@@ -47,7 +47,7 @@ export default function Hero() {
               href="/signup"
               className="w-fit"
             >
-              <motion.button className="text-base bg-foreground text-background px-5 py-2 hover:brightness-80 duration-200 w-fit">
+              <motion.button className="text-base bg-foreground text-background px-5 py-2 hover:brightness-80 duration-200 w-fit hover:cursor-pointer">
                 Hire Sentra
               </motion.button>
             </motion.a>
