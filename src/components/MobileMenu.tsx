@@ -92,7 +92,7 @@ export default function MobileMenu() {
                   ease: [0.4, 0, 0.2, 1],
                 }}
               >
-                <Link href="/signin" onClick={() => handleLinkClick("/signin")}>
+                <Link href="/login" onClick={() => handleLinkClick("/login")}>
                   <button className="text-sm bg-foreground text-background px-4 py-2 hover:brightness-80 duration-200 w-fit">
                     Sign In
                   </button>
