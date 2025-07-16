@@ -6,8 +6,10 @@ import Link from "next/link";
 import { ibmPlexMono } from "@/app/fonts";
 import { motion } from "motion/react";
 import { useAnimation } from "@/app/providers";
-declare const DelveCookieConsent: any;
-
+// Type declaration for DelveCookieConsent
+declare const DelveCookieConsent: {
+  show: () => void;
+};
 export default function HeroFooter() {
   const { isLoaded } = useAnimation();
 

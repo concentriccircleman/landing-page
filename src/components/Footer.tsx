@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ibmPlexMono } from "@/app/fonts";
-declare const DelveCookieConsent: any;
+
+// Type declaration for DelveCookieConsent
+declare const DelveCookieConsent: {
+  show: () => void;
+};
 const navLinks = [
   { path: "/", label: "Home" },
   // { path: "/about", label: "About" },

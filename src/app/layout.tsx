@@ -12,7 +12,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script src="https://cdn.delve.co/src/delve-cookie-consent-default.js" />
+        <script
+          src="https://cdn.delve.co/src/delve-cookie-consent-default.js"
+          async
+        />
         <script id="delve-cookie-init">
           {`
             DelveCookieConsent.init({
