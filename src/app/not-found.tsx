@@ -3,15 +3,8 @@
 import { fadeTransition, fadeVariants } from "@/app/_animations/fadeVariants";
 
 import Link from "next/link";
-import { Metadata } from "next";
-import { createMetadata } from "@/utils/metadata";
 import { motion } from "motion/react";
 import { useAnimation } from "@/app/providers";
-
-export const metadata: Metadata = createMetadata({
-  title: "Page Not Found",
-  description: "The page you are looking for does not exist.",
-});
 
 export default function NotFound() {
   const { isLoaded } = useAnimation();
