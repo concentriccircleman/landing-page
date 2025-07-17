@@ -26,7 +26,7 @@ export default function HeroFooter() {
 
   return (
     <motion.div
-      className="w-full flex flex-col sm:flex-row justify-between items-center p-4 pointer-events-auto z-10"
+      className={`w-full flex flex-col sm:flex-row justify-between items-center p-4 pointer-events-auto z-10 ${ibmPlexMono.className}`}
       variants={fadeVariants}
       initial="hidden"
       animate={isLoaded ? "visible" : "hidden"}
@@ -39,7 +39,7 @@ export default function HeroFooter() {
             href={path}
             target={target}
             scroll={false}
-            className={`text-xs xs:text-sm text-background/80 hover:text-background underline hover:no-underline transition-colors ${ibmPlexMono.className}`}
+            className="text-xs xs:text-sm text-background/80 hover:text-background underline hover:no-underline transition-colors"
           >
             {label}
           </Link>
@@ -52,13 +52,13 @@ export default function HeroFooter() {
         </button>
       </div>
       <p
-        className={`hidden sm:block text-xs xs:text-sm text-background/80 ${ibmPlexMono.className}`}
+        className="hidden sm:block text-xs xs:text-sm text-background/80"
       >
         2025 © Dynamis Labs.
       </p>
       <div className="w-full sm:hidden">
         <p
-          className={`text-xs xs:text-sm text-background/80 text-center ${ibmPlexMono.className}`}
+          className="text-xs xs:text-sm text-background/80 text-center"
         >
           2025 © Dynamis Labs.
         </p>

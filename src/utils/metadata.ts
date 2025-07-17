@@ -2,31 +2,34 @@ type MetaDataProps = {
   title?: string;
   description?: string;
   canonical?: string;
-  ogImage?: string;
 };
 
 const defaultMetadata = {
   title: "Sentra",
   description:
-    "Sentra is your AI teammate that listens, learns, and alerts you when your company drifts — before you even notice. It creates a memory of your company's institutional knowledge, memorializing and documenting details everyone forgets.",
+    "Sentra is your AI teammate who creates a unified company memory, remembering details everyone forgot and alerting you when your teams are misaligned.",
   canonical: "/",
-  ogImage: "/og.png",
 };
 
 // Takes in title, description, and other props and returns a Next.js metadata object
 export function createMetadata({
   title = defaultMetadata.title,
-  description = defaultMetadata.description,
+  description,
   canonical = defaultMetadata.canonical,
-  ogImage = defaultMetadata.ogImage,
 }: MetaDataProps) {
+  const finalDescription =
+    description ??
+    (title !== defaultMetadata.title
+      ? `${title} - ${defaultMetadata.description}`
+      : defaultMetadata.description);
+
   return {
-    metadataBase: new URL("https://sentra.com"),
+    metadataBase: new URL("https://sentra.app"),
     title:
       title !== defaultMetadata.title
         ? `${title} - ${defaultMetadata.title}`
         : defaultMetadata.title,
-    description,
+    description: finalDescription,
     alternates: {
       canonical,
     },
@@ -46,12 +49,12 @@ export function createMetadata({
     ],
     openGraph: {
       title,
-      description,
+      description: finalDescription,
       type: "website",
       url: canonical,
       images: [
         {
-          url: ogImage,
+          url: "https://sentra.app/og.png",
           width: 1200,
           height: 630,
           alt: "OG Image",

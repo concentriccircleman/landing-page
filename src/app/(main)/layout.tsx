@@ -3,8 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 import { Providers } from "@/app/providers";
-
-const manrope = Manrope({ subsets: ["latin"] });
+import { manrope } from "@/app/fonts";
 
 export default function MainLayout({
   children,

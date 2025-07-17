@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <footer
-      className={`fixed bottom-0 left-0 w-full z-20 ${
+      className={`fixed bottom-0 left-0 w-full z-20 ${ibmPlexMono.className} ${
         isHomePage ? "bg-transparent" : "bg-background"
       }`}
     >
@@ -41,9 +41,7 @@ export default function Footer() {
                 isHomePage
                   ? "text-background/80 hover:text-background"
                   : "text-foreground/80 hover:text-foreground"
-              } underline hover:no-underline transition-colors ${
-                ibmPlexMono.className
-              }`}
+              } underline hover:no-underline transition-colors`}
             >
               {label}
             </Link>
@@ -54,9 +52,7 @@ export default function Footer() {
               isHomePage
                 ? "text-background/80 hover:text-background"
                 : "text-foreground/80 hover:text-foreground"
-            } underline hover:no-underline transition-colors cursor-pointer ${
-              ibmPlexMono.className
-            }`}
+            } underline hover:no-underline transition-colors cursor-pointer`}
           >
             Cookie Settings
           </button>
@@ -65,7 +61,7 @@ export default function Footer() {
         <div
           className={`text-xs xs:text-sm ${
             isHomePage ? "text-background/80" : "text-foreground/80"
-          } ${ibmPlexMono.className}`}
+          }`}
         >
           2025 © Dynamis Labs.
         </div>
