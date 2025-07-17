@@ -1,14 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ibmPlexMono } from "@/app/fonts";
 
 // Type declaration for DelveCookieConsent
 declare const DelveCookieConsent: {
   show: () => void;
 };
+
 const navLinks = [
-  { path: "/", label: "Home" },
-  // { path: "/about", label: "About" },
-  { path: "/manifesto", label: "Manifesto" },
   { path: "/privacy", label: "Privacy" },
   { path: "/terms", label: "Terms" },
   {
@@ -19,35 +20,56 @@ const navLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   return (
-    <section className="fixed bottom-0 left-0 w-full z-20">
-      {/* <div className="absolute bottom-full w-full h-10 bg-gradient-to-t from-primary-600 to-transparent" /> */}
-      <div className="w-full flex justify-between items-center px-8 py-4 pointer-events-auto bg-gray-100 text-black relative">
-        <div className="hidden sm:flex justify-center items-center gap-8 relative z-10">
+    <footer
+      className={`fixed bottom-0 left-0 w-full z-20 ${
+        isHomePage ? "bg-transparent" : "bg-background"
+      }`}
+    >
+      <div className="w-full flex flex-col sm:flex-row justify-between items-center p-4 pointer-events-auto relative">
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-2 sm:mb-0 w-full sm:w-auto">
           {navLinks.map(({ path, label, target = undefined }) => (
             <Link
               key={path}
               href={path}
               target={target}
               scroll={false}
-              className={`text-xs xs:text-sm text-black/80 underline hover:no-underline ${ibmPlexMono.className}`}
+              className={`text-xs xs:text-sm ${
+                isHomePage
+                  ? "text-background/80 hover:text-background"
+                  : "text-foreground/80 hover:text-foreground"
+              } underline hover:no-underline transition-colors ${
+                ibmPlexMono.className
+              }`}
             >
               {label}
             </Link>
           ))}
           <button
-            className={`text-xs xs:text-sm text-black/80 underline hover:no-underline hover:cursor-pointer ${ibmPlexMono.className}`}
             onClick={() => DelveCookieConsent.show()}
+            className={`text-xs xs:text-sm ${
+              isHomePage
+                ? "text-background/80 hover:text-background"
+                : "text-foreground/80 hover:text-foreground"
+            } underline hover:no-underline transition-colors cursor-pointer ${
+              ibmPlexMono.className
+            }`}
           >
             Cookie Settings
           </button>
         </div>
+
         <div
-          className={`text-xs xs:text-sm text-black/80 relative z-10 ${ibmPlexMono.className}`}
+          className={`text-xs xs:text-sm ${
+            isHomePage ? "text-background/80" : "text-foreground/80"
+          } ${ibmPlexMono.className}`}
         >
           2025 © Dynamis Labs.
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

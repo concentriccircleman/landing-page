@@ -9,10 +9,10 @@ export default function Privacy() {
   const { isLoaded } = useAnimation();
 
   return (
-    <section className="flex flex-col justify-center items-center text-foreground pointer-events-none h-full">
-      <div className="px-8 max-w-3xl z-10 flex flex-col h-full w-full justify-center items-center pointer-events-auto overflow-y-auto">
+    <section className="flex flex-col justify-center items-center text-foreground  pointer-events-none h-full content-gradient">
+      <div className="px-4 max-w-3xl z-10 flex flex-col h-full w-full justify-center items-center pointer-events-auto overflow-y-auto">
         <motion.div
-          className="flex flex-col py-16"
+          className="flex flex-col "
           variants={fadeVariants}
           initial="hidden"
           animate={isLoaded ? "visible" : "hidden"}

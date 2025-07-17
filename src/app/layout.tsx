@@ -1,9 +1,11 @@
 "use client";
 
-import "./globals.css";
+import "@/app/globals.css";
+import { Manrope } from "next/font/google";
 
-import Layout from "@/components/Layout";
+const manrope = Manrope({ subsets: ["latin"] });
 
+// This is a Client Component that wraps the cookie consent script
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,53 +16,53 @@ export default function RootLayout({
       <head>
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="https://cdn.delve.co/src/delve-cookie-consent-default.js" />
-        <script id="delve-cookie-init">
-          {`
-            DelveCookieConsent.init({
-              message: "We use cookies to enhance your experience, analyze our traffic and keep your data secure.",
-              privacyPolicyUrl: "https://sentra.app/privacy",
-              manageScriptTags: true,
-              preferencesDisplayMode: "button",
-              showInNonRegulatedRegions: true,
-              categories: {
-                necessary: {
-                  enabled: true,
-                  cookieTable: {
-                    cookies: [
-                      {
-                        name: "delve_cookie_consent",
-                        purpose: "Stores your cookie preferences",
-                        duration: "1 year",
-                      },
-                      {
-                        name: "fbssls_*",
-                        purpose: "Tracks session status",
-                        duration: "Session",
-                      },
-                    ],
+        <script id="delve-cookie-init" dangerouslySetInnerHTML={{
+          __html: `
+            if (typeof DelveCookieConsent !== 'undefined') {
+              DelveCookieConsent.init({
+                message: "We use cookies to enhance your experience, analyze our traffic and keep your data secure.",
+                privacyPolicyUrl: "https://sentra.app/privacy",
+                manageScriptTags: true,
+                preferencesDisplayMode: "button",
+                showInNonRegulatedRegions: true,
+                categories: {
+                  necessary: {
+                    enabled: true,
+                    cookieTable: {
+                      cookies: [
+                        {
+                          name: "delve_cookie_consent",
+                          purpose: "Stores your cookie preferences",
+                          duration: "1 year",
+                        },
+                        {
+                          name: "fbssls_*",
+                          purpose: "Tracks session status",
+                          duration: "Session",
+                        },
+                      ],
+                    },
+                  },
+                  analytics: {
+                    enabled: false,
+                    cookieTable: {
+                      cookies: [
+                        {
+                          name: "ph_*",
+                          purpose: "PostHog analytics cookie",
+                          duration: "1 year",
+                        },
+                      ],
+                    },
                   },
                 },
-                analytics: {
-                  enabled: false,
-                  cookieTable: {
-                    cookies: [
-                      {
-                        name: "ph_*",
-                        purpose: "PostHog analytics cookie",
-                        duration: "1 year",
-                      },
-                    ],
-                  },
-                },
-              },
-            });
-          `}
-        </script>
+              });
+            }
+          `
+        }} />
       </head>
-      <body>
-        <Layout>{children}</Layout>
-
-        {/* Delve Cookie Consent */}
+      <body className={manrope.className}>
+        {children}
       </body>
     </html>
   );

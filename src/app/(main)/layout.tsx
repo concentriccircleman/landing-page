@@ -1,29 +1,26 @@
-"use client";
-
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import { Manrope } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 import { Providers } from "@/app/providers";
-import { usePathname } from "next/navigation";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
-export default function Layout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isLanding = usePathname() === "/";
-
   return (
     <Providers>
       <div
         className={`${manrope.className} antialiased min-h-screen flex flex-col bg-background`}
       >
-        {!isLanding && <Header />}
+        <Header />
         <MobileMenu />
-        <main className="flex-1 flex flex-col">{children}</main>
+        <main className="flex-1 flex flex-col pt-24 pb-32">
+          <div className="w-full">{children}</div>
+        </main>
         <Footer />
       </div>
     </Providers>

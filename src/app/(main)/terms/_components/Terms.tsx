@@ -9,8 +9,8 @@ export default function Terms() {
   const { isLoaded } = useAnimation();
 
   return (
-    <section className="flex flex-col justify-center items-center text-black pointer-events-none h-full content-gradient">
-      <div className="px-8 max-w-3xl z-10 flex flex-col h-full w-full justify-center items-center pointer-events-auto">
+    <section className="flex flex-col justify-center items-center text-foreground pointer-events-none h-full content-gradient">
+      <div className="px-4 max-w-3xl z-10 flex flex-col h-full w-full justify-center items-center pointer-events-auto">
         <motion.div
           className="flex flex-col"
           variants={fadeVariants}
@@ -22,11 +22,11 @@ export default function Terms() {
             Terms of Service
           </h1>
 
-          <p className="text-xl md:text-2xl text-black/60 mb-8 md:mb-12 font-light italic">
+          <p className="text-xl md:text-2xl text-foreground/60 mb-8 md:mb-12 font-light italic">
             Last Updated: July 2025
           </p>
 
-          <div className="text-base text-black/80 space-y-6 md:space-y-8 overflow-y-auto py-4">
+          <div className="text-base text-foreground/80 space-y-6 md:space-y-8 overflow-y-auto py-4">
             <p>
               Welcome, and thank you for your interest in Dynamis Labs, Inc.
               (&quot;Sentra,&quot; &quot;we,&quot; or &quot;us&quot;) and our
@@ -86,7 +86,7 @@ export default function Terms() {
               CLASS ACTION OR REPRESENTATIVE PROCEEDING.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               1. Sentra Service Overview
             </h2>
             <p>
@@ -110,7 +110,7 @@ export default function Terms() {
               events, places, people, or facts.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               2. Eligibility
             </h2>
             <p>
@@ -125,7 +125,7 @@ export default function Terms() {
               you agree to be bound by these Terms.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               3. Accounts and Registration
             </h2>
             <p>
@@ -143,7 +143,7 @@ export default function Terms() {
               then you should immediately notify us at support@sentra.app.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               4. General Payment Terms
             </h2>
             <p>
@@ -189,7 +189,7 @@ export default function Terms() {
               amount, including collection fees.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               5. Licenses
             </h2>
             <p>
@@ -223,7 +223,7 @@ export default function Terms() {
               products and services.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               6. Ownership; Proprietary Rights
             </h2>
             <p>
@@ -239,7 +239,7 @@ export default function Terms() {
               the materials not granted expressly in these Terms.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               7. Third-Party Terms
             </h2>
             <p>
@@ -266,7 +266,7 @@ export default function Terms() {
               third-party components under those third-party licenses.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               8. User Content
             </h2>
             <p>
@@ -300,7 +300,7 @@ export default function Terms() {
               that User Content.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               9. Communications
             </h2>
             <p>
@@ -321,7 +321,7 @@ export default function Terms() {
               the promotional email itself.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               10. Prohibited Conduct
             </h2>
             <p>
@@ -368,7 +368,7 @@ export default function Terms() {
               </li>
             </ul>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               11. Intellectual Property Rights Protection
             </h2>
             <p>
@@ -388,7 +388,7 @@ export default function Terms() {
               Email: support@sentra.app
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               12. Term, Termination, and Modification of the Service
             </h2>
             <p>
@@ -424,7 +424,7 @@ export default function Terms() {
               suspension or termination of your access to or use of the Service.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               13. Indemnity
             </h2>
             <p>
@@ -444,7 +444,7 @@ export default function Terms() {
               any dispute or issue between you and any third party.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               14. Disclaimers; No Warranties by Sentra
             </h2>
             <p>
@@ -469,7 +469,7 @@ export default function Terms() {
               SERVICE.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               15. Limitation of Liability
             </h2>
             <p>
@@ -490,7 +490,7 @@ export default function Terms() {
               AND (b) US$100.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               16. Dispute Resolution and Arbitration
             </h2>
             <p>
@@ -528,7 +528,7 @@ export default function Terms() {
               of arbitration.
             </p>
 
-            <h2 className="text-xl font-medium text-black mt-8 mb-4">
+            <h2 className="text-xl font-medium text-foreground mt-8 mb-4">
               17. Miscellaneous
             </h2>
             <p>

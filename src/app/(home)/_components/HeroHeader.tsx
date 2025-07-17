@@ -13,7 +13,7 @@ export default function HeroHeader() {
   return (
     <section className="fixed top-0 left-0 w-full z-20">
       <motion.div
-        className="w-full flex justify-between items-center px-8 py-4 pointer-events-auto"
+        className="w-full flex justify-between items-center p-4 pointer-events-auto"
         variants={fadeVariants}
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}
@@ -28,14 +28,17 @@ export default function HeroHeader() {
           <span className="text-base font-medium">Sentra</span>
         </Link>
 
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-4">
+          <Link href="/manifesto" className="text-sm text-background hover:opacity-80 duration-200">
+            Manifesto
+          </Link>
           <Link href="/login">
-            <button className="text-sm bg-foreground text-background px-3 py-1.5 hover:brightness-80 duration-200 w-fit hover:cursor-pointer">
+            <button className="text-sm bg-background text-foreground px-3 py-1.5 hover:brightness-80 duration-200 w-fit hover:cursor-pointer">
               Sign In
             </button>
           </Link>
           <Link href="/signup">
-            <button className="text-sm bg-primary-600 text-background px-3 py-1.5 hover:brightness-80 duration-200 w-fit hover:cursor-pointer">
+            <button className="text-sm bg-primary-600 text-foreground px-3 py-1.5 hover:brightness-80 duration-200 w-fit hover:cursor-pointer">
               Sign Up
             </button>
           </Link>

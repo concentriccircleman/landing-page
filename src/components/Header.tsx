@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <section className="fixed top-0 left-0 w-full z-20">
       {/* <div className="absolute top-full w-full h-10 bg-gradient-to-t from-transparent to-red-500" /> */}
-      <div className="w-full flex justify-between items-center px-8 py-4 pointer-events-auto bg-gray-100 text-black">
+      <div className="w-full flex justify-between items-center p-4 pointer-events-auto bg-background text-foreground">
         <Link
           href="/"
           scroll={false}
@@ -17,7 +17,10 @@ export default function Header() {
           <span className="text-base font-medium">Sentra</span>
         </Link>
 
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-4">
+          <Link href="/manifesto" className="text-sm text-foreground hover:opacity-80 duration-200">
+            Manifesto
+          </Link>
           <Link href="/login">
             <button className="text-sm bg-foreground text-background px-3 py-1.5 hover:brightness-80 duration-200 w-fit hover:cursor-pointer">
               Sign In

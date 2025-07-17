@@ -12,6 +12,14 @@ export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // Use white icons on hero page (homepage), black on other pages
+  const iconColor = pathname === "/" ? "#FFFFFF" : "#000000";
+
+  // Use black background on hero page, white on other pages
+  const isHeroPage = pathname === "/";
+  const menuBgColor = isHeroPage ? "bg-foreground" : "bg-background";
+  const menuTextColor = isHeroPage ? "text-background" : "text-foreground";
+
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -32,27 +40,25 @@ export default function MobileMenu() {
 
   const ROUTES = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
     { path: "/manifesto", label: "Manifesto" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 pointer-events-none">
-      <nav className="w-full flex sm:hidden flex-row justify-end px-8 py-4">
-        <div className="w-8 h-8" />
+      <nav className="w-full flex sm:hidden flex-row justify-end p-4">
         <button
           className="w-8 h-8 -mr-[5px] relative z-20 border-0 bg-transparent visible sm:hidden my-auto transition-opacity duration-300 ease pointer-events-auto"
           aria-label="Menu"
           type="button"
           onClick={toggleMenu}
         >
-          <MenuIcon data-hide={isMenuOpen} />
-          <CrossIcon data-hide={!isMenuOpen} />
+          <MenuIcon data-hide={isMenuOpen} color={iconColor} />
+          <CrossIcon data-hide={!isMenuOpen} color={iconColor} />
         </button>
         <AnimatePresence>
           {isMenuOpen && (
             <motion.ul
-              className="fixed inset-0 w-full h-[100dvh] bg-background backdrop-blur-md flex sm:hidden flex-col justify-center items-center text-center gap-8 px-8 overflow-y-auto pointer-events-auto"
+              className={`fixed inset-0 w-full h-[100dvh] ${menuBgColor} backdrop-blur-md flex sm:hidden flex-col justify-center items-center text-center gap-8 px-4 overflow-y-auto pointer-events-auto`}
               variants={fadeVariants}
               initial="hidden"
               animate="visible"
@@ -62,7 +68,7 @@ export default function MobileMenu() {
               {ROUTES.map((item, index) => (
                 <motion.li
                   key={index}
-                  className="text-foreground text-2xl sm:text-3xl whitespace-nowrap"
+                  className={`${menuTextColor} text-2xl sm:text-3xl whitespace-nowrap`}
                   variants={fadeVariants}
                   initial="hidden"
                   animate="visible"
@@ -73,7 +79,11 @@ export default function MobileMenu() {
                   }}
                 >
                   <Link
-                    className="px-4 py-2 duration-200 ease transition-all hover:bg-foreground/10"
+                    className={`px-4 py-2 duration-200 ease transition-all ${
+                      isHeroPage
+                        ? "hover:bg-background/10"
+                        : "hover:bg-foreground/10"
+                    }`}
                     href={item.path}
                     onClick={() => handleLinkClick(item.path)}
                   >
@@ -92,16 +102,26 @@ export default function MobileMenu() {
                   ease: [0.4, 0, 0.2, 1],
                 }}
               >
-                <Link href="/login" onClick={() => handleLinkClick("/login")}>
-                  <button className="text-sm bg-foreground text-background px-4 py-2 hover:brightness-80 duration-200 w-fit">
+                <div className="flex flex-col items-center gap-4">
+                  <Link
+                    href="/login"
+                    onClick={() => handleLinkClick("/login")}
+                    className={`w-fit mt-2 text-base ${
+                      isHeroPage
+                        ? "bg-background text-foreground"
+                        : "bg-foreground text-background"
+                    } px-5 py-2 hover:brightness-80 duration-200 hover:cursor-pointer font-medium`}
+                  >
                     Sign In
-                  </button>
-                </Link>
-                <Link href="/signup" onClick={() => handleLinkClick("/signup")}>
-                  <button className="text-sm bg-primary-600 text-background px-4 py-2 hover:brightness-80 duration-200 w-fit">
+                  </Link>
+                  <Link
+                    href="/signup"
+                    onClick={() => handleLinkClick("/signup")}
+                    className="w-fit mt-2 text-base bg-primary-600 text-background px-5 py-2 hover:brightness-80 duration-200 hover:cursor-pointer font-medium"
+                  >
                     Sign Up
-                  </button>
-                </Link>
+                  </Link>
+                </div>
               </motion.li>
             </motion.ul>
           )}

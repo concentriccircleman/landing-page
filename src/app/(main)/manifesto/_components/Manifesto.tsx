@@ -9,8 +9,8 @@ export default function Manifesto() {
   const { isLoaded } = useAnimation();
 
   return (
-    <section className="flex flex-col justify-center items-center text-black pointer-events-none h-full bg-white">
-      <div className="px-8 max-w-3xl z-10 flex flex-col h-full w-full justify-center items-center pointer-events-auto">
+    <section className="flex flex-col justify-center items-center text-foreground pointer-events-none h-full bg-background">
+      <div className="px-4 max-w-3xl z-10 flex flex-col h-full w-full justify-center items-center pointer-events-auto">
         <motion.div
           className="flex flex-col"
           variants={fadeVariants}
@@ -22,28 +22,28 @@ export default function Manifesto() {
             Sentra: a new kind of teamwork
           </h1>
 
-          <p className="text-xl md:text-2xl text-black/60 mb-8 md:mb-12 font-light italic">
+          <p className="text-xl md:text-2xl text-foreground/60 mb-8 md:mb-12 font-light italic">
             Misalignment: the silent killer inside every growing org
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             At growing Series A+ organizations, it&apos;s easy to hear stories
             like the following:
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8 italic">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8 italic">
             &quot;One time the inventory team deprecated an ad type without
             telling us. So we wasted a month building support for it even though
             it was deprecated.&quot; - SWE in a 100+ engineer company
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             A month&apos;s salary for 10 developers is $100,000+. Misalignment
             costs companies millions every year. It&apos;s death by a thousand
             cuts.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Maintaining alignment in a growing organization is hard. The larger
             the company, the harder it is to stay in sync. People start losing
             sight of the bigger picture. Goals shift. Messages get lost in
@@ -52,22 +52,22 @@ export default function Manifesto() {
             become exhausted and disconnected.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             And the current &quot;solutions&quot;?
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Another tool. Another meeting. Another dashboard.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Companies today drown in dashboards, OKRs, CRMs, Jira tickets, and
             endless Slack threads. Yet despite the infinity gauntlet of SaaS
             infrastructure, companies still remain chronically misaligned. In
             fact, these systems don&apos;t solve misalignment. They amplify it:
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             <strong>Standups fail</strong> because honesty is risky. Nobody
             wants to appear lost or unproductive, so they fabricate progress.
             Valuable concerns go unvoiced.
@@ -82,21 +82,21 @@ export default function Manifesto() {
             never connecting cross-team dots.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             These systems keep information in silos. When information does
             travel, it suffers from broken telephone: stripped of nuance,
             distorted through layers of translation, or misrepresented entirely
             by the time it reaches leadership or another team.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             This isn&apos;t a people problem, it&apos;s a systems problem. And
             our current systems fail by design.
           </p>
 
           <h2 className="text-2xl font-medium mb-6 md:mb-8">What we believe</h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             • Alignment is a continuous state, not a weekly checkbox.
             <br />
             • Trust is the foundation of alignment.
@@ -105,14 +105,14 @@ export default function Manifesto() {
 
           <h2 className="text-2xl font-medium mb-6 md:mb-8">What Sentra is</h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra is the first AI teammate built to continually enhance
             alignment across an organization. It proactively senses when
             problems may occur, and allows leaders to step in to intercept them.
             It is the only chief of staff any company will ever need.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra regularly talks (yes, talks, with its own voice) to everyone
             in the company, all the way from the execs down to the interns,
             creating hundreds of trusted touch-points every week. These unique
@@ -122,13 +122,13 @@ export default function Manifesto() {
             with a high resolution understanding of the whole org in real time.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Teams can further invite Sentra to team meetings, Slack channels,
             Jira, and Calendar and HR systems to enrich its contextual
             awareness. Participation is always consensual.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra continuously evolves its living map of the company,
             connecting the dots to deeply understand how the organization is
             working together. Sentra&apos;s multi-agent architecture allows it
@@ -137,12 +137,12 @@ export default function Manifesto() {
             misalignment grows.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra&apos;s job is simple: keep everyone on the same page.
             Quietly, consistently, humanely.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Misalignment is often spotted too late. For the first time, leaders
             can systematically intervene early, before wasted time, money,
             politics, or morale damage sets in.
@@ -152,7 +152,7 @@ export default function Manifesto() {
             What Sentra isn&apos;t
           </h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             <strong>Sentra is not an efficiency monitor.</strong>
             <br />
             <br />
@@ -198,7 +198,7 @@ export default function Manifesto() {
             Trust is everything
           </h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Companies are beginning to use surveillance tech to solve
             misalignment, believing the solution lies in monitoring employees
             more closely. But surveillance disguised as productivity software
@@ -209,19 +209,19 @@ export default function Manifesto() {
             they are untrustworthy.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Rather than aligning teams, these tools create paranoia, incentivize
             performative behaviors, and ultimately exacerbate the very
             misalignments you aim to resolve.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Real alignment is impossible without genuine trust. Trust is
             foundational, not optional. It thrives in environments where people
             feel respected, heard, and valued, not watched.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra rejects surveillance culture entirely. We believe true
             alignment emerges from collaboration, transparent systems, and
             mutual respect. Sentra protects autonomy, ensures privacy, builds
@@ -234,7 +234,7 @@ export default function Manifesto() {
             AI must feel human
           </h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra is built to interface with humans as they are, not as
             dashboards want them to be. Voice is our most natural interface.
             Speaking is way easier than typing and captures nuances lost in
@@ -243,7 +243,7 @@ export default function Manifesto() {
             clarification.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra&apos;s voice, cadence, and care are designed for dialogue.
             Every interaction helps build trust, not erode it. We believe this
             is how AI should be designed moving forward: an AI we welcome, not
@@ -254,47 +254,47 @@ export default function Manifesto() {
             The future of work is alignment, not surveillance
           </h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             For fast-growing companies, good work culture and relationships make
             or break your success. Misaligned teams aren&apos;t just slow,
             they&apos;re confused, unhappy, and checked out. Unresolved friction
             chips away at morale.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Sentra is the immune system which quietly detects and heals those
             cracks before they bleed out.
           </p>
 
           <h2 className="text-2xl font-medium mb-6 md:mb-8">Join us</h2>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             We&apos;re not just another SaaS. We&apos;re building a new contract
             between humans and technology.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             And if we get it right, the organizations that run on Sentra will
             feel different. More cohesive, more proactive, more resilient.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8">
             Not because their tools are louder. But because they finally listen.
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8 text-center">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8 text-center">
             contact@sentra.app
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8 text-right">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8 text-right">
             With conviction,
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8 text-right">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8 text-right">
             The Sentra Team
           </p>
 
-          <p className="text-base text-black/80 mb-6 md:mb-8 text-right">
+          <p className="text-base text-foreground/80 mb-6 md:mb-8 text-right">
             San Francisco, 2025
           </p>
         </motion.div>

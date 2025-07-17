@@ -5,9 +5,9 @@ const LOGOS = [
   "https://cdn.brandfetch.io/google.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
   "https://cdn.brandfetch.io/microsoft.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
   "https://cdn.brandfetch.io/twitter.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
-  "https://cdn.brandfetch.io/motorola.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
   "https://cdn.brandfetch.io/qualcomm.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
   "https://cdn.brandfetch.io/salesforce.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
+  "https://cdn.brandfetch.io/motorola.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
   "https://cdn.brandfetch.io/instacart.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7",
 ];
 
@@ -35,7 +35,11 @@ export function ResponsiveLogoCarousel() {
               key={idx}
               src={src}
               alt="Company logo"
-              className="h-6 mx-6 z-40"
+              className={`h-6 mx-6 z-40 ${
+                src.includes("motorola.com") || src.includes("twitter.com")
+                  ? "invert"
+                  : ""
+              }`}
             />
           ))}
         </Marquee>
@@ -52,7 +56,11 @@ export function ResponsiveLogoCarousel() {
               key={idx}
               src={src}
               alt="Company logo"
-              className="h-8 mx-6 z-40"
+              className={`h-8 mx-6 z-40 ${
+                src.includes("motorola.com") || src.includes("twitter.com")
+                  ? "invert"
+                  : ""
+              }`}
             />
           ))}
         </Marquee>
