@@ -44,7 +44,8 @@ export default function Hero() {
 
                 <div className="mt-8 sm:mt-12 overflow-hidden">
                   <p className="text-sm text-background/60 mb-4">
-                    Shaped and backed by former leaders of
+                    Shaped and backed by leaders of
+
                   </p>
                   <ResponsiveLogoCarousel />
                 </div>
