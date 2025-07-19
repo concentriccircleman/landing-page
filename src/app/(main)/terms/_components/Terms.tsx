@@ -22,11 +22,11 @@ export default function Terms() {
             Terms of Service
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/60 mb-8 md:mb-12 font-light italic">
+          <p className="text-xl md:text-2xl text-secondary mb-8 md:mb-12 font-light italic">
             Last Updated: July 2025
           </p>
 
-          <div className="text-base text-foreground/80 space-y-6 md:space-y-8 overflow-y-auto py-4">
+          <div className="text-base text-secondary space-y-6 md:space-y-8 overflow-y-auto py-4">
             <p>
               Welcome, and thank you for your interest in Dynamis Labs, Inc.
               (&quot;Sentra,&quot; &quot;we,&quot; or &quot;us&quot;) and our

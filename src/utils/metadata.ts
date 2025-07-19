@@ -54,7 +54,7 @@ export function createMetadata({
       url: canonical,
       images: [
         {
-          url: "https://sentra.app/og.png",
+          url: "https://sentra.app/opengraph-image.png",
           width: 1200,
           height: 630,
           alt: "OG Image",

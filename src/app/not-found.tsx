@@ -22,7 +22,7 @@ export default function NotFound() {
           <h1 className="text-3xl/snug s:text-4xl/snug md:text-5xl/snug font-medium mb-4">
             Page not found
           </h1>
-          <p className="text-foreground/80 text-lg mb-8">
+          <p className="text-secondary text-lg mb-8">
             The page you are looking for does not exist.
           </p>
           <Link href="/" className="text-lg underline hover:no-underline">

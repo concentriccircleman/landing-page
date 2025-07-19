@@ -2,12 +2,9 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Manrope } from "next/font/google";
 import MobileMenu from "@/components/MobileMenu";
 import { Providers } from "@/app/providers";
 import { usePathname } from "next/navigation";
-
-const manrope = Manrope({ subsets: ["latin"] });
 
 export default function Layout({
   children,
@@ -19,11 +16,15 @@ export default function Layout({
   return (
     <Providers>
       <div
-        className={`${manrope.className} antialiased min-h-screen flex flex-col bg-background`}
+        className={`min-h-screen flex flex-col ${
+          isLanding ? "bg-foreground" : "bg-background"
+        }`}
       >
         {!isLanding && <Header />}
         <MobileMenu />
-        <main className="flex-1 flex flex-col">{children}</main>
+        <main className={`flex-1 flex flex-col ${isLanding ? "" : "py-8"}`}>
+          {children}
+        </main>
         <Footer />
       </div>
     </Providers>

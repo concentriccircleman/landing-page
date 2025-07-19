@@ -6,14 +6,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useAnimation } from "@/app/providers";
+import { useState, useEffect } from "react";
 
 export default function HeroHeader() {
   const { isLoaded } = useAnimation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 10;
+      if (scrolled !== isScrolled) {
+        setIsScrolled(scrolled);
+      }
+    };
+
+    // Initial check
+    handleScroll();
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isScrolled]);
 
   return (
-    <section className="fixed top-0 left-0 w-full z-20">
+    <section 
+      className={`sticky top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        isScrolled ? 'bg-foreground' : 'bg-transparent'
+      }`}
+    >
       <motion.div
-        className="w-full flex justify-between items-center p-4 pointer-events-auto"
+        className="w-full flex justify-between items-center p-4 pointer-events-auto text-background"
         variants={fadeVariants}
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}

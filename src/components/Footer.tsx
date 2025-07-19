@@ -1,69 +1,117 @@
 "use client";
 
-import Link from "next/link";
+import { ibmPlexMono } from "@/utils/fonts";
 import { usePathname } from "next/navigation";
-import { ibmPlexMono } from "@/app/fonts";
+import CustomLink from "./ui/CustomLink";
 
-// Type declaration for DelveCookieConsent
 declare const DelveCookieConsent: {
   show: () => void;
 };
 
-const navLinks = [
-  { path: "/privacy", label: "Privacy" },
-  { path: "/terms", label: "Terms" },
-  {
-    path: "https://trust.delve.co/sentra",
-    target: "_blank",
-    label: "Security",
-  },
-];
+interface LinkItem {
+  path: string;
+  label: string;
+  target?: string;
+}
+
+interface FooterLinks {
+  legal: LinkItem[];
+  compliance: LinkItem[];
+  company: LinkItem[];
+}
+
+const footerLinks: FooterLinks = {
+  legal: [
+    { path: "/terms", label: "Terms of Service" },
+    { path: "/privacy", label: "Privacy Policy" },
+  ],
+  compliance: [
+    { path: "/data-transfer-agreement", label: "Data Transfer Agreement" },
+    {
+      path: "https://trust.delve.co/sentra",
+      label: "Security",
+    },
+  ],
+  company: [
+    { path: "/manifesto", label: "Manifesto" },
+    { path: "https://dynamislabs.ai", label: "Careers" },
+  ],
+};
 
 export default function Footer() {
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
-
   return (
-    <footer
-      className={`fixed bottom-0 left-0 w-full z-20 ${ibmPlexMono.className} ${
-        isHomePage ? "bg-transparent" : "bg-background"
-      }`}
-    >
-      <div className="w-full flex flex-col sm:flex-row justify-between items-center p-4 pointer-events-auto relative">
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-2 sm:mb-0 w-full sm:w-auto">
-          {navLinks.map(({ path, label, target = undefined }) => (
-            <Link
-              key={path}
-              href={path}
-              target={target}
-              scroll={false}
-              className={`text-xs xs:text-sm ${
-                isHomePage
-                  ? "text-background/80 hover:text-background"
-                  : "text-foreground/80 hover:text-foreground"
-              } underline hover:no-underline transition-colors`}
+    <footer className={`w-full z-20 ${ibmPlexMono.className} bg-foreground`}>
+      <div className="mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 className="text-sm font-medium text-background mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {footerLinks.legal.map(({ path, label }) => (
+                <li key={path}>
+                  <CustomLink
+                    href={path}
+                    className="text-sm text-secondary hover:text-background transition-colors inline-block"
+                  >
+                    {label}
+                  </CustomLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-background mb-4">
+              Compliance
+            </h3>
+            <ul className="space-y-2">
+              {footerLinks.compliance.map(({ path, label }) => (
+                <li key={path}>
+                  <CustomLink
+                    href={path}
+                    className="text-sm text-secondary hover:text-background transition-colors inline-block"
+                  >
+                    {label}
+                  </CustomLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-background mb-4">
+              Company
+            </h3>
+            <ul className="space-y-2">
+              {footerLinks.company.map(({ path, label }) => (
+                <li key={path}>
+                  <CustomLink
+                    href={path}
+                    className="text-sm text-secondary hover:text-background transition-colors inline-block"
+                  >
+                    {label}
+                  </CustomLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-background mb-4">
+              Preferences
+            </h3>
+            <button
+              onClick={() => DelveCookieConsent.show()}
+              className="text-sm text-secondary hover:text-background transition-colors text-left inline-block"
             >
-              {label}
-            </Link>
-          ))}
-          <button
-            onClick={() => DelveCookieConsent.show()}
-            className={`text-xs xs:text-sm ${
-              isHomePage
-                ? "text-background/80 hover:text-background"
-                : "text-foreground/80 hover:text-foreground"
-            } underline hover:no-underline transition-colors cursor-pointer`}
-          >
-            Cookie Settings
-          </button>
+              Cookie Settings
+            </button>
+          </div>
         </div>
-
-        <div
-          className={`text-xs xs:text-sm ${
-            isHomePage ? "text-background/80" : "text-foreground/80"
-          }`}
-        >
-          2025 © Dynamis Labs.
+        <p className="text-xs text-secondary mb-4">
+          Subprocessors include Amazon Web Services, Github, Slack, Google Cloud
+          Platform, and OpenAI.
+        </p>
+        <div className="pt-6 border-t border-border">
+          <p className="text-xs text-secondary">
+            &copy; {new Date().getFullYear()} Dynamis Labs. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

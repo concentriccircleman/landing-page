@@ -3,7 +3,7 @@
 import { fadeTransition, fadeVariants } from "@/app/_animations/fadeVariants";
 
 import HeroHeader from "./HeroHeader";
-import HeroFooter from "./HeroFooter";
+
 import { ResponsiveLogoCarousel } from "./ByVariants";
 import { motion } from "motion/react";
 import { useAnimation } from "@/app/providers";
@@ -37,7 +37,7 @@ export default function Hero() {
 
                 <Link
                   href="/signup"
-                  className="w-fit mt-2 text-base bg-background text-foreground px-5 py-2 hover:brightness-80 duration-200 w-fit hover:cursor-pointer"
+                  className="mt-2 text-base bg-background text-foreground px-5 py-2 hover:brightness-80 duration-200 hover:cursor-pointer"
                 >
                   Hire Sentra
                 </Link>
@@ -52,7 +52,6 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-        <HeroFooter />
       </div>
     </section>
   );

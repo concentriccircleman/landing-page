@@ -1,9 +1,8 @@
 "use client";
 
 import "@/app/globals.css";
-import { Manrope } from "next/font/google";
-
-const manrope = Manrope({ subsets: ["latin"] });
+import Layout from "@/components/Layout";
+import { manrope } from "@/utils/fonts";
 
 // This is a Client Component that wraps the cookie consent script
 export default function RootLayout({
@@ -16,8 +15,10 @@ export default function RootLayout({
       <head>
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="https://cdn.delve.co/src/delve-cookie-consent-default.js" />
-        <script id="delve-cookie-init" dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          id="delve-cookie-init"
+          dangerouslySetInnerHTML={{
+            __html: `
             if (typeof DelveCookieConsent !== 'undefined') {
               DelveCookieConsent.init({
                 message: "We use cookies to enhance your experience, analyze our traffic and keep your data secure.",
@@ -58,11 +59,12 @@ export default function RootLayout({
                 },
               });
             }
-          `
-        }} />
+          `,
+          }}
+        />
       </head>
-      <body className={manrope.className}>
-        {children}
+      <body className={`${manrope.className} antialiased`}>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

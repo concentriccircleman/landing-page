@@ -22,11 +22,11 @@ export default function About() {
             Autonomous Enterprise
           </h1>
 
-          <p className="text-xl md:text-2xl text-foreground/60 mb-8 md:mb-12 font-light italic">
+          <p className="text-xl md:text-2xl text-secondary mb-8 md:mb-12 font-light italic">
             The future of organizational intelligence
           </p>
 
-          <p className="text-base text-foreground/80 mb-6 md:mb-8">
+          <p className="text-base text-secondary mb-6 md:mb-8">
             3 years ago when ChatGPT first released, we realized models were
             amnesic, and that a robust memory model would be the most impactful
             invention to supercharge AI. We started work at MIT which stemmed

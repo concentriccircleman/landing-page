@@ -9,6 +9,8 @@ html {
 :root {
   --foreground: #000000;
   --background: #ffffff;
+  --border: #444444;
+  --secondary: #777777;
 
   /* took this from design agency */
   --color-primary-50: oklch(97.7% 0.013 236.62);
@@ -46,6 +48,9 @@ html {
 @theme inline {
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-border: var(--border);
+  --color-secondary: var(--secondary);
+
   --color-primary-50: var(--color-primary-50);
   --color-primary-100: var(--color-primary-100);
   --color-primary-200: var(--color-primary-200);
@@ -81,7 +86,7 @@ body::after {
   background-size: 2px 2px;
   background-repeat: repeat;
   pointer-events: none;
-  z-index: 30;
+  z-index: 100;
 }
 
 .hero-gradient {

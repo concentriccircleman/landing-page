@@ -44,10 +44,10 @@ export default function MobileMenu() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 pointer-events-none">
+    <header className="fixed top-0 left-0 w-full z-[60] pointer-events-none">
       <nav className="w-full flex sm:hidden flex-row justify-end p-4">
         <button
-          className="w-8 h-8 -mr-[5px] relative z-20 border-0 bg-transparent visible sm:hidden my-auto transition-opacity duration-300 ease pointer-events-auto"
+          className="w-8 h-8 -mr-[5px] relative z-[70] border-0 bg-transparent visible sm:hidden my-auto transition-opacity duration-300 ease pointer-events-auto"
           aria-label="Menu"
           type="button"
           onClick={toggleMenu}
@@ -58,7 +58,7 @@ export default function MobileMenu() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.ul
-              className={`fixed inset-0 w-full h-[100dvh] ${menuBgColor} backdrop-blur-md flex sm:hidden flex-col justify-center items-center text-center gap-8 px-4 overflow-y-auto pointer-events-auto`}
+              className={`fixed inset-0 w-full h-[100dvh] ${menuBgColor} backdrop-blur-md flex sm:hidden flex-col justify-center items-center text-center gap-8 px-4 overflow-y-auto pointer-events-auto z-[65]`}
               variants={fadeVariants}
               initial="hidden"
               animate="visible"
