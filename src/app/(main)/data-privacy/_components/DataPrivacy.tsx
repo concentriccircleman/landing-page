@@ -197,7 +197,7 @@ export default function DataPrivacy() {
           <div className="border border-foreground/20 rounded-lg p-6 mb-8">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-xl font-medium text-foreground">
-                2. Meeting Data (via Recall.ai)
+                2. Meeting Data
               </h3>
               <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
                 Participant-Only for Raw Data
