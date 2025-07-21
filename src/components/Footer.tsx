@@ -35,6 +35,7 @@ const footerLinks: FooterLinks = {
   company: [
     { path: "/manifesto", label: "Manifesto" },
     { path: "https://dynamislabs.ai", label: "Careers" },
+    { path: "/data-privacy", label: "How We Handle Data" },
   ],
 };
 
