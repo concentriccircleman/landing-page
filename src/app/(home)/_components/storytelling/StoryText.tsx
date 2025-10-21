@@ -23,7 +23,7 @@ export default function StoryText({ storyOpacity, scrollYProgress }: StoryTextPr
         className="text-5xl font-bold text-foreground leading-tight"
         style={{ opacity: phase1Opacity }}
       >
-        Many startups pride themselves on agility.
+        Many companies pride themselves on agility.
       </motion.h2>
 
       {/* Phase 2: But over time, they start to feel way, way slower */}
