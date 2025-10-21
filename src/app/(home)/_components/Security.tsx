@@ -37,15 +37,6 @@ export default function Security() {
           <p className="text-secondary mb-6 leading-relaxed">
             For organizations with sensitive data requirements, we offer dedicated isolated VPC or on-premise air-gapped deployments. This flexibility ensures your data never leaves your infrastructure while still providing the full power of Sentra&apos;s AI-driven organizational intelligence.
           </p>
-          <Link 
-            href="/private-deployments"
-            className="inline-flex items-center gap-2 bg-foreground text-background px-5 py-2 hover:brightness-80 duration-200"
-          >
-            Learn more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>
