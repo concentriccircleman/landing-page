@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/login",               "destination": "https://sentra-app.vercel.app/login" },
     { "source": "/signup",              "destination": "https://sentra-app.vercel.app/signup" },
+    { "source": "/create-account",      "destination": "https://sentra-app.vercel.app/create-account" },
     { "source": "/signup-success",      "destination": "https://sentra-app.vercel.app/signup-success" },
     { "source": "/activate-account",    "destination": "https://sentra-app.vercel.app/activate-account" },
     { "source": "/employee-onboarding", "destination": "https://sentra-app.vercel.app/employee-onboarding" },
