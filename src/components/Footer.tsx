@@ -26,7 +26,7 @@ const footerLinks: FooterLinks = {
     { path: "/privacy", label: "Privacy Policy" },
   ],
   compliance: [
-    { path: "/data-transfer-agreement", label: "Data Transfer Agreement" },
+    // { path: "/data-transfer-agreement", label: "Data Transfer Agreement" },
     {
       path: "https://trust.delve.co/sentra",
       label: "Security",
