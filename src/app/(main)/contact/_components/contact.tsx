@@ -126,16 +126,16 @@ const Contact = () => {
               Contact Sales
             </h2>
             <p className="text-base md:text-lg text-foreground/70">
-              Tell us a bit about your team and what you&apos;re trying to accomplish. We&apos;ll follow up quickly.
+              Connect with our sales team to explore how we can support your use case.
             </p>
-            <div className="text-sm text-foreground/70">
-              Prefer email?{" "}
-              <a
-                className="text-foreground underline hover:no-underline"
-                href={`mailto:${SALES_EMAIL_ADDRESS}?subject=${encodeURIComponent("Contact Sales — Sentra")}`}
-              >
-                {SALES_EMAIL_ADDRESS}
-              </a>
+            <div className="mt-8 pt-8 border-t border-foreground/10 flex flex-col items-start text-left">
+              <blockquote className="text-base italic text-foreground/80 leading-relaxed mb-4">
+                “Of all the AI tools that I’ve tried, Sentra is actually useful. I make a million promises across zoom meetings, slack, and emails—faster than I can write them down, and Sentra is the only tool that allowed me to start catching onto them.”
+              </blockquote>
+              <cite className="not-italic">
+                <div className="font-medium text-foreground text-sm">Paul Rothemund</div>
+                <div className="text-xs text-foreground/60">VP of Research at Biostate.ai</div>
+              </cite>
             </div>
           </div>
 
