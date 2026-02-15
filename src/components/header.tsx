@@ -55,7 +55,7 @@ const Header = () => {
             href="/contact"
             className="h-8 inline-flex items-center text-sm bg-primary-600 text-background px-3 hover:opacity-80 duration-200 w-fit hover:cursor-pointer"
           >
-            Contact Sales
+            Get a Demo
           </Link>
         </div>
       </div>

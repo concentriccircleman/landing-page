@@ -11,6 +11,8 @@ interface ContactSalesFormValues {
   company: string;
   companySize: string;
   country: string;
+  heardAboutUs: string;
+  heardAboutUsOther: string;
   motivations: string;
 }
 
@@ -22,6 +24,8 @@ interface ContactSalesMetadata {
 
 const SALES_EMAIL_ADDRESS = "contact@sentra.app";
 const DEFAULT_COUNTRY_CODE = "US";
+const HEARD_ABOUT_US_OTHER_OPTION = "Other";
+const HEARD_ABOUT_US_OPTIONS = ["LinkedIn", "X", "Instagram", "Other"];
 
 const normalizeOptionLabel = (value: string) =>
   value
@@ -37,20 +41,33 @@ const Contact = () => {
     company: "",
     companySize: "",
     country: "",
+    heardAboutUs: "",
+    heardAboutUsOther: "",
     motivations: "",
   });
   const [submitErrorMessage, setSubmitErrorMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [didSubmitSuccessfully, setDidSubmitSuccessfully] = useState(false);
   const [metadata, setMetadata] = useState<ContactSalesMetadata | null>(null);
+  const isOtherHeardAboutUsSelected = formValues.heardAboutUs === HEARD_ABOUT_US_OTHER_OPTION;
+  const isMetadataReady =
+    metadata !== null &&
+    metadata.companySizeOptions.length > 0 &&
+    (metadata.countryInputMode !== "select" || metadata.countryOptions.length > 0);
 
   useEffect(() => {
     const loadMetadata = async () => {
       try {
         const response = await fetch("/api/contact-sales", { method: "GET" });
         const responseBody: unknown = await response.json().catch(() => null);
-        if (!response.ok) return;
-        if (!responseBody || typeof responseBody !== "object") return;
+        if (!response.ok) {
+          setMetadata(null);
+          return;
+        }
+        if (!responseBody || typeof responseBody !== "object") {
+          setMetadata(null);
+          return;
+        }
 
         const parsed = responseBody as Partial<ContactSalesMetadata>;
         if (
@@ -60,6 +77,7 @@ const Contact = () => {
             parsed.countryInputMode !== "select" &&
             parsed.countryInputMode !== "text")
         ) {
+          setMetadata(null);
           return;
         }
 
@@ -81,12 +99,44 @@ const Contact = () => {
     setSubmitErrorMessage(null);
     setDidSubmitSuccessfully(false);
 
+    if (!isMetadataReady) {
+      setSubmitErrorMessage("Please try again in a moment.");
+      return;
+    }
+
+    const trimmedFormValues: ContactSalesFormValues = {
+      workEmail: formValues.workEmail.trim(),
+      firstName: formValues.firstName.trim(),
+      lastName: formValues.lastName.trim(),
+      company: formValues.company.trim(),
+      companySize: formValues.companySize.trim(),
+      country: formValues.country.trim(),
+      heardAboutUs: formValues.heardAboutUs.trim(),
+      heardAboutUsOther: formValues.heardAboutUsOther.trim(),
+      motivations: formValues.motivations.trim(),
+    };
+
+    if (
+      !trimmedFormValues.workEmail ||
+      !trimmedFormValues.firstName ||
+      !trimmedFormValues.lastName ||
+      !trimmedFormValues.company ||
+      !trimmedFormValues.companySize ||
+      !trimmedFormValues.country ||
+      !trimmedFormValues.heardAboutUs ||
+      !trimmedFormValues.motivations ||
+      (trimmedFormValues.heardAboutUs === HEARD_ABOUT_US_OTHER_OPTION && !trimmedFormValues.heardAboutUsOther)
+    ) {
+      setSubmitErrorMessage("All fields are required.");
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       const response = await fetch("/api/contact-sales", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formValues),
+        body: JSON.stringify(trimmedFormValues),
       });
 
       const responseBody: unknown = await response.json().catch(() => null);
@@ -108,6 +158,8 @@ const Contact = () => {
         company: "",
         companySize: "",
         country: "",
+        heardAboutUs: "",
+        heardAboutUsOther: "",
         motivations: "",
       });
     } catch {
@@ -123,7 +175,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 md:p-12">
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl md:text-4xl font-medium text-foreground">
-              Contact Sales
+              Get a Demo
             </h2>
             <p className="text-base md:text-lg text-foreground/70">
               Connect with our sales team to explore how we can support your use case.
@@ -198,18 +250,12 @@ const Contact = () => {
                 value={formValues.companySize}
                 onChange={(event) => setFormValues({ ...formValues, companySize: event.target.value })}
                 required
+                disabled={!isMetadataReady}
               >
                 <NativeSelectOption value="" disabled>
-                  Select a company size
+                  {isMetadataReady ? "Select a company size" : "Loading company sizes"}
                 </NativeSelectOption>
-                {(metadata?.companySizeOptions?.length ? metadata.companySizeOptions : [
-                  "1-10",
-                  "11-50",
-                  "51-250",
-                  "251-1000",
-                  "1001-5000",
-                  "5001+",
-                ]).map((optionTitle) => (
+                {(metadata?.companySizeOptions ?? []).map((optionTitle) => (
                   <NativeSelectOption key={optionTitle} value={optionTitle}>
                     {optionTitle}
                   </NativeSelectOption>
@@ -219,7 +265,13 @@ const Contact = () => {
 
             <label className="flex flex-col gap-2">
               <span className="text-sm text-foreground/80">Country</span>
-              {metadata?.countryInputMode === "select" ? (
+              {!metadata ? (
+                <NativeSelect name="country" value="" required disabled>
+                  <NativeSelectOption value="" disabled>
+                    Loading countries
+                  </NativeSelectOption>
+                </NativeSelect>
+              ) : metadata.countryInputMode === "select" ? (
                 <NativeSelect
                   name="country"
                   value={formValues.country}
@@ -242,7 +294,7 @@ const Contact = () => {
                     </NativeSelectOption>
                   ))}
                 </NativeSelect>
-              ) : metadata?.countryInputMode === "location" ? (
+              ) : metadata.countryInputMode === "location" ? (
                 <NativeSelect
                   name="country"
                   value={formValues.country}
@@ -274,6 +326,51 @@ const Contact = () => {
             </label>
 
             <label className="flex flex-col gap-2">
+              <span className="text-sm text-foreground/80">How did you hear about us?</span>
+              <NativeSelect
+                name="heardAboutUs"
+                value={formValues.heardAboutUs}
+                onChange={(event) =>
+                  setFormValues((previousFormValues) => ({
+                    ...previousFormValues,
+                    heardAboutUs: event.target.value,
+                    heardAboutUsOther: event.target.value === HEARD_ABOUT_US_OTHER_OPTION
+                      ? previousFormValues.heardAboutUsOther
+                      : "",
+                  }))
+                }
+                required
+              >
+                <NativeSelectOption value="" disabled>
+                  Select an option
+                </NativeSelectOption>
+                {HEARD_ABOUT_US_OPTIONS.map((optionTitle) => (
+                  <NativeSelectOption key={optionTitle} value={optionTitle}>
+                    {optionTitle}
+                  </NativeSelectOption>
+                ))}
+              </NativeSelect>
+            </label>
+
+            {isOtherHeardAboutUsSelected && (
+              <label className="flex flex-col gap-2">
+                <span className="text-sm text-foreground/80">Please specify</span>
+                <input
+                  name="heardAboutUsOther"
+                  value={formValues.heardAboutUsOther}
+                  onChange={(event) =>
+                    setFormValues({
+                      ...formValues,
+                      heardAboutUsOther: event.target.value,
+                    })
+                  }
+                  className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                  required={isOtherHeardAboutUsSelected}
+                />
+              </label>
+            )}
+
+            <label className="flex flex-col gap-2">
               <span className="text-sm text-foreground/80">What motivated you to explore Sentra?</span>
               <textarea
                 name="motivations"
@@ -289,16 +386,16 @@ const Contact = () => {
               <button
                 type="submit"
                 className="inline-flex justify-center items-center bg-foreground text-background px-6 py-3 text-sm font-medium cursor-pointer hover:opacity-80 duration-200 disabled:opacity-60 disabled:pointer-events-none"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !isMetadataReady}
               >
-                {isSubmitting ? "Sending…" : "Contact Sales"}
+                {isSubmitting ? "Sending…" : "Get a Demo"}
               </button>
               {submitErrorMessage && (
                 <p className="text-xs text-foreground/70">
                   {submitErrorMessage} You can also email{" "}
                   <a
                     className="text-foreground underline hover:no-underline"
-                    href={`mailto:${SALES_EMAIL_ADDRESS}?subject=${encodeURIComponent("Contact Sales — Sentra")}`}
+                    href={`mailto:${SALES_EMAIL_ADDRESS}?subject=${encodeURIComponent("Get a Demo — Sentra")}`}
                   >
                     {SALES_EMAIL_ADDRESS}
                   </a>

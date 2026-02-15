@@ -10,6 +10,8 @@ interface ContactSalesWebhookPayload {
   company: string;
   companySize: string;
   country: string;
+  heardAboutUs: string;
+  heardAboutUsOther: string;
   motivations: string;
 }
 
@@ -45,6 +47,8 @@ interface ContactSalesWebhookResponse {
   ok: boolean;
   error?: string;
 }
+
+const HEARD_ABOUT_US_OTHER_OPTION = "Other";
 
 interface ContactSalesMetadataResponse {
   companySizeOptions: string[];
@@ -286,6 +290,8 @@ const isContactSalesWebhookPayload = (value: unknown): value is ContactSalesWebh
     "company",
     "companySize",
     "country",
+    "heardAboutUs",
+    "heardAboutUsOther",
     "motivations",
   ];
 
@@ -315,6 +321,8 @@ export const POST = async (request: Request) => {
     company: body.company.trim(),
     companySize: body.companySize.trim(),
     country: body.country.trim(),
+    heardAboutUs: body.heardAboutUs.trim(),
+    heardAboutUsOther: body.heardAboutUsOther.trim(),
     motivations: body.motivations.trim(),
   };
 
@@ -325,9 +333,14 @@ export const POST = async (request: Request) => {
     !trimmedPayload.company ||
     !trimmedPayload.companySize ||
     !trimmedPayload.country ||
+    !trimmedPayload.heardAboutUs ||
     !trimmedPayload.motivations
   ) {
     return createErrorResponse(400, "All fields are required.");
+  }
+
+  if (trimmedPayload.heardAboutUs === HEARD_ABOUT_US_OTHER_OPTION && !trimmedPayload.heardAboutUsOther) {
+    return createErrorResponse(400, "Please specify how you heard about us.");
   }
 
   const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedPayload.workEmail);
@@ -388,6 +401,7 @@ export const POST = async (request: Request) => {
 
   const companySizeListAttribute = findListAttributeByTitle(listAttributes, "Company Size");
   const motivationsListAttribute = findListAttributeByTitle(listAttributes, "Motivations");
+  const heardAboutUsListAttribute = findListAttributeByTitle(listAttributes, "Hear");
 
   const allCountryListAttributes = listAttributes.filter((attribute) => {
     const normalizedTitle = attribute.title ? normalizeKey(attribute.title) : "";
@@ -531,6 +545,20 @@ export const POST = async (request: Request) => {
     }
 
     entryValues[attributeIdentifier] = trimmedPayload.motivations;
+  }
+
+  if (heardAboutUsListAttribute) {
+    const attributeIdentifier =
+      heardAboutUsListAttribute.api_slug ?? heardAboutUsListAttribute.id?.attribute_id ?? null;
+    if (!attributeIdentifier) {
+      return createErrorResponse(500, "Attio list column is missing an identifier: How did you hear about us?.");
+    }
+
+    const heardAboutUsValue =
+      trimmedPayload.heardAboutUs === HEARD_ABOUT_US_OTHER_OPTION
+        ? trimmedPayload.heardAboutUsOther
+        : trimmedPayload.heardAboutUs;
+    entryValues[attributeIdentifier] = heardAboutUsValue;
   }
 
   for (const countryListAttribute of countryListAttributes) {

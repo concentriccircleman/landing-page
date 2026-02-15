@@ -98,7 +98,7 @@ const MobileMenu = () => {
                 }}
               >
                 <Link className="block w-full py-1" href="/contact" onClick={() => handleLinkClick("/contact")}>
-                  Contact Sales
+                  Get a Demo
                 </Link>
               </motion.li>
             </motion.ul>
