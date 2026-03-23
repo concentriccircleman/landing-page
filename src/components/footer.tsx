@@ -1,6 +1,7 @@
 "use client";
 
 import CustomLink from "./ui/custom-link";
+import PixelShimmer from "./pixel-shimmer";
 
 declare const DelveCookieConsent: {
   show: () => void;
@@ -41,8 +42,9 @@ const footerLinks: FooterLinks = {
 
 export default function Footer() {
   return (
-    <footer className="w-full z-20 bg-[#1a1a1f]">
-      <div className="max-w-screen-2xl mx-auto px-4 py-10">
+    <footer className="relative w-full z-20 bg-[#1a1a1f] overflow-hidden">
+      <PixelShimmer maxOpacity={0.12} />
+      <div className="relative z-10 max-w-screen-2xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-[11px] uppercase tracking-wider font-semibold text-[#808085] mb-4">Legal</h3>

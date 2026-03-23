@@ -1,8 +1,10 @@
 import Link from "next/link";
+import PixelShimmer from "@/components/pixel-shimmer";
 
 const CTA = () => {
   return (
     <section className="relative bg-[#1a1a1f] py-24 md:py-32 overflow-hidden">
+      <PixelShimmer />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,rgba(37,99,235,0.12)_0%,transparent_70%)]" />
       </div>
