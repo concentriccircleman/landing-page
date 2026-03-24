@@ -23,8 +23,8 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2.5 h-8 px-3.5 rounded-full bg-white text-[#1a1a1f]
-                      shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04),inset_0_0.75px_0_rgba(255,255,255,0.6)]
-                      hover:shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_6px_rgba(0,0,0,0.06),inset_0_0.75px_0_rgba(255,255,255,0.6)]
+                      shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04),0_3px_6px_rgba(0,0,0,0.04),inset_0_0.75px_0_rgba(255,255,255,0.6)]
+                      hover:shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.05),0_4px_8px_rgba(0,0,0,0.05),inset_0_0.75px_0_rgba(255,255,255,0.6)]
                       hover:-translate-y-px transition-all duration-200 active:scale-[0.97]"
                   >
                     <span
