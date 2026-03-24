@@ -30,6 +30,9 @@ export default function CursorTrail() {
     window.addEventListener("resize", resize);
 
     const onMove = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target?.closest("a, button, [role='button'], input, select, textarea, [data-no-trail]")) return;
+
       const cx = e.clientX;
       const cy = e.clientY;
       const cells = Math.ceil(RADIUS / CELL);

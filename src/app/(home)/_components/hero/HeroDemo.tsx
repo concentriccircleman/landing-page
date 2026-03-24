@@ -2,23 +2,23 @@
 
 import { useState, useCallback } from "react";
 
-type PageId = "home" | "memory" | "weekly-reports" | "meeting-notes" | "deep-research" | "risk-radar" | "chart" | "todo" | "apps";
+type PageId = "home" | "meeting-notes" | "deep-research" | "todo" | "connections" | "weekly-reports" | "risk-radar" | "integrations";
 
 const pageConfig: Record<PageId, { title: string; desc: string; hint: string }> = {
   home:             { title: "Home",            desc: "Welcome back, Shaurya",                                    hint: "Ask anything..." },
-  memory:           { title: "Memory",          desc: "Your organization's collective knowledge",                 hint: "Search organizational memory..." },
-  "weekly-reports": { title: "Weekly Reports",  desc: "AI-generated summaries of your week",                      hint: "Ask about this week's highlights..." },
-  "meeting-notes":  { title: "Meeting Notes",   desc: "Review and manage your meeting recordings",                hint: "Ask about meetings..." },
+  "meeting-notes":  { title: "Meetings",        desc: "Review and manage your meeting recordings",                hint: "Ask about meetings..." },
   "deep-research":  { title: "Deep Research",   desc: "AI-powered research across your data",                     hint: "Start a research query..." },
-  "risk-radar":     { title: "Risk Radar",      desc: "AI-detected risks and conflicts across your organization", hint: "Ask about risks, conflicts, or action items..." },
-  chart:            { title: "Reports",         desc: "Analytics and insights dashboard",                         hint: "Ask about trends or metrics..." },
   todo:             { title: "Commitments",     desc: "Your tasks and action items",                              hint: "Ask about your tasks..." },
-  apps:             { title: "Apps",            desc: "Connected integrations",                                   hint: "Search apps..." },
+  connections:      { title: "Connections",     desc: "Your network and contacts",                                hint: "Search connections..." },
+  "weekly-reports": { title: "Weekly Reports",  desc: "AI-generated summaries of your week",                      hint: "Ask about this week's highlights..." },
+  "risk-radar":     { title: "Risk Radar",      desc: "AI-detected risks and conflicts across your organization", hint: "Ask about risks, conflicts, or action items..." },
+  integrations:     { title: "Integrations",    desc: "Connected apps and services",                              hint: "Search integrations..." },
 };
 
 const navToPage: Record<string, PageId> = {
-  home: "home", memory: "memory", reports: "weekly-reports", meeting: "meeting-notes",
-  research: "deep-research", radar: "risk-radar", chart: "chart", todo: "todo", apps: "apps",
+  home: "home", meeting: "meeting-notes", research: "deep-research",
+  todo: "todo", connections: "connections", reports: "weekly-reports",
+  radar: "risk-radar", integrations: "integrations",
 };
 
 export default function HeroDemo() {
@@ -76,27 +76,26 @@ export default function HeroDemo() {
 
           <div className="flex flex-col gap-3 py-1.5">
             <div className="flex flex-col gap-px px-2.5">
+              <SectionHeader label="Personal" />
               <NavItem icon="home" label="Home" active={activePage === "home"} hovered={hoveredNav === "home"} onClick={handleNav} onHover={setHoveredNav} />
+              <NavItem icon="meeting" label="Meetings" active={activePage === "meeting-notes"} hovered={hoveredNav === "meeting"} onClick={handleNav} onHover={setHoveredNav} />
+              <NavItem icon="research" label="Deep Research" active={activePage === "deep-research"} hovered={hoveredNav === "research"} onClick={handleNav} onHover={setHoveredNav} />
+              <NavItem icon="todo" label="Commitments" active={activePage === "todo"} hovered={hoveredNav === "todo"} onClick={handleNav} onHover={setHoveredNav} />
+              <NavItem icon="connections" label="Connections" active={activePage === "connections"} hovered={hoveredNav === "connections"} onClick={handleNav} onHover={setHoveredNav} />
             </div>
             <div className="flex flex-col gap-px px-2.5">
               <SectionHeader label="Workspace" />
-              <NavItem icon="memory" label="Memory" active={activePage === "memory"} hovered={hoveredNav === "memory"} onClick={handleNav} onHover={setHoveredNav} />
               <NavItem icon="reports" label="Weekly Reports" active={activePage === "weekly-reports"} hovered={hoveredNav === "reports"} onClick={handleNav} onHover={setHoveredNav} />
-              <NavItem icon="meeting" label="Meeting Notes" active={activePage === "meeting-notes"} hovered={hoveredNav === "meeting"} onClick={handleNav} onHover={setHoveredNav} />
-              <NavItem icon="research" label="Deep Research" active={activePage === "deep-research"} hovered={hoveredNav === "research"} onClick={handleNav} onHover={setHoveredNav} />
               <NavItem icon="radar" label="Risk Radar" active={activePage === "risk-radar"} hovered={hoveredNav === "radar"} onClick={handleNav} onHover={setHoveredNav} />
-              <NavItem icon="chart" label="Reports" active={activePage === "chart"} hovered={hoveredNav === "chart"} onClick={handleNav} onHover={setHoveredNav} />
-            </div>
-            <div className="flex flex-col gap-px px-2.5">
-              <SectionHeader label="Personal" />
-              <NavItem icon="todo" label="Commitments" active={activePage === "todo"} hovered={hoveredNav === "todo"} onClick={handleNav} onHover={setHoveredNav} />
-              <NavItem icon="apps" label="Apps" active={activePage === "apps"} hovered={hoveredNav === "apps"} onClick={handleNav} onHover={setHoveredNav} />
+              <NavItem icon="integrations" label="Integrations" active={activePage === "integrations"} hovered={hoveredNav === "integrations"} onClick={handleNav} onHover={setHoveredNav} />
             </div>
           </div>
 
-          <div className="mt-auto flex flex-col gap-px px-2.5 pb-3">
-            <NavItem icon="help" label="Help" hovered={hoveredNav === "help"} onClick={() => {}} onHover={setHoveredNav} />
-            <NavItem icon="settings" label="Settings" hovered={hoveredNav === "settings"} onClick={() => {}} onHover={setHoveredNav} />
+          <div className="mt-auto flex flex-col gap-1 px-2.5 pb-3">
+            <div className="flex items-center gap-2 h-6 px-1 cursor-pointer group/user">
+              <span className="shrink-0 flex items-center justify-center" style={{ width: 16, height: 16, borderRadius: "50%", background: "#2563eb", fontSize: 7, fontWeight: 700, color: "#fff" }}>SN</span>
+              <span className="group-hover/user:text-[#18181b] transition-colors" style={{ fontSize: 11, fontWeight: 500, color: "#52525b" }}>Shaurya Narang</span>
+            </div>
           </div>
         </div>
 
@@ -186,12 +185,12 @@ interface ContentProps {
 
 function PageContent({ page, expandedRisk, onToggleRisk, checkedTodos, onToggleTodo }: ContentProps) {
   switch (page) {
-    case "risk-radar": return <RiskRadarContent expandedRisk={expandedRisk} onToggleRisk={onToggleRisk} />;
-    case "meeting-notes": return <MeetingNotesContent />;
-    case "memory": return <MemoryContent />;
-    case "weekly-reports": return <WeeklyReportsContent />;
-    case "todo": return <CommitmentsContent checkedTodos={checkedTodos} onToggleTodo={onToggleTodo} />;
     case "home": return <HomeContent />;
+    case "meeting-notes": return <MeetingNotesContent />;
+    case "deep-research": return <GenericContent page={page} />;
+    case "todo": return <CommitmentsContent checkedTodos={checkedTodos} onToggleTodo={onToggleTodo} />;
+    case "weekly-reports": return <WeeklyReportsContent />;
+    case "risk-radar": return <RiskRadarContent expandedRisk={expandedRisk} onToggleRisk={onToggleRisk} />;
     default: return <GenericContent page={page} />;
   }
 }
@@ -308,7 +307,7 @@ function HomeContent() {
       <div className="flex flex-col gap-1.5">
         <ActivityRow icon="radar" text="New critical risk: SoftBank PoC timeline conflict" time="2h ago" />
         <ActivityRow icon="meeting" text="Q1 Planning Review notes ready" time="3h ago" />
-        <ActivityRow icon="memory" text="New decision captured: CSS Modules for styling" time="5h ago" />
+        <ActivityRow icon="todo" text="New decision captured: CSS Modules for styling" time="5h ago" />
         <ActivityRow icon="todo" text="Carol assigned: Sync on PoC timeline" time="6h ago" />
       </div>
     </>
@@ -343,16 +342,14 @@ function SectionHeader({ label }: { label: string }) {
 
 const iconPaths: Record<string, React.ReactNode> = {
   home: <path d="M3 9.5l7-5.5 7 5.5v8.5a1 1 0 01-1 1h-4v-5h-4v5H4a1 1 0 01-1-1z" />,
-  memory: <><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6" /><path d="M16 13H8M16 17H8M10 9H8" /></>,
-  reports: <><path d="M18 20V10M12 20V4M6 20v-6" /></>,
-  meeting: <><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6" /><circle cx="11" cy="15" r="2" /><path d="M11 13v-2" /></>,
+  meeting: <><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></>,
   research: <><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/><path d="M2 12h20"/></>,
-  radar: <><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 01-3.46 0" /></>,
-  chart: <><path d="M18 20V10M12 20V4M6 20v-6" /></>,
   todo: <><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6" /><path d="M9 15l2 2 4-4" /></>,
-  apps: <><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></>,
-  help: <><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></>,
-  settings: <><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.32 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></>,
+  connections: <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></>,
+  reports: <><path d="M18 20V10M12 20V4M6 20v-6" /></>,
+  radar: <><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 01-3.46 0" /></>,
+  integrations: <><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" /></>,
+  sage: <><path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/></>,
 };
 
 function NavItem({ icon, label, active, hovered, onClick, onHover }: { icon: string; label: string; active?: boolean; hovered?: boolean; onClick?: (icon: string) => void; onHover?: (icon: string | null) => void }) {
@@ -436,11 +433,12 @@ function RiskCard({ severity, title, synthesis, sources, date, people, expanded,
       style={{
         background: expanded ? sev.bg : "#fff",
         borderRadius: 8,
+        border: expanded ? `1px solid ${sev.dot}33` : "1px solid #e4e4e7",
         boxShadow: expanded
-          ? `0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04), 0 0 0 1px ${sev.dot}22`
+          ? `0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)`
           : "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)",
         overflow: "hidden",
-        transition: "box-shadow 0.2s ease, background 0.2s ease",
+        transition: "box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease",
       }}
       onMouseEnter={e => { if (!expanded) (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)"; }}
       onMouseLeave={e => { if (!expanded) (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)"; }}

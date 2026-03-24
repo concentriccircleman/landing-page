@@ -8,7 +8,7 @@ import {
 
 interface BlogIndexProps {
   category?: string;
-};
+}
 
 const formatBlogDate = (value: string) => {
   const parsedDate = new Date(value);
@@ -29,9 +29,9 @@ const BlogIndex = async ({ category }: BlogIndexProps) => {
 
   return (
     <div className="w-full px-4">
-      <h1 className="text-3xl/snug font-medium tracking-tight text-foreground">
+      <h1 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f] mb-10">
         Blog
-        <sup className="ml-0.5 align-super text-lg font-medium leading-none">
+        <sup className="ml-1 align-super text-lg font-medium leading-none text-[#a1a1aa]">
           {filteredPosts.length}
         </sup>
       </h1>
@@ -50,8 +50,8 @@ const BlogIndex = async ({ category }: BlogIndexProps) => {
                   aria-current={selectedCategory === c ? "page" : undefined}
                   className={
                     selectedCategory === c
-                      ? "block text-sm font-semibold text-foreground"
-                      : "block text-sm font-semibold text-muted hover:text-foreground duration-200"
+                      ? "block text-[13px] font-semibold text-[#2563eb]"
+                      : "block text-[13px] font-semibold text-[#a1a1aa] hover:text-[#1a1a1f] duration-200"
                   }
                 >
                   {c}
@@ -62,23 +62,23 @@ const BlogIndex = async ({ category }: BlogIndexProps) => {
         </nav>
 
         <div className="max-w-3xl mx-auto">
-          <ul className="space-y-6">
+          <ul className="divide-y divide-[#ebebeb]">
             {filteredPosts.map((p) => (
               <li key={p.slug}>
                 <Link
                   href={`/blog/${p.slug}`}
-                  className="block px-3 py-3 hover:bg-foreground/5 duration-200 md:-mx-3"
+                  className="block px-4 py-5 hover:bg-[#f0f0f2] duration-200 md:-mx-4 transition-colors"
                 >
-                  <div className="text-lg font-medium text-foreground">
+                  <div className="text-[16px] font-semibold text-[#1a1a1f]">
                     {p.metadata.title}
                   </div>
                   {p.metadata.description ? (
-                    <p className="mt-1 text-sm text-foreground/70">
+                    <p className="mt-1.5 text-[14px] text-[#52525b] leading-relaxed">
                       {p.metadata.description}
                     </p>
                   ) : null}
                   {p.metadata.category || p.metadata.date ? (
-                    <div className="mt-2 text-sm text-muted">
+                    <div className="mt-2 text-[13px] text-[#a1a1aa]">
                       {p.metadata.category ? (
                         <span>{p.metadata.category}</span>
                       ) : null}
@@ -95,8 +95,8 @@ const BlogIndex = async ({ category }: BlogIndexProps) => {
             ))}
 
             {selectedCategory && filteredPosts.length === 0 ? (
-              <li>
-                <p className="text-sm text-foreground/70">
+              <li className="py-5">
+                <p className="text-[14px] text-[#a1a1aa]">
                   No posts in {selectedCategory}.
                 </p>
               </li>

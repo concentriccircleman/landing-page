@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FeatureCards />
-      <div className="bg-[#f8f8f8] py-24 md:py-32">
+      <div className="bg-[#f8f8f8] pt-0 pb-24 md:pt-0 md:pb-32">
         <Security />
       </div>
       <CTA />

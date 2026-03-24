@@ -6,7 +6,6 @@ import CursorTrail from "@/components/cursor-trail";
 
 import { Providers } from "@/app/providers";
 import { usePathname } from "next/navigation";
-import { cn } from "@/utils/cn";
 
 export default function Layout({
   children,
@@ -15,7 +14,6 @@ export default function Layout({
 }>) {
   const pathname = usePathname();
   const isLanding = pathname === "/";
-  const isContact = pathname === "/contact";
 
   const isBlogRoute = pathname.startsWith("/blog");
   const validRoutes = [
@@ -24,24 +22,18 @@ export default function Layout({
     "/contact",
     "/manifesto",
     "/careers",
-    "/contact",
     "/privacy",
     "/terms",
     "/data-privacy",
     "/blog",
   ];
-  
+
   const isNotFound = !validRoutes.includes(pathname) && !isBlogRoute;
 
   return (
     <Providers>
       <CursorTrail />
-      <div
-        className={cn(
-          "relative min-h-screen flex flex-col",
-          isContact && "contact-gradient",
-        )}
-      >
+      <div className="relative min-h-screen flex flex-col bg-[#f8f8f8]">
         {isLanding ? (
           <>
             <Header />
@@ -57,17 +49,12 @@ export default function Layout({
             </main>
           </>
         ) : (
-          <div
-            className={cn(
-              "flex-1 flex flex-col max-w-screen-2xl mx-auto w-full",
-              !isContact && "bg-background",
-            )}
-          >
+          <>
             <Header />
-            <main className="flex-1 flex flex-col py-40">
+            <main className="flex-1 flex flex-col py-40 max-w-screen-2xl mx-auto w-full">
               {children}
             </main>
-          </div>
+          </>
         )}
         <Footer />
       </div>

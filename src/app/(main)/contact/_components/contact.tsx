@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { countryOptions } from "@/lib/country-options";
 import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select";
+import FadeIn from "@/components/fade-in";
 
 interface ContactSalesFormValues {
   workEmail: string;
@@ -171,34 +172,37 @@ const Contact = () => {
 
   return (
     <div className="w-full px-4">
-      <div className="border border-foreground/15 bg-background">
+      <div className="border border-[#ebebeb] bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 md:p-12">
+          <FadeIn>
           <div className="flex flex-col gap-4">
-            <h2 className="text-3xl md:text-4xl font-medium text-foreground">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">
               Get a Demo
             </h2>
-            <p className="text-base md:text-lg text-foreground/70">
+            <p className="text-[15px] text-[#a1a1aa] leading-relaxed">
               Connect with our sales team to explore how we can support your use case.
             </p>
-            <div className="mt-8 pt-8 border-t border-foreground/10 flex flex-col items-start text-left">
-              <blockquote className="text-base italic text-foreground/80 leading-relaxed mb-4">
+            <div className="mt-8 pt-8 border-t border-[#ebebeb] flex flex-col items-start text-left">
+              <blockquote className="text-[15px] italic text-[#52525b] leading-relaxed mb-4">
                 “Of all the AI tools that I’ve tried, Sentra is actually useful. I make a million promises across zoom meetings, slack, and emails—faster than I can write them down, and Sentra is the only tool that allowed me to start catching onto them.”
               </blockquote>
               <cite className="not-italic">
-                <div className="font-medium text-foreground text-sm">Paul Rothemund</div>
-                <div className="text-xs text-foreground/60">VP of Research at Biostate.ai</div>
+                <div className="font-semibold text-[#1a1a1f] text-[13px]">Paul Rothemund</div>
+                <div className="text-[12px] text-[#a1a1aa]">VP of Research at Biostate.ai</div>
               </cite>
             </div>
           </div>
+          </FadeIn>
 
+          <FadeIn delay={100}>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <label className="flex flex-col gap-2">
-              <span className="text-sm text-foreground/80">Work email</span>
+              <span className="text-[13px] text-[#52525b]">Work email</span>
               <input
                 name="workEmail"
                 value={formValues.workEmail}
                 onChange={(event) => setFormValues({ ...formValues, workEmail: event.target.value })}
-                className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
                 autoComplete="email"
                 type="email"
                 required
@@ -207,24 +211,24 @@ const Contact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <label className="flex flex-col gap-2">
-                <span className="text-sm text-foreground/80">First name</span>
+                <span className="text-[13px] text-[#52525b]">First name</span>
                 <input
                   name="firstName"
                   value={formValues.firstName}
                   onChange={(event) => setFormValues({ ...formValues, firstName: event.target.value })}
-                  className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
                   autoComplete="given-name"
                   required
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-sm text-foreground/80">Last name</span>
+                <span className="text-[13px] text-[#52525b]">Last name</span>
                 <input
                   name="lastName"
                   value={formValues.lastName}
                   onChange={(event) => setFormValues({ ...formValues, lastName: event.target.value })}
-                  className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
                   autoComplete="family-name"
                   required
                 />
@@ -232,19 +236,19 @@ const Contact = () => {
             </div>
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm text-foreground/80">Company</span>
+              <span className="text-[13px] text-[#52525b]">Company</span>
               <input
                 name="company"
                 value={formValues.company}
                 onChange={(event) => setFormValues({ ...formValues, company: event.target.value })}
-                className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
                 autoComplete="organization"
                 required
               />
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm text-foreground/80">Company size</span>
+              <span className="text-[13px] text-[#52525b]">Company size</span>
               <NativeSelect
                 name="companySize"
                 value={formValues.companySize}
@@ -264,7 +268,7 @@ const Contact = () => {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm text-foreground/80">Country</span>
+              <span className="text-[13px] text-[#52525b]">Country</span>
               {!metadata ? (
                 <NativeSelect name="country" value="" required disabled>
                   <NativeSelectOption value="" disabled>
@@ -318,7 +322,7 @@ const Contact = () => {
                   name="country"
                   value={formValues.country}
                   onChange={(event) => setFormValues({ ...formValues, country: event.target.value })}
-                  className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
                   autoComplete="country-name"
                   required
                 />
@@ -326,7 +330,7 @@ const Contact = () => {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm text-foreground/80">How did you hear about us?</span>
+              <span className="text-[13px] text-[#52525b]">How did you hear about us?</span>
               <NativeSelect
                 name="heardAboutUs"
                 value={formValues.heardAboutUs}
@@ -354,7 +358,7 @@ const Contact = () => {
 
             {isOtherHeardAboutUsSelected && (
               <label className="flex flex-col gap-2">
-                <span className="text-sm text-foreground/80">Please specify</span>
+                <span className="text-[13px] text-[#52525b]">Please specify</span>
                 <input
                   name="heardAboutUsOther"
                   value={formValues.heardAboutUsOther}
@@ -364,14 +368,14 @@ const Contact = () => {
                       heardAboutUsOther: event.target.value,
                     })
                   }
-                  className="w-full h-10 bg-background text-foreground border border-foreground/20 px-4 py-2 text-sm focus:outline-none focus:border-foreground/60"
+                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
                   required={isOtherHeardAboutUsSelected}
                 />
               </label>
             )}
 
             <label className="flex flex-col gap-2">
-              <span className="text-sm text-foreground/80">What motivated you to explore Sentra?</span>
+              <span className="text-[13px] text-[#52525b]">What motivated you to explore Sentra?</span>
               <textarea
                 name="motivations"
                 value={formValues.motivations}
@@ -385,16 +389,16 @@ const Contact = () => {
             <div className="flex flex-col gap-2">
               <button
                 type="submit"
-                className="inline-flex justify-center items-center bg-foreground text-background px-6 py-3 text-sm font-medium cursor-pointer hover:opacity-80 duration-200 disabled:opacity-60 disabled:pointer-events-none"
+                className="inline-flex justify-center items-center bg-brand text-[#f0f0f0] px-8 py-3.5 text-[14px] font-medium rounded-lg cursor-pointer hover:brightness-110 hover:-translate-y-px duration-200 shadow-[0_0_0_1px_#1e40af,0_2px_4px_rgba(37,99,235,0.3),0_6px_16px_rgba(37,99,235,0.2),0_12px_32px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_0_1px_#1e40af,0_4px_8px_rgba(37,99,235,0.35),0_12px_28px_rgba(37,99,235,0.25),0_20px_48px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)] disabled:opacity-60 disabled:pointer-events-none"
                 disabled={isSubmitting || !isMetadataReady}
               >
                 {isSubmitting ? "Sending…" : "Get a Demo"}
               </button>
               {submitErrorMessage && (
-                <p className="text-xs text-foreground/70">
+                <p className="text-xs text-[#52525b]">
                   {submitErrorMessage} You can also email{" "}
                   <a
-                    className="text-foreground underline hover:no-underline"
+                    className="text-[#1a1a1f] underline hover:no-underline"
                     href={`mailto:${SALES_EMAIL_ADDRESS}?subject=${encodeURIComponent("Get a Demo — Sentra")}`}
                   >
                     {SALES_EMAIL_ADDRESS}
@@ -403,12 +407,13 @@ const Contact = () => {
                 </p>
               )}
               {didSubmitSuccessfully && (
-                <p className="text-xs text-foreground/70">
+                <p className="text-xs text-[#52525b]">
                   Submitted. We&apos;ll follow up shortly.
                 </p>
               )}
             </div>
           </form>
+          </FadeIn>
         </div>
       </div>
     </div>

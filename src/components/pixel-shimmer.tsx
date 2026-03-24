@@ -3,10 +3,10 @@
 import { useEffect, useRef } from "react";
 
 const CELL = 5;
-const SPAWN_RATE_PER_1000 = 80;
-const FADE_RATE = 0.008;
+const SPAWN_RATE_PER_1000 = 20;
+const FADE_RATE = 0.003;
 
-export default function PixelShimmer({ maxOpacity = 0.75 }: { maxOpacity?: number }) {
+export default function PixelShimmer({ maxOpacity = 0.15 }: { maxOpacity?: number }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const gridRef = useRef<Map<string, number>>(new Map());
   const animRef = useRef<number>(0);

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { ibmPlexMono } from "@/utils/fonts";
+import PageHeader from "@/components/page-header";
+import FadeIn from "@/components/fade-in";
 
 interface CareersRole {
   title: string;
@@ -44,43 +47,43 @@ const CAREERS_ROLES: CareersRole[] = [
 const Careers = () => {
   return (
     <section className="w-full px-4">
-      <h1 className="text-3xl/snug font-medium tracking-tight text-foreground">
-        Careers
-      </h1>
+      <PageHeader title="Careers" subtitle="Join us and help build the future of organizational intelligence" />
 
-      <div className="mt-6 space-y-10">
-        <div className="w-full">
-          <ul className="w-full space-y-2">
-            {CAREERS_ROLES.map((careersRole) => (
-              <li key={careersRole.title}>
-                <Link
-                  href={careersRole.ashbyUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block w-full py-3 sm:-mx-4 sm:px-4 sm:hover:bg-foreground/5 sm:transition-colors"
-                >
-                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
-                    <div className="text-sm font-medium text-foreground sm:flex-1">
-                      {careersRole.title}
+      <FadeIn delay={100}>
+        <div className="space-y-3">
+          {CAREERS_ROLES.map((role, i) => (
+            <FadeIn key={role.title} delay={100 + i * 50}>
+              <Link
+                href={role.ashbyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group block border border-[#ebebeb] bg-white p-5 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
+              >
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex-1">
+                    <div className="text-[14px] font-semibold text-[#1a1a1f] group-hover:text-[#2563eb] transition-colors duration-150">
+                      {role.title}
                     </div>
-                    <div className="text-sm text-foreground/70 sm:w-56 sm:shrink-0">
-                      {careersRole.location}
-                    </div>
-                    <div
-                      className={`text-sm text-secondary sm:hover:text-foreground sm:transition-colors sm:ml-auto sm:w-40 sm:shrink-0 sm:text-right ${ibmPlexMono.className}`}
-                    >
-                      {careersRole.department}
+                    <div className="text-[13px] text-[#a1a1aa] mt-1">
+                      {role.location}
                     </div>
                   </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[12px] font-medium text-[#52525b] bg-[#f0f0f2] px-2.5 py-1">
+                      {role.department}
+                    </span>
+                    <svg className="w-4 h-4 text-[#a1a1aa] group-hover:text-[#2563eb] transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            </FadeIn>
+          ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };
 
 export default Careers;
-

@@ -1,7 +1,4 @@
-"use client";
-
 import Image, { type ImageProps } from "next/image";
-import UnifiedMemoryAnimation from "./animations/unified-memory";
 import unifiedKnowledgeImage from "@/assets/illustrations/unified-knowledge.svg";
 import alignmentImage from "@/assets/illustrations/alignment.svg";
 import misalignmentRadarImage from "@/assets/illustrations/misalignment-radar.svg";
@@ -32,7 +29,7 @@ const FEATURES: Feature[] = [
       "Sentra understands how the company changes by creating a unified timeline of decisions and commitments. Every meeting, document, and conversation becomes part of a living record that your entire organization can draw from.",
     imageSrc: unifiedKnowledgeImage,
     imageAlt: "Unified knowledge timeline visualization",
-    animation: <UnifiedMemoryAnimation />,
+    animation: undefined,
     icon: (
       <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3zm0 5h16" />
@@ -153,41 +150,157 @@ const FEATURES: Feature[] = [
   },
 ];
 
-function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
+const TAB_H = 30;
+const NAV_H = 80;
+const SIDE_PAD = 32;
+const SCROLL_DWELL = 60;
+const SCROLL_DWELL_LAST = 60;
+
+const MARK = 10;
+const MARK_COLOR = "#c4c4c8";
+
+function CornerMarks() {
+  const b = MARK_COLOR;
+  return (
+    <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <span style={{ position: "absolute", top: 8, left: 8, width: MARK, height: 1, background: b }} />
+      <span style={{ position: "absolute", top: 8, left: 8, width: 1, height: MARK, background: b }} />
+      <span style={{ position: "absolute", top: 8, right: 8, width: MARK, height: 1, background: b }} />
+      <span style={{ position: "absolute", top: 8, right: 8, width: 1, height: MARK, background: b }} />
+      <span style={{ position: "absolute", bottom: 8, left: 8, width: MARK, height: 1, background: b }} />
+      <span style={{ position: "absolute", bottom: 8, left: 8, width: 1, height: MARK, background: b }} />
+      <span style={{ position: "absolute", bottom: 8, right: 8, width: MARK, height: 1, background: b }} />
+      <span style={{ position: "absolute", bottom: 8, right: 8, width: 1, height: MARK, background: b }} />
+    </div>
+  );
+}
+
+function FeatureCard({ features, index }: { features: Feature[]; index: number }) {
+  const feature = features[index];
+  const isLast = index === features.length - 1;
+  const dwell = isLast ? SCROLL_DWELL_LAST : SCROLL_DWELL;
+
   return (
     <div
-      className="sticky top-0 w-full h-screen"
-      style={{ zIndex: index + 1 }}
+      className="sticky w-full"
+      style={{
+        top: NAV_H,
+        height: `calc(100vh - ${NAV_H}px + ${dwell}vh)`,
+        zIndex: index + 1,
+      }}
     >
-      <div className="bg-[#f8f8f8] h-full flex flex-col">
-        <div className="max-w-screen-2xl mx-auto w-full px-4 flex-1 flex items-center">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full py-8">
-            {/* Text side */}
-            <div className="flex flex-col justify-center md:w-[40%] shrink-0">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 bg-brand flex items-center justify-center flex-shrink-0">
+      {/* Tab strip — transparent so previous cards' tabs show through */}
+      <div
+        className="flex items-end"
+        style={{ height: TAB_H, padding: `0 ${SIDE_PAD}px` }}
+      >
+        {features.slice(0, index + 1).map((f, i) => {
+          const isCurrent = i === index;
+          return (
+            <div
+              key={f.id}
+              className="flex items-center gap-1.5 px-3 shrink-0"
+              style={{
+                height: TAB_H - 2,
+                visibility: isCurrent ? "visible" : "hidden",
+                background: "#f8f8f8",
+                borderTop: "1px solid #e0e0e3",
+                borderLeft: "1px solid #e0e0e3",
+                borderRight: "1px solid #e0e0e3",
+                borderBottom: "1px solid #f8f8f8",
+                borderRadius: "3px 3px 0 0",
+                marginLeft: i > 0 ? -1 : 0,
+              }}
+            >
+              <span className="text-[10px] font-mono whitespace-nowrap text-[#a1a1aa]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.1em] font-medium whitespace-nowrap text-[#52525b]">
+                {f.label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Card body */}
+      <div
+        className="overflow-hidden relative"
+        style={{
+          height: `calc(100vh - ${NAV_H + TAB_H}px)`,
+          margin: `0 ${SIDE_PAD}px`,
+          background: "#f8f8f8",
+          border: "1px solid #e0e0e3",
+          borderTop: "1px solid #e0e0e3",
+        }}
+      >
+        {/* Dot grid texture */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(circle, #d4d4d8 0.5px, transparent 0.5px)",
+            backgroundSize: "24px 24px",
+            opacity: 0.4,
+          }}
+        />
+        <div className="relative z-10 max-w-screen-xl mx-auto w-full px-8 md:px-12 h-full flex items-center">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 w-full py-8">
+            <div className="relative flex flex-col justify-center md:w-[42%] shrink-0">
+              {/* Large faded feature number */}
+              <span
+                className="absolute -top-6 -left-2 select-none pointer-events-none font-semibold tabular-nums"
+                style={{
+                  fontSize: 120,
+                  lineHeight: 1,
+                  color: "rgba(0,0,0,0.025)",
+                  letterSpacing: "-0.04em",
+                }}
+                aria-hidden="true"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="relative">
+                <div className="w-6 h-6 bg-brand flex items-center justify-center mb-4 rounded-[3px]">
                   {feature.icon}
                 </div>
-                <span className="text-[11px] uppercase tracking-[0.15em] font-medium text-[#a1a1aa]">
-                  {feature.label}
+                <h3 className="text-2xl md:text-3xl lg:text-[2.25rem] font-semibold tracking-tighter text-[#1a1a1f] leading-[1.15] mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-[15px] md:text-base text-[#71717a] leading-relaxed max-w-lg">
+                  {feature.description}
+                </p>
+              </div>
+              {/* Progress indicator */}
+              <div
+                className="hidden md:flex items-center gap-2 mt-8"
+                aria-hidden="true"
+              >
+                {features.map((_, pi) => (
+                  <span
+                    key={pi}
+                    style={{
+                      width: pi === index ? 16 : 4,
+                      height: 2,
+                      borderRadius: 1,
+                      background: pi === index ? "#2563eb" : "#d4d4d8",
+                      transition: "width 0.3s, background 0.3s",
+                    }}
+                  />
+                ))}
+                <span className="text-[10px] font-mono text-[#a1a1aa] ml-1.5">
+                  {String(index + 1).padStart(2, "0")}/{String(features.length).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="text-2xl md:text-3xl lg:text-[2.25rem] font-semibold tracking-tighter text-[#1a1a1f] leading-[1.15] mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-[15px] md:text-base text-[#52525b] leading-relaxed max-w-lg">
-                {feature.description}
-              </p>
             </div>
 
-            {/* Visual side */}
             <div className="flex-1 flex items-center justify-center">
               {feature.animation ? (
-                <div className="w-full aspect-square max-h-[520px] bg-[#f0f0f2] border border-[#e4e4e7] overflow-hidden">
+                <div className="relative w-full aspect-square max-h-[520px] bg-white border border-[#e4e4e7] overflow-hidden rounded-sm">
                   {feature.animation}
+                  <CornerMarks />
                 </div>
               ) : (
-                <div className="w-full aspect-[4/3] max-h-[480px] bg-[#f0f0f2] border border-[#e4e4e7] flex items-center justify-center p-8 md:p-12">
+                <div className="relative w-full aspect-[4/3] max-h-[480px] bg-white border border-[#e4e4e7] flex items-center justify-center p-8 md:p-12 rounded-sm">
                   <Image
                     src={feature.imageSrc}
                     alt={feature.imageAlt}
@@ -195,6 +308,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
                     height={400}
                     className="w-full h-auto max-h-[360px] object-contain"
                   />
+                  <CornerMarks />
                 </div>
               )}
             </div>
@@ -207,9 +321,9 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
 
 export default function FeatureCards() {
   return (
-    <section className="relative bg-[#f8f8f8]">
-      {FEATURES.map((feature, i) => (
-        <FeatureCard key={feature.id} feature={feature} index={i} />
+    <section className="relative" style={{ background: "#f8f8f8" }}>
+      {FEATURES.map((_, i) => (
+        <FeatureCard key={FEATURES[i].id} features={FEATURES} index={i} />
       ))}
     </section>
   );

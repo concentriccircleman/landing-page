@@ -35,15 +35,15 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
       : null;
 
   const breadcrumb = (
-    <nav aria-label="Breadcrumb" className="text-sm/snug font-medium">
+    <nav aria-label="Breadcrumb" className="text-[13px] font-medium">
       <ol className="flex items-center gap-1.5">
         <li>
-          <Link href="/blog" className="text-muted hover:text-brand duration-200">
+          <Link href="/blog" className="text-[#a1a1aa] hover:text-[#2563eb] duration-200">
             Blog
           </Link>
         </li>
-        <li aria-hidden="true" className="text-muted">/</li>
-        <li className="text-foreground truncate">{metadata.title}</li>
+        <li aria-hidden="true" className="text-[#a1a1aa]">/</li>
+        <li className="text-[#1a1a1f] truncate">{metadata.title}</li>
       </ol>
     </nav>
   );
@@ -52,8 +52,8 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
     <div className="space-y-4">
       {metadata.date && (
         <div>
-          <div className="text-sm font-semibold text-foreground">Date:</div>
-          <div className="mt-1 text-sm font-medium text-muted">
+          <div className="text-[12px] font-semibold text-[#1a1a1f] uppercase tracking-wider">Date</div>
+          <div className="mt-1 text-[13px] text-[#a1a1aa]">
             {formatBlogDate(metadata.date)}
           </div>
         </div>
@@ -61,8 +61,8 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
 
       {updatedDate ? (
         <div>
-          <div className="text-sm font-semibold text-foreground">Last updated:</div>
-          <div className="mt-1 text-sm font-medium text-muted">
+          <div className="text-[12px] font-semibold text-[#1a1a1f] uppercase tracking-wider">Last updated</div>
+          <div className="mt-1 text-[13px] text-[#a1a1aa]">
             {formatBlogDate(updatedDate)}
           </div>
         </div>
@@ -70,19 +70,19 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
 
       {metadata.category && (
         <div>
-          <div className="text-sm font-semibold text-foreground">Category:</div>
-          <div className="mt-1 text-sm font-medium text-muted">{metadata.category}</div>
+          <div className="text-[12px] font-semibold text-[#1a1a1f] uppercase tracking-wider">Category</div>
+          <div className="mt-1 text-[13px] text-[#a1a1aa]">{metadata.category}</div>
         </div>
       )}
 
       {authors.length > 0 ? (
         <div>
-          <div className="text-sm font-semibold text-foreground">
-            {getAuthorLabel(authors)}:
+          <div className="text-[12px] font-semibold text-[#1a1a1f] uppercase tracking-wider">
+            {getAuthorLabel(authors)}
           </div>
           <ul className="mt-1 space-y-1">
             {authors.map((authorName) => (
-              <li key={authorName} className="text-sm font-medium text-muted">
+              <li key={authorName} className="text-[13px] text-[#a1a1aa]">
                 {authorName}
               </li>
             ))}
@@ -113,10 +113,10 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
               <div className="mb-2">
                 {breadcrumb}
               </div>
-              <h1 className="text-3xl font-medium text-foreground">
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">
                 {metadata.title}
               </h1>
-              <div className="lg:hidden space-y-4 p-4 bg-sh-background">
+              <div className="lg:hidden space-y-4 p-4 bg-white border border-[#ebebeb]">
                 <div className="text-left">
                   {metadataDetails}
                 </div>
