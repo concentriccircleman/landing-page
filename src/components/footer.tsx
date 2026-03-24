@@ -36,6 +36,7 @@ const footerLinks: FooterLinks = {
     { path: "/about", label: "About" },
     { path: "/manifesto", label: "Manifesto" },
     { path: "/contact", label: "Enterprise" },
+    { path: "/pricing", label: "Pricing" },
     { path: "/blog", label: "Blog" },
     { path: "/careers", label: "Careers" },
   ],
