@@ -18,6 +18,7 @@ interface Feature {
   imageAlt: string;
   icon: React.ReactNode;
   animation?: React.ReactNode;
+  isNew?: boolean;
 }
 
 const FEATURES: Feature[] = [
@@ -33,6 +34,21 @@ const FEATURES: Feature[] = [
     icon: (
       <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3zm0 5h16" />
+      </svg>
+    ),
+  },
+  {
+    id: "meeting-notes",
+    label: "Meeting Notes",
+    title: "Smarter meeting notes, written for you",
+    description:
+      "Sentra automatically captures, structures, and enriches your meeting notes in real time. Key decisions, action items, and context are surfaced instantly — so your team stays aligned without lifting a finger.",
+    imageSrc: meetingsImage,
+    imageAlt: "Auto meeting notes placeholder",
+    isNew: true,
+    icon: (
+      <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
       </svg>
     ),
   },
@@ -260,8 +276,15 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div className="relative">
-                <div className="w-6 h-6 bg-brand flex items-center justify-center mb-4 rounded-sm">
-                  {feature.icon}
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-6 h-6 bg-brand flex items-center justify-center rounded-sm">
+                    {feature.icon}
+                  </div>
+                  {feature.isNew && (
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-brand bg-[#eff6ff] border border-[#bfdbfe] px-2 py-0.5 rounded-full">
+                      New
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-2xl md:text-3xl lg:text-[2.25rem] font-semibold tracking-tighter text-[#1a1a1f] leading-[1.15] mb-4">
                   {feature.title}
