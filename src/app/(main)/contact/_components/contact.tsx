@@ -195,14 +195,14 @@ const Contact = () => {
           </FadeIn>
 
           <FadeIn delay={100}>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 border-l border-[#ebebeb] p-8 md:p-14 bg-[#fafafa]">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 border-l border-[#ebebeb] p-8 md:p-14 bg-[#fafafa]">
             <label className="flex flex-col gap-2">
-              <span className="text-[13px] text-[#52525b]">Work email</span>
+              <span className="text-[13px] font-medium text-[#3f3f46]">Work email</span>
               <input
                 name="workEmail"
                 value={formValues.workEmail}
                 onChange={(event) => setFormValues({ ...formValues, workEmail: event.target.value })}
-                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                 autoComplete="email"
                 type="email"
                 required
@@ -211,24 +211,24 @@ const Contact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <label className="flex flex-col gap-2">
-                <span className="text-[13px] text-[#52525b]">First name</span>
+                <span className="text-[13px] font-medium text-[#3f3f46]">First name</span>
                 <input
                   name="firstName"
                   value={formValues.firstName}
                   onChange={(event) => setFormValues({ ...formValues, firstName: event.target.value })}
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   autoComplete="given-name"
                   required
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-[13px] text-[#52525b]">Last name</span>
+                <span className="text-[13px] font-medium text-[#3f3f46]">Last name</span>
                 <input
                   name="lastName"
                   value={formValues.lastName}
                   onChange={(event) => setFormValues({ ...formValues, lastName: event.target.value })}
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   autoComplete="family-name"
                   required
                 />
@@ -236,19 +236,19 @@ const Contact = () => {
             </div>
 
             <label className="flex flex-col gap-2">
-              <span className="text-[13px] text-[#52525b]">Company</span>
+              <span className="text-[13px] font-medium text-[#3f3f46]">Company</span>
               <input
                 name="company"
                 value={formValues.company}
                 onChange={(event) => setFormValues({ ...formValues, company: event.target.value })}
-                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                 autoComplete="organization"
                 required
               />
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-[13px] text-[#52525b]">Company size</span>
+              <span className="text-[13px] font-medium text-[#3f3f46]">Company size</span>
               <NativeSelect
                 name="companySize"
                 value={formValues.companySize}
@@ -268,7 +268,7 @@ const Contact = () => {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-[13px] text-[#52525b]">Country</span>
+              <span className="text-[13px] font-medium text-[#3f3f46]">Country</span>
               {!metadata ? (
                 <NativeSelect name="country" value="" required disabled>
                   <NativeSelectOption value="" disabled>
@@ -322,7 +322,7 @@ const Contact = () => {
                   name="country"
                   value={formValues.country}
                   onChange={(event) => setFormValues({ ...formValues, country: event.target.value })}
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   autoComplete="country-name"
                   required
                 />
@@ -330,7 +330,7 @@ const Contact = () => {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-[13px] text-[#52525b]">How did you hear about us?</span>
+              <span className="text-[13px] font-medium text-[#3f3f46]">How did you hear about us?</span>
               <NativeSelect
                 name="heardAboutUs"
                 value={formValues.heardAboutUs}
@@ -358,7 +358,7 @@ const Contact = () => {
 
             {isOtherHeardAboutUsSelected && (
               <label className="flex flex-col gap-2">
-                <span className="text-[13px] text-[#52525b]">Please specify</span>
+                <span className="text-[13px] font-medium text-[#3f3f46]">Please specify</span>
                 <input
                   name="heardAboutUsOther"
                   value={formValues.heardAboutUsOther}
@@ -368,19 +368,19 @@ const Contact = () => {
                       heardAboutUsOther: event.target.value,
                     })
                   }
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   required={isOtherHeardAboutUsSelected}
                 />
               </label>
             )}
 
             <label className="flex flex-col gap-2">
-              <span className="text-[13px] text-[#52525b]">What motivated you to explore Sentra?</span>
+              <span className="text-[13px] font-medium text-[#3f3f46]">What motivated you to explore Sentra?</span>
               <textarea
                 name="motivations"
                 value={formValues.motivations}
                 onChange={(event) => setFormValues({ ...formValues, motivations: event.target.value })}
-                className="w-full min-h-32 max-h-64 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 resize-y"
+                className="w-full min-h-32 max-h-64 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-3 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 resize-y"
                 placeholder="Example: We want a system that captures decisions across meetings and Slack, and makes them searchable for new hires."
                 required
               />

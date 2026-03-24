@@ -106,6 +106,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+input,
+textarea,
+select {
+  border-radius: 0;
+}
+
 .contact-gradient {
   background: linear-gradient(
     to bottom,

@@ -21,7 +21,7 @@ export const NativeSelect = ({ className, size = "default", disabled, ...props }
         data-slot="native-select"
         disabled={disabled}
         className={cn(
-          "w-full min-w-0 appearance-none bg-background text-foreground border border-foreground/20 focus:outline-none focus:border-foreground/60 disabled:pointer-events-none disabled:cursor-not-allowed",
+          "w-full min-w-0 appearance-none bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-[#f5f5f5]",
           sizeClasses,
           className,
         )}
