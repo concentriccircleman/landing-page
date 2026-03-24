@@ -215,11 +215,16 @@ const PricingCard = ({
       <div className="border-t border-[#ebebeb] pt-8 mb-8 flex-1">
         <div className="flex flex-col gap-3.5">
           {features.map((feature) => (
-            <div key={feature} className="flex items-start gap-2.5">
+            <div key={feature} className="flex items-center gap-2.5">
               <CheckIcon />
               <span className="text-[13px] text-[#52525b] leading-relaxed">
                 {feature}
               </span>
+              {feature === "AI meeting notes" && (
+                <span className="text-[9px] font-semibold uppercase tracking-widest text-brand bg-[#eff6ff] border border-[#bfdbfe] px-1.5 py-px rounded-full shrink-0">
+                  Free Forever
+                </span>
+              )}
             </div>
           ))}
         </div>
@@ -308,10 +313,15 @@ const ComparisonTable = () => {
                       featureIndex % 2 === 1 ? "bg-[#fafafa]/50" : "bg-white"
                     }`}
                   >
-                    <div className="px-5 py-3">
+                    <div className="px-5 py-3 flex items-center gap-2">
                       <span className="text-[13px] text-[#52525b]">
                         {feature.name}
                       </span>
+                      {feature.name === "AI meeting notes" && (
+                        <span className="text-[9px] font-semibold uppercase tracking-widest text-brand bg-[#eff6ff] border border-[#bfdbfe] px-1.5 py-px rounded-full shrink-0">
+                          Free Forever
+                        </span>
+                      )}
                     </div>
                     <div className="flex items-center justify-center px-3 py-3 border-l border-[#ebebeb]">
                       <CellValue value={feature.team} />
