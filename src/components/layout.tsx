@@ -25,6 +25,7 @@ export default function Layout({
     "/privacy",
     "/terms",
     "/data-privacy",
+    "/pricing",
     "/blog",
   ];
 

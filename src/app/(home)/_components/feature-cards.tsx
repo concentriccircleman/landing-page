@@ -208,7 +208,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
                 borderLeft: "1px solid #e0e0e3",
                 borderRight: "1px solid #e0e0e3",
                 borderBottom: "1px solid #f8f8f8",
-                borderRadius: "3px 3px 0 0",
+                borderRadius: "4px 4px 0 0",
                 marginLeft: i > 0 ? -1 : 0,
               }}
             >
@@ -260,7 +260,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div className="relative">
-                <div className="w-6 h-6 bg-brand flex items-center justify-center mb-4 rounded-[3px]">
+                <div className="w-6 h-6 bg-brand flex items-center justify-center mb-4 rounded-sm">
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl md:text-3xl lg:text-[2.25rem] font-semibold tracking-tighter text-[#1a1a1f] leading-[1.15] mb-4">

@@ -172,37 +172,37 @@ const Contact = () => {
 
   return (
     <div className="w-full px-4">
-      <div className="border border-[#ebebeb] bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 md:p-12">
+      <div className="border border-[#ebebeb] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(0,0,0,0.03)]">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           <FadeIn>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col p-8 md:p-14">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">
               Get a Demo
             </h2>
-            <p className="text-[15px] text-[#a1a1aa] leading-relaxed">
+            <p className="mt-4 text-[15px] text-[#a1a1aa] leading-relaxed">
               Connect with our sales team to explore how we can support your use case.
             </p>
-            <div className="mt-8 pt-8 border-t border-[#ebebeb] flex flex-col items-start text-left">
-              <blockquote className="text-[15px] italic text-[#52525b] leading-relaxed mb-4">
+            <div className="mt-auto pt-12 border-t border-[#ebebeb] flex flex-col items-start text-left">
+              <blockquote className="text-[15px] italic text-[#52525b] leading-[1.7] mb-5">
                 “Of all the AI tools that I’ve tried, Sentra is actually useful. I make a million promises across zoom meetings, slack, and emails—faster than I can write them down, and Sentra is the only tool that allowed me to start catching onto them.”
               </blockquote>
               <cite className="not-italic">
                 <div className="font-semibold text-[#1a1a1f] text-[13px]">Paul Rothemund</div>
-                <div className="text-[12px] text-[#a1a1aa]">VP of Research at Biostate.ai</div>
+                <div className="text-[12px] text-[#a1a1aa] mt-0.5">VP of Research at Biostate.ai</div>
               </cite>
             </div>
           </div>
           </FadeIn>
 
           <FadeIn delay={100}>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 border-l border-[#ebebeb] p-8 md:p-14 bg-[#fafafa]">
             <label className="flex flex-col gap-2">
               <span className="text-[13px] text-[#52525b]">Work email</span>
               <input
                 name="workEmail"
                 value={formValues.workEmail}
                 onChange={(event) => setFormValues({ ...formValues, workEmail: event.target.value })}
-                className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
+                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                 autoComplete="email"
                 type="email"
                 required
@@ -216,7 +216,7 @@ const Contact = () => {
                   name="firstName"
                   value={formValues.firstName}
                   onChange={(event) => setFormValues({ ...formValues, firstName: event.target.value })}
-                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   autoComplete="given-name"
                   required
                 />
@@ -228,7 +228,7 @@ const Contact = () => {
                   name="lastName"
                   value={formValues.lastName}
                   onChange={(event) => setFormValues({ ...formValues, lastName: event.target.value })}
-                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   autoComplete="family-name"
                   required
                 />
@@ -241,7 +241,7 @@ const Contact = () => {
                 name="company"
                 value={formValues.company}
                 onChange={(event) => setFormValues({ ...formValues, company: event.target.value })}
-                className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
+                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                 autoComplete="organization"
                 required
               />
@@ -322,7 +322,7 @@ const Contact = () => {
                   name="country"
                   value={formValues.country}
                   onChange={(event) => setFormValues({ ...formValues, country: event.target.value })}
-                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   autoComplete="country-name"
                   required
                 />
@@ -368,7 +368,7 @@ const Contact = () => {
                       heardAboutUsOther: event.target.value,
                     })
                   }
-                  className="w-full h-10 bg-[#f8f8f8] text-[#1a1a1f] border border-[#ebebeb] px-4 py-2 text-sm focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[rgba(37,99,235,0.2)]"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-2 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
                   required={isOtherHeardAboutUsSelected}
                 />
               </label>
@@ -380,7 +380,7 @@ const Contact = () => {
                 name="motivations"
                 value={formValues.motivations}
                 onChange={(event) => setFormValues({ ...formValues, motivations: event.target.value })}
-                className="w-full min-h-32 max-h-64 bg-background text-foreground border border-foreground/20 px-4 py-3 text-sm focus:outline-none focus:border-foreground/60 resize-y"
+                className="w-full min-h-32 max-h-64 bg-white text-[#1a1a1f] border border-[#e0e0e3] px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 resize-y"
                 placeholder="Example: We want a system that captures decisions across meetings and Slack, and makes them searchable for new hires."
                 required
               />
@@ -389,7 +389,7 @@ const Contact = () => {
             <div className="flex flex-col gap-2">
               <button
                 type="submit"
-                className="inline-flex justify-center items-center bg-brand text-[#f0f0f0] px-8 py-3.5 text-[14px] font-medium rounded-lg cursor-pointer hover:brightness-110 hover:-translate-y-px duration-200 shadow-[0_0_0_1px_#1e40af,0_2px_4px_rgba(37,99,235,0.3),0_6px_16px_rgba(37,99,235,0.2),0_12px_32px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.2)] hover:shadow-[0_0_0_1px_#1e40af,0_4px_8px_rgba(37,99,235,0.35),0_12px_28px_rgba(37,99,235,0.25),0_20px_48px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)] disabled:opacity-60 disabled:pointer-events-none"
+                className="inline-flex justify-center items-center bg-brand text-[#f0f0f0] px-8 py-3.5 text-[14px] font-medium rounded-lg cursor-pointer hover:brightness-110 hover:-translate-y-px duration-200 shadow-[0_0_0_1px_#1e40af,0_2px_4px_rgba(37,99,235,0.3),0_6px_16px_rgba(37,99,235,0.2),0_12px_32px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.25)] hover:shadow-[0_0_0_1px_#1e40af,0_4px_8px_rgba(37,99,235,0.35),0_10px_24px_rgba(37,99,235,0.25),0_16px_40px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)] disabled:opacity-60 disabled:pointer-events-none"
                 disabled={isSubmitting || !isMetadataReady}
               >
                 {isSubmitting ? "Sending…" : "Get a Demo"}

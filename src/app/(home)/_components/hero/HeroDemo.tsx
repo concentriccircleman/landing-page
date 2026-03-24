@@ -52,7 +52,7 @@ export default function HeroDemo() {
       <div
         className="w-full h-full flex overflow-hidden"
         style={{
-          borderRadius: 10,
+          borderRadius: 8,
           background: "#f5f5f5",
           boxShadow: "0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.08), 0 12px 40px rgba(0,0,0,0.1), 0 24px 64px rgba(0,0,0,0.06)",
         }}
@@ -64,7 +64,7 @@ export default function HeroDemo() {
         >
           <div className="flex items-center gap-2 px-3 pt-3 pb-1.5 cursor-pointer group">
             <div className="shrink-0 flex items-center justify-center" style={{ width: 18, height: 18, borderRadius: 4, background: "#fff", padding: 1, boxShadow: "0 0 0 0.5px rgba(0,0,0,0.08)" }}>
-              <div className="w-full h-full flex items-center justify-center" style={{ borderRadius: 3, background: "#7c3aed" }}>
+              <div className="w-full h-full flex items-center justify-center" style={{ borderRadius: 4, background: "#7c3aed" }}>
                 <span style={{ fontSize: 8, fontWeight: 700, color: "#fff", lineHeight: 1 }}>S</span>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function HeroDemo() {
                 <path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/>
               </svg>
               <span className="group-hover/hint:text-[#71717a] transition-colors" style={{ fontSize: 10, color: "#a1a1aa" }}>{cfg.hint}</span>
-              <span className="ml-auto flex items-center group-hover/hint:bg-[#efeff0] transition-colors" style={{ fontSize: 9, color: "#a1a1aa", background: "#f5f5f5", border: "1px solid #efeff0", borderRadius: 3, padding: "1px 5px", lineHeight: "16px" }}>⌘⇧E</span>
+              <span className="ml-auto flex items-center group-hover/hint:bg-[#efeff0] transition-colors" style={{ fontSize: 9, color: "#a1a1aa", background: "#f5f5f5", border: "1px solid #efeff0", borderRadius: 4, padding: "1px 5px", lineHeight: "16px" }}>⌘⇧E</span>
             </div>
           </div>
         </div>
@@ -393,7 +393,7 @@ function IconBtn({ children, tooltip }: { children: React.ReactNode; tooltip?: s
 
 function FeatureBanner({ text }: { text: string }) {
   return (
-    <div className="flex items-center gap-2 px-3 mb-4" style={{ height: 28, background: "#eff6ff", borderRadius: 5, border: "0.5px solid #bfdbfe" }}>
+    <div className="flex items-center gap-2 px-3 mb-4" style={{ height: 28, background: "#eff6ff", borderRadius: 4, border: "0.5px solid #bfdbfe" }}>
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/>
       </svg>
@@ -482,11 +482,11 @@ function MeetingRow({ title, summary, date, duration, participants, topics, acti
       <div className="flex-1 min-w-0 flex flex-col gap-1">
         <div className="flex items-center gap-2">
           <span style={{ fontSize: 12, fontWeight: 600, color: "#18181b" }}>{title}</span>
-          {active && <span style={{ fontSize: 8, fontWeight: 500, color: "#1d4ed8", background: "#dbeafe", borderRadius: 3, padding: "1px 5px", lineHeight: "14px" }}>AI Summary</span>}
+          {active && <span style={{ fontSize: 8, fontWeight: 500, color: "#1d4ed8", background: "#dbeafe", borderRadius: 4, padding: "1px 5px", lineHeight: "14px" }}>AI Summary</span>}
         </div>
         <p style={{ fontSize: 10, color: "#52525b", margin: 0, lineHeight: 1.4 }} className="truncate">{summary}</p>
         <div className="flex items-center gap-1.5 mt-0.5">
-          {topics.map((t) => <span key={t} style={{ fontSize: 8, fontWeight: 500, color: "#71717a", background: "#fafafa", border: "0.5px solid #efeff0", borderRadius: 3, padding: "1px 4px", lineHeight: "14px" }}>{t}</span>)}
+          {topics.map((t) => <span key={t} style={{ fontSize: 8, fontWeight: 500, color: "#71717a", background: "#fafafa", border: "0.5px solid #efeff0", borderRadius: 4, padding: "1px 4px", lineHeight: "14px" }}>{t}</span>)}
         </div>
       </div>
       <div className="shrink-0 flex flex-col items-end gap-1.5">
@@ -565,7 +565,7 @@ function TodoItem({ text, due, who, done, urgent, onToggle }: { text: string; du
       <div
         className="shrink-0"
         style={{
-          width: 14, height: 14, borderRadius: 3,
+          width: 14, height: 14, borderRadius: 4,
           border: done ? "none" : "1.5px solid #d4d4d8",
           background: done ? "#2563eb" : "#fff",
           display: "flex", alignItems: "center", justifyContent: "center",
@@ -578,7 +578,7 @@ function TodoItem({ text, due, who, done, urgent, onToggle }: { text: string; du
         {done && <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>}
       </div>
       <span className="flex-1" style={{ fontSize: 11, color: done ? "#a1a1aa" : "#18181b", textDecoration: done ? "line-through" : "none", fontWeight: 500, transition: "color 0.2s ease" }}>{text}</span>
-      {urgent && !done && <span style={{ fontSize: 8, fontWeight: 600, color: "#ef4444", background: "#fef2f2", borderRadius: 3, padding: "1px 5px", lineHeight: "14px" }}>Urgent</span>}
+      {urgent && !done && <span style={{ fontSize: 8, fontWeight: 600, color: "#ef4444", background: "#fef2f2", borderRadius: 4, padding: "1px 5px", lineHeight: "14px" }}>Urgent</span>}
       <AvatarDot initials={who} />
       <span style={{ fontSize: 9, color: "#a1a1aa" }}>{due}</span>
     </div>
@@ -591,7 +591,7 @@ function StatCard({ label, value, color }: { label: string; value: string; color
   return (
     <div
       className="cursor-pointer"
-      style={{ background: "#fff", borderRadius: 6, padding: "8px 10px", boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)", transition: "box-shadow 0.2s ease, transform 0.15s ease" }}
+      style={{ background: "#fff", borderRadius: 8, padding: "8px 10px", boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)", transition: "box-shadow 0.2s ease, transform 0.15s ease" }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
     >

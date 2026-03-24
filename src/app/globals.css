@@ -17,9 +17,7 @@ html {
   --brand-hover: #1e40af;
 
   --radius-sm: 4px;
-  --radius-md: 6px;
   --radius-lg: 8px;
-  --radius-xl: 12px;
 
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
   --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);

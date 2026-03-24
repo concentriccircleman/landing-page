@@ -20,7 +20,7 @@ const CTA = () => {
         <FadeIn delay={200}>
           <Link
             href="/contact"
-            className="relative z-10 inline-flex items-center justify-center px-10 py-3 text-[15px] font-medium rounded-[10px] duration-200 hover:cursor-pointer hover:-translate-y-px transition-all active:scale-[0.97]"
+            className="relative z-10 inline-flex items-center justify-center px-10 py-3 text-[15px] font-medium rounded-lg duration-200 hover:cursor-pointer hover:-translate-y-px transition-all active:scale-[0.97]"
             style={{
               background: "#ffffff",
               color: "#1a1a1f",
