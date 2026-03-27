@@ -67,7 +67,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">1. Sentra Service Overview</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">1.1</strong> The Service provides software for organizations to monitor employee work progress, get automated analytics into team progression and alignment, and integrate with existing project management tools.</p>
@@ -78,7 +78,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">2. Eligibility</h2>
           <p className="text-[15px] text-[#52525b] leading-relaxed">
             You must be at least 18 years old to use the Service. By agreeing to these Terms, you represent and warrant to us that: (a) you are at least 18 years old; (b) you have not previously been suspended or removed from the Service; and (c) your registration and use of the Service is in compliance with any and all applicable laws and regulations. If you are an entity, organization, or company, the individual accepting these Terms on your behalf represents and warrants that they have authority to bind you to these Terms and you agree to be bound by these Terms.
@@ -87,7 +87,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">3. Accounts and Registration</h2>
           <p className="text-[15px] text-[#52525b] leading-relaxed">
             To access most features of the Service, you must register for an account. When you register for an account, you may be required to provide us with some information about yourself and your organization, such as names, email addresses, or other contact information. You agree that the information you provide to us is accurate, complete, and not misleading, and that you will keep it accurate and up to date at all times. When you register, you will be asked to create a password. You are solely responsible for maintaining the confidentiality of your account and password, and you accept responsibility for all activities that occur under your account. If you believe that your account is no longer secure, then you should immediately notify us at support@sentra.app.
@@ -96,7 +96,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">4. General Payment Terms</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">4.1 Price.</strong> Sentra reserves the right to determine pricing for the Service. Sentra will make reasonable efforts to keep pricing information published on the Service up to date. We encourage you to check our pricing page periodically for current pricing information. Sentra may change the fees for any feature of the Service, including additional fees or charges, if Sentra gives you advance notice of changes before they apply.</p>
@@ -108,7 +108,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">5. Licenses</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">5.1 Limited License.</strong> Subject to your complete and ongoing compliance with these Terms, Sentra grants you, solely for your business use, a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to: (a) install and use one object code copy of any mobile or other downloadable application associated with the Service on a device that you own or control; and (b) access and use the Service.</p>
@@ -119,7 +119,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">6. Ownership; Proprietary Rights</h2>
           <p className="text-[15px] text-[#52525b] leading-relaxed">
             The Service is owned and operated by Sentra. The visual interfaces, graphics, design, compilation, information, data, computer code (including source code and object code), products, software, services, and all other elements of the Service provided by Sentra are protected by intellectual property and other laws. All materials included in the Service are the property of Sentra or its third-party licensors. Except as expressly authorized by Sentra, you may not make use of the materials. There are no implied licenses in these Terms and Sentra reserves all rights to the materials not granted expressly in these Terms.
@@ -128,7 +128,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">7. Third-Party Terms</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">7.1 Third-Party Services and Linked Websites.</strong> Sentra may provide tools through the Service that enable you to export information to third-party services, including through features that allow you to link your account on the Service with an account on the third-party service. By using one of these tools, you hereby authorize Sentra to transfer that information to the applicable third-party service. Third-party services are not under Sentra&apos;s control, and, to the fullest extent permitted by law, Sentra is not responsible for any third-party service&apos;s use of your exported information.</p>
@@ -138,7 +138,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">8. User Content</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">8.1 User Content Generally.</strong> Certain features of the Service will permit Users to submit, upload, publish, or otherwise transmit content to the Service, including work reports, meeting transcripts, and company internal documents of work progression (&quot;User Content&quot;). You retain any copyright and other proprietary rights that you may hold in the User Content that you provide to the Service, subject to the licenses granted in these Terms.</p>
@@ -149,7 +149,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">9. Meeting Recording and Transcription</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">9.1 Meeting Recording Disclosure.</strong> When you use Sentra&apos;s meeting bot or desktop meeting note taker, the Service may capture audio, recordings, transcripts, and other meeting content. These recordings and transcripts are processed to provide meeting notes, summaries, and other features of the Service. When the Sentra meeting bot joins a meeting, its presence is intended to notify participants that the meeting may be recorded or transcribed.</p>
@@ -161,7 +161,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">10. Communications</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">10.1 Text Messaging and Phone Calls.</strong> You agree that Sentra and those acting on our behalf may send you text (SMS) messages and phone calls at the phone number you provide us. These communications may include operational messages about your use of the Service, as well as marketing messages. Text messages and phone calls may be sent using an automatic telephone dialing system. Standard data and message rates may apply whenever you send or receive such messages, as specified by your carrier.</p>
@@ -171,7 +171,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">11. Prohibited Conduct</h2>
           <div className="text-[15px] text-[#52525b] leading-relaxed">
             <p className="mb-4"><strong className="text-[#1a1a1f]">BY USING THE SERVICE, YOU AGREE NOT TO:</strong></p>
@@ -191,7 +191,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">12. Intellectual Property Rights Protection</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">12.1 Respect of Third-Party Rights.</strong> Sentra respects the intellectual property rights of others, takes the protection of intellectual property rights very seriously, and asks Users of the Service to do the same. Infringing activity will not be tolerated on or through the Service.</p>
@@ -201,7 +201,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">13. Term, Termination, and Modification of the Service</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">13.1 Term.</strong> These Terms are effective beginning when you accept the Terms or first download, install, access, or use the Service, and end when terminated as described in Section 13.2.</p>
@@ -213,7 +213,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">14. Indemnity</h2>
           <p className="text-[15px] text-[#52525b] leading-relaxed">
             To the fullest extent permitted by law, you are responsible for your use of the Service, and you will defend and indemnify Sentra, its affiliates and their respective shareholders, directors, managers, members, officers, employees, consultants, and agents from and against every claim brought by a third party, and any related liability, damage, loss, and expense, including attorneys&apos; fees and costs, arising out of or connected with: (1) your unauthorized use of, or misuse of, the Service; (2) your violation of any portion of these Terms, any representation, warranty, or agreement referenced in these Terms, or any applicable law or regulation; (3) your violation of any third-party right, including any intellectual property right or privacy, confidentiality, other property, or privacy right; or (4) any dispute or issue between you and any third party.
@@ -222,7 +222,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">15. Disclaimers; No Warranties by Sentra</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">15.1 Disclaimers related to AI.</strong> To the maximum extent permitted by applicable law, we disclaim any and all liability related to the use of AI tools. AI tools may return inaccurate information that does not accurately reflect real people, places, or facts. The Service does not provide any medical, health, safety, legal, financial, tax, accounting, or other professional advice. YOUR USE OF THE SERVICE IS AT YOUR SOLE RISK, AND Sentra WILL NOT BE LIABLE FOR ANY STATEMENTS, REPRESENTATIONS, DEFAMATION, OMISSIONS, FALSEHOODS, OR OTHER TYPES OF CONTENT THAT MAY RESULT FROM YOUR OR ANY OTHER USERS USE OF THE SERVICE.</p>
@@ -232,7 +232,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">16. Limitation of Liability</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">16.1</strong> TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL Sentra BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO YOUR ACCESS TO OR USE OF, OR YOUR INABILITY TO ACCESS OR USE, THE SERVICE OR ANY MATERIALS OR CONTENT ON THE SERVICE.</p>
@@ -242,7 +242,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">17. Dispute Resolution and Arbitration</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">17.1 Generally.</strong> Except as described in Section 17.2 and 17.3, you and Sentra agree that every dispute arising in connection with these Terms, the Service, or communications from us will be resolved through binding arbitration.</p>
@@ -254,7 +254,7 @@ const Terms = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">18. Miscellaneous</h2>
           <div className="text-[15px] text-[#52525b] space-y-4 leading-relaxed">
             <p><strong className="text-[#1a1a1f]">18.1 General Terms.</strong> These Terms, including the Privacy Policy and any other agreements expressly incorporated by reference into these Terms, are the entire and exclusive understanding and agreement between you and Sentra regarding your use of the Service.</p>

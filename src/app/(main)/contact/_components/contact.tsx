@@ -172,7 +172,7 @@ const Contact = () => {
 
   return (
     <div className="w-full px-4">
-      <div className="border border-[#ebebeb] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(0,0,0,0.03)]">
+      <div className="border border-[#e8e8ec] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(0,0,0,0.03)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <FadeIn>
           <div className="flex flex-col p-8 md:p-14">
@@ -182,7 +182,7 @@ const Contact = () => {
             <p className="mt-4 text-[15px] text-[#a1a1aa] leading-relaxed">
               Connect with our sales team to explore how we can support your use case.
             </p>
-            <div className="mt-auto pt-12 border-t border-[#ebebeb] flex flex-col items-start text-left">
+            <div className="mt-auto pt-12 border-t border-[#e8e8ec] flex flex-col items-start text-left">
               <blockquote className="text-[15px] italic text-[#52525b] leading-[1.7] mb-5">
                 “Of all the AI tools that I’ve tried, Sentra is actually useful. I make a million promises across zoom meetings, slack, and emails—faster than I can write them down, and Sentra is the only tool that allowed me to start catching onto them.”
               </blockquote>
@@ -195,7 +195,7 @@ const Contact = () => {
           </FadeIn>
 
           <FadeIn delay={100}>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5 border-l border-[#ebebeb] p-8 md:p-14 bg-[#fafafa]">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 border-l border-[#e8e8ec] p-8 md:p-14 bg-[#fafafa]">
             <label className="flex flex-col gap-2">
               <span className="text-[13px] font-medium text-[#3f3f46]">Work email</span>
               <input

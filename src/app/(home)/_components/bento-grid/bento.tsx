@@ -37,7 +37,7 @@ export function BentoContainer({ children, className }: BentoContainerProps) {
     isLastGroup: boolean
   ) =>
     cn(
-      "border-0 border-l border-t border-[#ebebeb]",
+      "border-0 border-l border-t border-[#e8e8ec]",
       "border-r md:border-r-0",
       idxInGroup % colCount === colCount - 1 && "md:border-r",
       isLastGroup && "border-b"
@@ -78,7 +78,7 @@ export function BentoContainer({ children, className }: BentoContainerProps) {
     );
   });
 
-  return <div className={cn("overflow-hidden border border-[#ebebeb]", className)}>{renderedGroups}</div>;
+  return <div className={cn("overflow-hidden border border-[#e8e8ec]", className)}>{renderedGroups}</div>;
 }
 
 export function Bento({

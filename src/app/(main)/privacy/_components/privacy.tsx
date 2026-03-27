@@ -24,7 +24,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn delay={150}>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Information We Collect
           </h2>
@@ -115,7 +115,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             How We Use the Information We Collect
           </h2>
@@ -144,7 +144,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             How We Disclose the Information We Collect
           </h2>
@@ -199,7 +199,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Your Choices
           </h2>
@@ -222,7 +222,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Google Workspace API Compliance
           </h2>
@@ -237,7 +237,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Third Parties
           </h2>
@@ -254,7 +254,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Security
           </h2>
@@ -270,7 +270,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Children&apos;s Privacy
           </h2>
@@ -285,7 +285,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             International Visitors
           </h2>
@@ -303,7 +303,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Data Retention for Meeting Content
           </h2>
@@ -320,7 +320,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Update Your Information
           </h2>
@@ -332,7 +332,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Changes to this Privacy Policy
           </h2>
@@ -348,7 +348,7 @@ const Privacy = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-8">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-10">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Contact Information
           </h2>

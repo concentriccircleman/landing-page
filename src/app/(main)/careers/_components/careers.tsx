@@ -57,7 +57,7 @@ const Careers = () => {
                 href={role.ashbyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group block border border-[#ebebeb] bg-white p-5 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
+                className="group block border border-[#e8e8ec] bg-white p-5 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex-1">

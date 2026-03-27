@@ -19,7 +19,7 @@ const About = () => {
       </FadeIn>
 
       <FadeIn delay={150}>
-        <div className="bg-white border border-[#ebebeb] p-6 mb-10 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+        <div className="bg-white border border-[#e8e8ec] p-6 mb-10 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
           <h3 className="text-base font-semibold text-[#1a1a1f] mb-4">
             Example Job Assignments
           </h3>
@@ -52,7 +52,7 @@ const About = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-4">
             Why Unified Company Memory Matters
           </h2>
@@ -64,7 +64,7 @@ const About = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-8">
-            <div className="border border-[#ebebeb] bg-white p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+            <div className="border border-[#e8e8ec] bg-white p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
               <h3 className="text-base font-semibold text-[#1a1a1f] mb-3">
                 Without Company Memory
               </h3>
@@ -82,7 +82,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border border-[#ebebeb] bg-white p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+            <div className="border border-[#e8e8ec] bg-white p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
               <h3 className="text-base font-semibold text-[#1a1a1f] mb-3">
                 With Company Memory
               </h3>
@@ -106,7 +106,7 @@ const About = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="bg-white border border-[#ebebeb] p-6 mb-10 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+        <div className="bg-white border border-[#e8e8ec] p-6 mb-10 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
           <h3 className="text-base font-semibold text-[#1a1a1f] mb-3">
             Real Example: Personalized Meeting Summaries
           </h3>
@@ -128,7 +128,7 @@ const About = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <h2 className="text-xl font-semibold tracking-tighter text-[#1a1a1f] mb-6">
             What Sentra Doesn&apos;t Do
           </h2>
@@ -164,7 +164,7 @@ const About = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="bg-white border border-[#ebebeb] p-6 mb-8">
+        <div className="bg-white border border-[#e8e8ec] p-6 mb-8">
           <h3 className="text-base font-semibold text-[#1a1a1f] mb-2">
             Questions About How Sentra Works?
           </h3>

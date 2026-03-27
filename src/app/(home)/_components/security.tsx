@@ -2,29 +2,30 @@
 
 import Link from "next/link";
 import FadeIn from "@/components/fade-in";
+import IsometricCard from "@/components/isometric-card";
 
 export default function Security() {
   return (
     <section className="max-w-screen-2xl mx-auto w-full px-4">
       <FadeIn>
-        <div className="flex items-center gap-3 mb-8">
+        <div className="flex items-center gap-3 mb-10">
           <div className="w-8 h-8 bg-brand flex items-center justify-center">
             <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">
-            Ultimate data security, control, and sovereignty
+            Your data stays safe, private, and under your control
           </h2>
         </div>
       </FadeIn>
       
       <div className="grid md:grid-cols-2 gap-6">
         <FadeIn delay={100}>
-          <div className="border border-[#ebebeb] bg-[#f8f8f8] p-8 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+          <IsometricCard className="border border-[#e0e0e3] bg-[#f8f8f8] p-8">
             <h3 className="text-lg md:text-xl font-semibold text-[#1a1a1f] tracking-tighter mb-6">
               Enterprise-grade security
             </h3>
             <p className="text-[14px] text-[#52525b] mb-8 leading-relaxed">
-              Your data security is our top priority. Sentra is SOC 2 compliant. We adhere to ISO standards and GDPR regulations (certifications pending), ensuring the highest levels of data protection and privacy for your organization.
+              Keeping your data safe is our top priority. Sentra is SOC 2 compliant and follows ISO and GDPR standards (certifications pending) — so you can trust that your information is always protected.
             </p>
             <Link 
               href="https://trust.delve.co/sentra"
@@ -37,18 +38,18 @@ export default function Security() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </Link>
-          </div>
+          </IsometricCard>
         </FadeIn>
         
         <FadeIn delay={200}>
-          <div className="border border-[#ebebeb] bg-[#f8f8f8] p-8 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+          <IsometricCard className="border border-[#e0e0e3] bg-[#f8f8f8] p-8">
             <h3 className="text-lg md:text-xl font-semibold text-[#1a1a1f] tracking-tighter mb-6">
-              On-premise deployments
+              Runs on your own servers
             </h3>
             <p className="text-[14px] text-[#52525b] leading-relaxed">
-              For organizations with sensitive data requirements, we offer dedicated isolated VPC or on-premise air-gapped deployments. This flexibility ensures your data never leaves your infrastructure while still providing the full power of Sentra&apos;s AI-driven organizational intelligence.
+              Need your data to stay on your own servers? We can set that up. Sentra works just as well when deployed entirely within your infrastructure — your data never has to leave your building.
             </p>
-          </div>
+          </IsometricCard>
         </FadeIn>
       </div>
     </section>

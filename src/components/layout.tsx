@@ -3,6 +3,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import CursorTrail from "@/components/cursor-trail";
+import CrosshatchSquares from "@/components/crosshatch-squares";
 
 import { Providers } from "@/app/providers";
 import { usePathname } from "next/navigation";
@@ -34,6 +35,7 @@ export default function Layout({
   return (
     <Providers>
       <CursorTrail />
+      <CrosshatchSquares />
       <div className="relative min-h-screen flex flex-col bg-[#f8f8f8]">
         {isLanding ? (
           <>

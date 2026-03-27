@@ -62,7 +62,7 @@ const BlogIndex = async ({ category }: BlogIndexProps) => {
         </nav>
 
         <div className="max-w-3xl mx-auto">
-          <ul className="divide-y divide-[#ebebeb]">
+          <ul className="divide-y divide-[#e8e8ec]">
             {filteredPosts.map((p) => (
               <li key={p.slug}>
                 <Link

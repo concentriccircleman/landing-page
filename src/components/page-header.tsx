@@ -11,7 +11,7 @@ interface PageHeaderProps {
 export default function PageHeader({ title, subtitle, date }: PageHeaderProps) {
   return (
     <FadeIn>
-      <header className="mb-10 md:mb-14">
+      <header className="mb-12 md:mb-16">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">
           {title}
         </h1>

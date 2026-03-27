@@ -133,7 +133,7 @@ const Pricing = () => {
       />
 
       <FadeIn delay={100}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#ebebeb] border border-[#ebebeb] mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#e8e8ec] border border-[#e8e8ec] mb-16">
           <PricingCard
             name="Team"
             subtitle="For teams of 2–20"
@@ -212,7 +212,7 @@ const PricingCard = ({
         <p className="mt-2 text-[12px] text-[#a1a1aa]">{credits}</p>
       </div>
 
-      <div className="border-t border-[#ebebeb] pt-8 mb-8 flex-1">
+      <div className="border-t border-[#e8e8ec] pt-8 mb-8 flex-1">
         <div className="flex flex-col gap-3.5">
           {features.map((feature) => (
             <div key={feature} className="flex items-center gap-2.5">
@@ -267,19 +267,19 @@ const ComparisonTable = () => {
         Compare plans
       </h2>
 
-      <div className="border border-[#ebebeb] bg-white overflow-hidden">
-        <div className="grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] bg-[#fafafa] border-b border-[#ebebeb]">
+      <div className="border border-[#e8e8ec] bg-white overflow-hidden">
+        <div className="grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] bg-[#fafafa] border-b border-[#e8e8ec]">
           <div className="px-5 py-3.5">
             <span className="text-[12px] font-semibold uppercase tracking-wider text-[#71717a]">
               Features
             </span>
           </div>
-          <div className="px-5 py-3.5 text-center border-l border-[#ebebeb]">
+          <div className="px-5 py-3.5 text-center border-l border-[#e8e8ec]">
             <span className="text-[12px] font-semibold uppercase tracking-wider text-[#71717a]">
               Team
             </span>
           </div>
-          <div className="px-5 py-3.5 text-center border-l border-[#ebebeb]">
+          <div className="px-5 py-3.5 text-center border-l border-[#e8e8ec]">
             <span className="text-[12px] font-semibold uppercase tracking-wider text-[#71717a]">
               Enterprise
             </span>
@@ -293,7 +293,7 @@ const ComparisonTable = () => {
               <button
                 type="button"
                 onClick={() => toggleSection(category.name)}
-                className="w-full grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] border-b border-[#ebebeb] bg-[#fafafa] hover:bg-[#f2f2f3] transition-colors duration-150 cursor-pointer"
+                className="w-full grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] border-b border-[#e8e8ec] bg-[#fafafa] hover:bg-[#f2f2f3] transition-colors duration-150 cursor-pointer"
               >
                 <div className="flex items-center gap-2.5 px-5 py-3">
                   <ChevronIcon rotated={isExpanded} />
@@ -301,15 +301,15 @@ const ComparisonTable = () => {
                     {category.name}
                   </span>
                 </div>
-                <div className="border-l border-[#ebebeb]" />
-                <div className="border-l border-[#ebebeb]" />
+                <div className="border-l border-[#e8e8ec]" />
+                <div className="border-l border-[#e8e8ec]" />
               </button>
 
               {isExpanded &&
                 category.features.map((feature, featureIndex) => (
                   <div
                     key={feature.name}
-                    className={`grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] border-b border-[#ebebeb] ${
+                    className={`grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] border-b border-[#e8e8ec] ${
                       featureIndex % 2 === 1 ? "bg-[#fafafa]/50" : "bg-white"
                     }`}
                   >
@@ -323,10 +323,10 @@ const ComparisonTable = () => {
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center justify-center px-3 py-3 border-l border-[#ebebeb]">
+                    <div className="flex items-center justify-center px-3 py-3 border-l border-[#e8e8ec]">
                       <CellValue value={feature.team} />
                     </div>
-                    <div className="flex items-center justify-center px-3 py-3 border-l border-[#ebebeb]">
+                    <div className="flex items-center justify-center px-3 py-3 border-l border-[#e8e8ec]">
                       <CellValue value={feature.enterprise} />
                     </div>
                   </div>

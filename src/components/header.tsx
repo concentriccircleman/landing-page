@@ -21,9 +21,9 @@ const Header = () => {
     "fixed z-40 left-1/2 -translate-x-1/2 w-full will-change-transform",
     "transition-[max-width,top,border-radius,background-color,border-color,box-shadow,backdrop-filter] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]",
 
-    atTop && "top-0 max-w-[100vw] rounded-none border-b backdrop-blur-xl bg-[#f8f8f8]/80 border-[#e0e0e0]/60",
+    atTop && "top-0 max-w-[100vw] rounded-none border-b backdrop-blur-xl bg-[#f8f8f8]/80 border-[#e8e8ec]/60",
 
-    !atTop && "top-4 max-w-[calc(100vw-24px)] sm:max-w-3xl rounded-[10px] backdrop-blur-2xl bg-[#f4f4f5]/70 shadow-[0_0_0_0.5px_rgba(0,0,0,0.2),0_2px_4px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.08),0_16px_48px_rgba(0,0,0,0.04)]",
+    !atTop && "top-4 max-w-[calc(100vw-24px)] sm:max-w-3xl rounded-[10px] backdrop-blur-2xl bg-[#f4f4f5]/70 shadow-[0_0_0_1px_rgba(0,0,0,0.12),0_2px_4px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.08),0_16px_48px_rgba(0,0,0,0.04)]",
   );
 
   const innerClasses = cn(

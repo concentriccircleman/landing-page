@@ -9,7 +9,10 @@ html {
 :root {
   --foreground: #1a1a1f;
   --background: #f8f8f8;
-  --border: #ebebeb;
+  --stroke-subtle: #e8e8ec;
+  --stroke-default: #e0e0e3;
+  --stroke-strong: #d4d4d8;
+  --border: #e8e8ec;
   --secondary: #52525b;
   --muted: #71717a;
   --muted-foreground: #3f3f46;

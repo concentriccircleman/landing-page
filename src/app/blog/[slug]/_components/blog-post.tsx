@@ -116,7 +116,7 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
               <h1 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">
                 {metadata.title}
               </h1>
-              <div className="lg:hidden space-y-4 p-4 bg-white border border-[#ebebeb]">
+              <div className="lg:hidden space-y-4 p-4 bg-white border border-[#e8e8ec]">
                 <div className="text-left">
                   {metadataDetails}
                 </div>

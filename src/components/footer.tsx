@@ -47,8 +47,8 @@ export default function Footer() {
     <footer className="relative w-full z-20 bg-[#1a1a1f]" style={{ boxShadow: '0 0 0 50vh #1a1a1f', clipPath: 'inset(0 -100vw -50vh -100vw)' }}>
       <div className="relative overflow-hidden">
         <PixelShimmer />
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="relative z-10 max-w-screen-2xl mx-auto px-4 py-14">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           <FadeIn>
             <div>
               <h3 className="text-[11px] uppercase tracking-wider font-semibold text-[#808085] mb-4">Legal</h3>
@@ -122,7 +122,7 @@ export default function Footer() {
           Subprocessors include Amazon Web Services, Github, Slack, Google Cloud
           Platform, and OpenAI.
         </p>
-        <div className="pt-6 border-t border-[#333338]">
+        <div className="pt-8 border-t border-[#333338]">
           <p className="text-[12px] text-[#71717a]">
             &copy; {new Date().getFullYear()} Dynamis Labs. All rights reserved.
           </p>

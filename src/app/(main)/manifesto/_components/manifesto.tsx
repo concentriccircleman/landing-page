@@ -44,7 +44,7 @@ const Manifesto = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
               Why wasn&apos;t this built before? Because until now, AI was
@@ -83,7 +83,7 @@ const Manifesto = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
               What does this look like? An engineer asks why the architecture
@@ -116,7 +116,7 @@ const Manifesto = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
               Making coherent sense of millions of tokens of organizational
@@ -142,7 +142,7 @@ const Manifesto = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
               If Sentra is ingesting every meeting and every chat, you&apos;re
@@ -173,7 +173,7 @@ const Manifesto = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="border-t border-[#ebebeb] pt-8 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
               Over time, patterns will emerge across companies. Not shared data,

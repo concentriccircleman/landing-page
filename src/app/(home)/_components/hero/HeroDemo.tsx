@@ -106,7 +106,7 @@ export default function HeroDemo() {
             style={{ background: "#fff", borderRadius: 8, boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)" }}
           >
             {/* TopBar */}
-            <div className="shrink-0 flex items-center justify-between px-4" style={{ height: 40, borderBottom: "1px solid #efeff0" }}>
+            <div className="shrink-0 flex items-center justify-between px-4" style={{ height: 40, borderBottom: "1px solid #e8e8ec" }}>
               <span style={{ fontSize: 13, fontWeight: 600, color: "#18181b" }}>{cfg.title}</span>
               <div className="flex items-center gap-1.5">
                 <IconBtn tooltip="Search"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></IconBtn>
@@ -125,12 +125,12 @@ export default function HeroDemo() {
             </div>
 
             {/* Research panel hint */}
-            <div className="shrink-0 flex items-center gap-2 px-4 cursor-pointer group/hint" style={{ height: 36, borderTop: "1px solid #efeff0", background: "#fafafa" }}>
+            <div className="shrink-0 flex items-center gap-2 px-4 cursor-pointer group/hint" style={{ height: 36, borderTop: "1px solid #e8e8ec", background: "#fafafa" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/hint:scale-110 transition-transform">
                 <path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/>
               </svg>
               <span className="group-hover/hint:text-[#71717a] transition-colors" style={{ fontSize: 10, color: "#a1a1aa" }}>{cfg.hint}</span>
-              <span className="ml-auto flex items-center group-hover/hint:bg-[#efeff0] transition-colors" style={{ fontSize: 9, color: "#a1a1aa", background: "#f5f5f5", border: "1px solid #efeff0", borderRadius: 4, padding: "1px 5px", lineHeight: "16px" }}>⌘⇧E</span>
+              <span className="ml-auto flex items-center group-hover/hint:bg-[#e8e8ec] transition-colors" style={{ fontSize: 9, color: "#a1a1aa", background: "#f5f5f5", border: "1px solid #e8e8ec", borderRadius: 4, padding: "1px 5px", lineHeight: "16px" }}>⌘⇧E</span>
             </div>
           </div>
         </div>
@@ -363,7 +363,7 @@ function NavItem({ icon, label, active, hovered, onClick, onHover }: { icon: str
       className="flex items-center gap-2 w-full border-none cursor-pointer"
       style={{
         height: 26, paddingLeft: 6, borderRadius: 4, fontFamily: "inherit",
-        background: active ? "#efeff0" : hovered ? "rgba(0,0,0,0.03)" : "transparent",
+        background: active ? "#e8e8ec" : hovered ? "rgba(0,0,0,0.03)" : "transparent",
         color: isHighlighted ? "#18181b" : "#52525b",
         transition: "background 0.15s ease, color 0.15s ease",
       }}
@@ -393,7 +393,7 @@ function IconBtn({ children, tooltip }: { children: React.ReactNode; tooltip?: s
 
 function FeatureBanner({ text }: { text: string }) {
   return (
-    <div className="flex items-center gap-2 px-3 mb-4" style={{ height: 28, background: "#eff6ff", borderRadius: 4, border: "0.5px solid #bfdbfe" }}>
+    <div className="flex items-center gap-2 px-3 mb-4" style={{ height: 28, background: "#eff6ff", borderRadius: 4, border: "1px solid #bfdbfe" }}>
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/>
       </svg>
@@ -433,7 +433,7 @@ function RiskCard({ severity, title, synthesis, sources, date, people, expanded,
       style={{
         background: expanded ? sev.bg : "#fff",
         borderRadius: 8,
-        border: expanded ? `1px solid ${sev.dot}33` : "1px solid #e4e4e7",
+        border: expanded ? `1px solid ${sev.dot}33` : "1px solid #e8e8ec",
         boxShadow: expanded
           ? `0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)`
           : "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)",
@@ -453,7 +453,7 @@ function RiskCard({ severity, title, synthesis, sources, date, people, expanded,
         </div>
         <p style={{ fontSize: 10, color: "#52525b", margin: 0, lineHeight: 1.5, overflow: "hidden", transition: "max-height 0.25s ease", maxHeight: expanded ? 100 : 18 }}>{synthesis}</p>
       </div>
-      <div className="flex items-center gap-3 px-3" style={{ height: 28, background: expanded ? "rgba(0,0,0,0.02)" : "#fafafa", boxShadow: "inset 0 1px 0 #efeff0", transition: "background 0.2s ease" }}>
+      <div className="flex items-center gap-3 px-3" style={{ height: 28, background: expanded ? "rgba(0,0,0,0.02)" : "#fafafa", boxShadow: "inset 0 1px 0 #e8e8ec", transition: "background 0.2s ease" }}>
         <span style={{ fontSize: 9, color: "#a1a1aa" }}>{sources} sources</span>
         <span style={{ fontSize: 9, color: "#a1a1aa" }}>{date}</span>
         <div className="flex -space-x-1.5 ml-auto">{people.map((p) => <AvatarDot key={p} initials={p} />)}</div>
@@ -486,7 +486,7 @@ function MeetingRow({ title, summary, date, duration, participants, topics, acti
         </div>
         <p style={{ fontSize: 10, color: "#52525b", margin: 0, lineHeight: 1.4 }} className="truncate">{summary}</p>
         <div className="flex items-center gap-1.5 mt-0.5">
-          {topics.map((t) => <span key={t} style={{ fontSize: 8, fontWeight: 500, color: "#71717a", background: "#fafafa", border: "0.5px solid #efeff0", borderRadius: 4, padding: "1px 4px", lineHeight: "14px" }}>{t}</span>)}
+          {topics.map((t) => <span key={t} style={{ fontSize: 8, fontWeight: 500, color: "#71717a", background: "#fafafa", border: "1px solid #e8e8ec", borderRadius: 4, padding: "1px 4px", lineHeight: "14px" }}>{t}</span>)}
         </div>
       </div>
       <div className="shrink-0 flex flex-col items-end gap-1.5">
@@ -566,7 +566,7 @@ function TodoItem({ text, due, who, done, urgent, onToggle }: { text: string; du
         className="shrink-0"
         style={{
           width: 14, height: 14, borderRadius: 4,
-          border: done ? "none" : "1.5px solid #d4d4d8",
+          border: done ? "none" : "1px solid #d4d4d8",
           background: done ? "#2563eb" : "#fff",
           display: "flex", alignItems: "center", justifyContent: "center",
           transition: "background 0.2s ease, border-color 0.2s ease, transform 0.15s ease",

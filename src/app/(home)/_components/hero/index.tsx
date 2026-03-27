@@ -41,14 +41,14 @@ export default function Hero() {
                 </FadeIn>
                 <FadeIn delay={100} className="mt-8">
                   <h1 className="leading-[1.1] text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-semibold tracking-tighter text-[#1a1a1f]">
-                    Empower your enterprise with organizational memory
+                    Your company&apos;s knowledge, always at your fingertips
                   </h1>
                 </FadeIn>
                 <FadeIn delay={200} className="mt-4">
                   <p className="text-[15px] xs:text-base s:text-[17px] md:text-lg text-[#a1a1aa] leading-relaxed max-w-xl">
-                    Sentra is your organizational memory system that transforms your
-                    company&apos;s collective knowledge, data and decisions into living
-                    intelligence.
+                    Sentra remembers every meeting, decision, and conversation so your
+                    team doesn&apos;t have to. Less time searching, more time doing what
+                    matters.
                   </p>
                 </FadeIn>
                 <FadeIn delay={300} className="mt-10">

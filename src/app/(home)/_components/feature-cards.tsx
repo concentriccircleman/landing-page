@@ -25,9 +25,9 @@ const FEATURES: Feature[] = [
   {
     id: "unified-memory",
     label: "Unified Memory",
-    title: "A \"git log\" of your company's decisions",
+    title: "A complete history of every decision",
     description:
-      "Sentra understands how the company changes by creating a unified timeline of decisions and commitments. Every meeting, document, and conversation becomes part of a living record that your entire organization can draw from.",
+      "Sentra keeps track of how your company evolves by building a living timeline of decisions and commitments. Every meeting, conversation, and document is captured — so anyone on your team can find the answers they need.",
     imageSrc: unifiedKnowledgeImage,
     imageAlt: "Unified knowledge timeline visualization",
     animation: undefined,
@@ -53,25 +53,11 @@ const FEATURES: Feature[] = [
     ),
   },
   {
-    id: "strategic-alignment",
-    label: "Strategic Alignment",
-    title: "A ground-zero understanding of your company",
-    description:
-      "By being present with your team, Sentra learns your company's priorities and strategic context. It connects the dots across departments, ensuring everyone shares the same understanding of what matters most.",
-    imageSrc: alignmentImage,
-    imageAlt: "Strategic alignment visualization",
-    icon: (
-      <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-    ),
-  },
-  {
     id: "risk-detection",
     label: "Risk Detection",
-    title: "Identify risks and conflicts in real time",
+    title: "Spot problems before they grow",
     description:
-      "With real-time awareness across your organization, Sentra identifies conflicting priorities, missed commitments, and communication breakdowns before they become costly problems.",
+      "Sentra watches for conflicting priorities, missed commitments, and communication gaps across your company — and flags them before they turn into bigger issues.",
     imageSrc: misalignmentRadarImage,
     imageAlt: "Risk detection radar visualization",
     icon: (
@@ -83,9 +69,9 @@ const FEATURES: Feature[] = [
   {
     id: "business-reviews",
     label: "Business Reviews",
-    title: "Powerful weekly business reviews",
+    title: "Weekly updates, written for you",
     description:
-      "Replace 5 manual status reports, bureaucratic SOPs, and hours of writing training with a one-time ask to Sentra for weekly updates.",
+      "Stop chasing status reports. Just ask Sentra and get a clear summary of what happened across your team this week — ready to share in minutes, not hours.",
     imageSrc: alwaysWorkingImage,
     imageAlt: "Always working status visualization",
     icon: (
@@ -95,39 +81,11 @@ const FEATURES: Feature[] = [
     ),
   },
   {
-    id: "meeting-intelligence",
-    label: "Meeting Intelligence",
-    title: "Stay in the loop without the meeting",
-    description:
-      "Keep informed of the key decisions and action items from every meeting, even if you're not there. Sentra ensures nothing falls through the cracks.",
-    imageSrc: meetingsImage,
-    imageAlt: "Meetings visualization",
-    icon: (
-      <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-      </svg>
-    ),
-  },
-  {
-    id: "follow-ups",
-    label: "Follow-ups",
-    title: "Never miss a follow-up",
-    description:
-      "Sentra remembers your spoken commitments and proactively reminds you at the right time.",
-    imageSrc: remindersImage,
-    imageAlt: "Reminders visualization",
-    icon: (
-      <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-      </svg>
-    ),
-  },
-  {
     id: "job-assignments",
-    label: "Job Assignments",
-    title: "Personalized job assignments",
+    label: "Agents",
+    title: "Agents that do the work for you",
     description:
-      "Get Sentra to help you in the way you need it. Whether it's meeting briefs, custom reports, or just keeping you in the loop.",
+      "Set up agents that handle the busywork — daily briefings, custom reports, meeting prep, or nudges when something needs your attention. You define the job, Sentra takes care of the rest.",
     imageSrc: actionLogImage,
     imageAlt: "Action log visualization",
     icon: (
@@ -137,25 +95,11 @@ const FEATURES: Feature[] = [
     ),
   },
   {
-    id: "onboarding",
-    label: "Onboarding",
-    title: "A smoother onboarding",
-    description:
-      "Accelerate new hire ramp-up with contextual knowledge delivery. Sentra provides just-in-time answers to role-specific questions.",
-    imageSrc: onboardingImage,
-    imageAlt: "Onboarding visualization",
-    icon: (
-      <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" />
-      </svg>
-    ),
-  },
-  {
     id: "institutional-knowledge",
     label: "Institutional Knowledge",
-    title: "Memorialize your institutional knowledge",
+    title: "Keep your company's knowledge alive",
     description:
-      "Access decisions from departed team members. Sentra links the who, what, when, and why of every important choice. Own your company's lore.",
+      "When people leave, their knowledge doesn't have to go with them. Sentra preserves the who, what, when, and why behind every important decision.",
     imageSrc: memorizedInstitutionalKnowledgeImage,
     imageAlt: "Institutional knowledge visualization",
     icon: (
@@ -168,9 +112,11 @@ const FEATURES: Feature[] = [
 
 const TAB_H = 30;
 const NAV_H = 80;
-const SIDE_PAD = 32;
-const SCROLL_DWELL = 60;
+const SIDE_PAD = "min(600px, max(2rem, calc((100vw - 1200px) / 2)))";
+const SCROLL_DWELL = 20;
 const SCROLL_DWELL_LAST = 20;
+
+const SHADOW_OFFSET = 20;
 
 const MARK = 10;
 const MARK_COLOR = "#c4c4c8";
@@ -208,7 +154,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
       {/* Tab strip — transparent so previous cards' tabs show through */}
       <div
         className="flex items-end"
-        style={{ height: TAB_H, padding: `0 ${SIDE_PAD}px` }}
+        style={{ height: TAB_H, padding: `0 ${SIDE_PAD}` }}
       >
         {features.slice(0, index + 1).map((f, i) => {
           const isCurrent = i === index;
@@ -241,100 +187,119 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
 
       {/* Card body */}
       <div
-        className="overflow-hidden relative"
+        className="relative"
         style={{
-          height: `calc(100vh - ${NAV_H + TAB_H}px)`,
-          margin: `0 ${SIDE_PAD}px`,
-          background: "#f8f8f8",
-          border: "1px solid #e0e0e3",
-          borderTop: "1px solid #e0e0e3",
+          height: `calc(100vh - ${NAV_H + TAB_H + SHADOW_OFFSET}px)`,
+          margin: `0 ${SIDE_PAD}`,
         }}
       >
-        {/* Dot grid texture */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: "radial-gradient(circle, #d4d4d8 0.5px, transparent 0.5px)",
-            backgroundSize: "24px 24px",
-            opacity: 0.4,
-          }}
-        />
-        <div className="relative z-10 max-w-screen-xl mx-auto w-full px-8 md:px-12 h-full flex items-center">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 w-full py-8">
-            <div className="relative flex flex-col justify-center md:w-[42%] shrink-0">
-              {/* Large faded feature number */}
-              <span
-                className="absolute -top-6 -left-2 select-none pointer-events-none font-semibold tabular-nums"
-                style={{
-                  fontSize: 120,
-                  lineHeight: 1,
-                  color: "rgba(0,0,0,0.025)",
-                  letterSpacing: "-0.04em",
-                }}
-                aria-hidden="true"
-              >
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div className="relative">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-6 h-6 bg-brand flex items-center justify-center rounded-sm">
-                    {feature.icon}
-                  </div>
-                  {feature.isNew && (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-widest text-brand bg-white px-2.5 py-1 rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_2px_4px_rgba(0,0,0,0.04),0_4px_12px_rgba(37,99,235,0.1),inset_0_1px_0_rgba(255,255,255,0.9)]">
-                      <svg className="w-2.5 h-2.5 -translate-y-[0.5px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      New
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-2xl md:text-3xl lg:text-[2.25rem] font-semibold tracking-tighter text-[#1a1a1f] leading-[1.15] mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-[15px] md:text-base text-[#71717a] leading-relaxed max-w-lg">
-                  {feature.description}
-                </p>
-              </div>
-              {/* Progress indicator */}
-              <div
-                className="hidden md:flex items-center gap-2 mt-8"
-                aria-hidden="true"
-              >
-                {features.map((_, pi) => (
-                  <span
-                    key={pi}
-                    style={{
-                      width: pi === index ? 16 : 4,
-                      height: 2,
-                      borderRadius: 1,
-                      background: pi === index ? "#2563eb" : "#d4d4d8",
-                      transition: "width 0.3s, background 0.3s",
-                    }}
-                  />
-                ))}
-                <span className="text-[10px] font-mono text-[#a1a1aa] ml-1.5">
-                  {String(index + 1).padStart(2, "0")}/{String(features.length).padStart(2, "0")}
+        {index === 0 && (
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              top: SHADOW_OFFSET,
+              left: SHADOW_OFFSET,
+              width: "100%",
+              height: "100%",
+              zIndex: 0,
+              background: `repeating-linear-gradient(
+                45deg,
+                #b4b4ba,
+                #b4b4ba 1px,
+                transparent 1px,
+                transparent 6px
+              )`,
+            }}
+            aria-hidden="true"
+          />
+        )}
+        <div className="overflow-hidden relative h-full z-10" style={{ background: "#f8f8f8", border: "1px solid #e0e0e3" }}>
+          {/* Dot grid texture */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: "radial-gradient(circle, #d4d4d8 0.5px, transparent 0.5px)",
+              backgroundSize: "24px 24px",
+              opacity: 0.4,
+            }}
+          />
+          <div className="relative z-10 max-w-screen-xl mx-auto w-full px-8 md:px-12 h-full flex items-center">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 w-full py-8">
+              <div className="relative flex flex-col justify-center md:w-[42%] shrink-0">
+                {/* Large faded feature number */}
+                <span
+                  className="absolute -top-6 -left-2 select-none pointer-events-none font-semibold tabular-nums"
+                  style={{
+                    fontSize: 120,
+                    lineHeight: 1,
+                    color: "rgba(0,0,0,0.025)",
+                    letterSpacing: "-0.04em",
+                  }}
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
                 </span>
+                <div className="relative">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-6 h-6 bg-brand flex items-center justify-center rounded-sm">
+                      {feature.icon}
+                    </div>
+                    {feature.isNew && (
+                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-widest text-brand bg-white px-2.5 py-1 rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_2px_4px_rgba(0,0,0,0.04),0_4px_12px_rgba(37,99,235,0.1),inset_0_1px_0_rgba(255,255,255,0.9)]">
+                        <svg className="w-2.5 h-2.5 -translate-y-[0.5px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        New
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-2xl md:text-3xl lg:text-[2.25rem] font-semibold tracking-tighter text-[#1a1a1f] leading-[1.15] mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-[15px] md:text-base text-[#71717a] leading-relaxed max-w-lg">
+                    {feature.description}
+                  </p>
+                </div>
+                {/* Progress indicator */}
+                <div
+                  className="hidden md:flex items-center gap-2 mt-8"
+                  aria-hidden="true"
+                >
+                  {features.map((_, pi) => (
+                    <span
+                      key={pi}
+                      style={{
+                        width: pi === index ? 16 : 4,
+                        height: 2,
+                        borderRadius: 1,
+                        background: pi === index ? "#2563eb" : "#d4d4d8",
+                        transition: "width 0.3s, background 0.3s",
+                      }}
+                    />
+                  ))}
+                  <span className="text-[10px] font-mono text-[#a1a1aa] ml-1.5">
+                    {String(index + 1).padStart(2, "0")}/{String(features.length).padStart(2, "0")}
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <div className="flex-1 flex items-center justify-center">
-              {feature.animation ? (
-                <div className="relative w-full aspect-square max-h-[520px] bg-white border border-[#e4e4e7] overflow-hidden rounded-sm">
-                  {feature.animation}
-                  <CornerMarks />
-                </div>
-              ) : (
-                <div className="relative w-full aspect-[4/3] max-h-[480px] bg-white border border-[#e4e4e7] flex items-center justify-center p-8 md:p-12 rounded-sm">
-                  <Image
-                    src={feature.imageSrc}
-                    alt={feature.imageAlt}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto max-h-[360px] object-contain"
-                  />
-                  <CornerMarks />
-                </div>
-              )}
+              <div className="flex-1 flex items-center justify-center">
+                {feature.animation ? (
+                  <div className="relative w-full aspect-square max-h-[520px] bg-white border border-[#e0e0e3] overflow-hidden rounded-sm">
+                    {feature.animation}
+                    <CornerMarks />
+                  </div>
+                ) : (
+                  <div className="relative w-full aspect-[4/3] max-h-[480px] bg-white border border-[#e0e0e3] flex items-center justify-center p-8 md:p-12 rounded-sm">
+                    <Image
+                      src={feature.imageSrc}
+                      alt={feature.imageAlt}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto max-h-[360px] object-contain"
+                    />
+                    <CornerMarks />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -345,7 +310,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
 
 export default function FeatureCards() {
   return (
-    <section className="relative" style={{ background: "#f8f8f8" }}>
+    <section className="relative" style={{ background: "#f8f8f8", marginBottom: `-${SCROLL_DWELL_LAST}vh` }}>
       {FEATURES.map((_, i) => (
         <FeatureCard key={FEATURES[i].id} features={FEATURES} index={i} />
       ))}
