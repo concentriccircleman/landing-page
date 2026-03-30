@@ -194,11 +194,6 @@ const PricingCard = ({
     <div className="flex flex-col bg-white p-8 md:p-10">
       <div className="flex items-center gap-3 mb-1">
         <h3 className="text-base font-semibold text-[#1a1a1f]">{name}</h3>
-        {highlighted && (
-          <span className="text-[10px] font-semibold uppercase tracking-widest text-brand">
-            Popular
-          </span>
-        )}
       </div>
       <p className="text-[13px] text-[#a1a1aa] mb-8">{subtitle}</p>
 

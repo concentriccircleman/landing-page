@@ -49,20 +49,24 @@ export function StaticLogoRow() {
 export function StaticInvestorRow() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 py-2">
-      {INVESTOR_LOGOS.map((logo) => (
-        <div
-          key={logo.id}
-          className="select-none h-6 md:h-7 w-auto flex items-center justify-center"
-        >
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={140}
-            height={28}
-            className="h-full w-auto object-contain opacity-50 hover:opacity-80 transition-opacity"
-          />
-        </div>
-      ))}
+      <div className="select-none h-5 md:h-6 w-auto flex items-center justify-center">
+        <Image
+          src={a16zSpeedrunLogo}
+          alt="a16z Speedrun"
+          width={140}
+          height={28}
+          className="h-full w-auto object-contain opacity-50 hover:opacity-80 transition-opacity"
+        />
+      </div>
+      <div className="select-none h-7 md:h-8 w-auto flex items-center justify-center translate-y-0.5">
+        <Image
+          src={togetherFundLogo}
+          alt="Together Fund"
+          width={140}
+          height={28}
+          className="h-full w-auto object-contain opacity-50 hover:opacity-80 transition-opacity"
+        />
+      </div>
     </div>
   );
 }

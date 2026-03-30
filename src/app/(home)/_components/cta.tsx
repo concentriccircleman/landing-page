@@ -4,7 +4,7 @@ import FadeIn from "@/components/fade-in";
 
 const CTA = () => {
   return (
-    <section className="relative z-10 bg-[#1a1a1f] py-28 md:py-36 overflow-hidden">
+    <section className="relative z-10 bg-[#1a1a1f] py-16 md:py-36 overflow-hidden">
       <PixelShimmer />
       <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-4 text-center">
         <FadeIn>
