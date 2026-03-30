@@ -202,7 +202,7 @@ const Contact = () => {
                 name="workEmail"
                 value={formValues.workEmail}
                 onChange={(event) => setFormValues({ ...formValues, workEmail: event.target.value })}
-                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-sm"
                 autoComplete="email"
                 type="email"
                 required
@@ -216,7 +216,7 @@ const Contact = () => {
                   name="firstName"
                   value={formValues.firstName}
                   onChange={(event) => setFormValues({ ...formValues, firstName: event.target.value })}
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-sm"
                   autoComplete="given-name"
                   required
                 />
@@ -228,7 +228,7 @@ const Contact = () => {
                   name="lastName"
                   value={formValues.lastName}
                   onChange={(event) => setFormValues({ ...formValues, lastName: event.target.value })}
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-sm"
                   autoComplete="family-name"
                   required
                 />
@@ -241,7 +241,7 @@ const Contact = () => {
                 name="company"
                 value={formValues.company}
                 onChange={(event) => setFormValues({ ...formValues, company: event.target.value })}
-                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-sm"
                 autoComplete="organization"
                 required
               />
@@ -322,7 +322,7 @@ const Contact = () => {
                   name="country"
                   value={formValues.country}
                   onChange={(event) => setFormValues({ ...formValues, country: event.target.value })}
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-sm"
                   autoComplete="country-name"
                   required
                 />
@@ -368,7 +368,7 @@ const Contact = () => {
                       heardAboutUsOther: event.target.value,
                     })
                   }
-                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150"
+                  className="w-full h-10 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-sm"
                   required={isOtherHeardAboutUsSelected}
                 />
               </label>
@@ -380,13 +380,13 @@ const Contact = () => {
                 name="motivations"
                 value={formValues.motivations}
                 onChange={(event) => setFormValues({ ...formValues, motivations: event.target.value })}
-                className="w-full min-h-32 max-h-64 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-3 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 resize-y"
+                className="w-full min-h-32 max-h-64 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-3 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 resize-y rounded-sm"
                 placeholder="Example: We want a system that captures decisions across meetings and Slack, and makes them searchable for new hires."
                 required
               />
             </label>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-4">
               <button
                 type="submit"
                 className="inline-flex justify-center items-center bg-brand text-[#f0f0f0] px-8 py-3.5 text-[14px] font-medium rounded-lg cursor-pointer hover:brightness-110 hover:-translate-y-px duration-200 shadow-[0_0_0_1px_#1e40af,0_2px_4px_rgba(37,99,235,0.3),0_6px_16px_rgba(37,99,235,0.2),0_12px_32px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.25)] hover:shadow-[0_0_0_1px_#1e40af,0_4px_8px_rgba(37,99,235,0.35),0_10px_24px_rgba(37,99,235,0.25),0_16px_40px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)] disabled:opacity-60 disabled:pointer-events-none"
