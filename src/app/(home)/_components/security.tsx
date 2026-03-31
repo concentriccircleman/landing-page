@@ -44,10 +44,10 @@ export default function Security() {
         <FadeIn delay={200}>
           <IsometricCard className="border border-[#e0e0e3] bg-[#f8f8f8] p-8">
             <h3 className="text-lg md:text-xl font-semibold text-[#1a1a1f] tracking-tighter mb-6">
-              Runs on your own servers
+              On-premise deployments
             </h3>
             <p className="text-[14px] text-[#52525b] leading-relaxed">
-              Need your data to stay on your own servers? We can set that up. Sentra works just as well when deployed entirely within your infrastructure — your data never has to leave your building.
+              For organizations with sensitive data requirements, we offer dedicated isolated VPC or on-premise air-gapped deployments. This flexibility ensures your data never leaves your infrastructure while still providing the full power of Sentra&apos;s AI-driven organizational intelligence.
             </p>
           </IsometricCard>
         </FadeIn>

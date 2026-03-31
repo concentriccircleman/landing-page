@@ -17,6 +17,8 @@ export default function Layout({
   const isLanding = pathname === "/";
 
   const isBlogRoute = pathname.startsWith("/blog");
+  const isAuthRoute = pathname === "/sign-in";
+
   const validRoutes = [
     "/",
     "/about",
@@ -28,9 +30,18 @@ export default function Layout({
     "/data-privacy",
     "/pricing",
     "/blog",
+    "/sign-in",
   ];
 
   const isNotFound = !validRoutes.includes(pathname) && !isBlogRoute;
+
+  if (isAuthRoute) {
+    return (
+      <Providers>
+        {children}
+      </Providers>
+    );
+  }
 
   return (
     <Providers>
