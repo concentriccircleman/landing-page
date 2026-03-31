@@ -3,10 +3,20 @@
 import { useEffect, useRef } from "react";
 
 const CELL = 5;
-const SPAWN_RATE_PER_1000 = 20;
-const FADE_RATE = 0.003;
+const DEFAULT_SPAWN_RATE = 20;
+const DEFAULT_FADE_RATE = 0.003;
 
-export default function PixelShimmer({ maxOpacity = 0.15 }: { maxOpacity?: number }) {
+interface PixelShimmerProps {
+  maxOpacity?: number;
+  spawnRate?: number;
+  fadeRate?: number;
+}
+
+export default function PixelShimmer({
+  maxOpacity = 0.15,
+  spawnRate = DEFAULT_SPAWN_RATE,
+  fadeRate = DEFAULT_FADE_RATE,
+}: PixelShimmerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const gridRef = useRef<Map<string, number>>(new Map());
   const animRef = useRef<number>(0);
@@ -48,7 +58,7 @@ export default function PixelShimmer({ maxOpacity = 0.15 }: { maxOpacity?: numbe
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const totalCells = cols * rows;
-      const spawnCount = Math.max(1, Math.round((totalCells / 1000) * SPAWN_RATE_PER_1000));
+      const spawnCount = Math.max(1, Math.round((totalCells / 1000) * spawnRate));
 
       for (let i = 0; i < spawnCount; i++) {
         const gx = Math.floor(Math.random() * cols);
@@ -62,7 +72,7 @@ export default function PixelShimmer({ maxOpacity = 0.15 }: { maxOpacity?: numbe
       }
 
       for (const [key, opacity] of gridRef.current) {
-        const next = opacity - FADE_RATE;
+        const next = opacity - fadeRate;
         if (next <= 0) {
           gridRef.current.delete(key);
           continue;
@@ -85,7 +95,7 @@ export default function PixelShimmer({ maxOpacity = 0.15 }: { maxOpacity?: numbe
       window.removeEventListener("resize", onResize);
       cancelAnimationFrame(animRef.current);
     };
-  }, [maxOpacity]);
+  }, [maxOpacity, spawnRate, fadeRate]);
 
   return (
     <canvas

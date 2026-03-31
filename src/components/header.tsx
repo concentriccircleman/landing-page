@@ -45,7 +45,7 @@ const Header = () => {
 
         <div className="flex sm:hidden items-center gap-2">
           <Link
-            href="/login"
+            href="/sign-in"
             className="h-8 inline-flex items-center text-[12px] font-medium px-3 rounded-sm duration-200 transition-all active:scale-[0.97] bg-white text-[#1a1a1f] hover:bg-[#f4f4f5] shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04),inset_0_0.75px_0_rgba(255,255,255,0.6)]"
           >
             Sign In
@@ -64,7 +64,7 @@ const Header = () => {
             Pricing
           </Link>
           <Link
-            href="/login"
+            href="/sign-in"
             className="h-8 inline-flex items-center text-[13px] font-medium px-3.5 rounded-sm duration-200 hover:cursor-pointer transition-all active:scale-[0.97] bg-white text-[#1a1a1f] hover:bg-[#f4f4f5] hover:-translate-y-px shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04),inset_0_0.75px_0_rgba(255,255,255,0.6)] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_6px_rgba(0,0,0,0.06),inset_0_0.75px_0_rgba(255,255,255,0.6)]"
           >
             Sign In
