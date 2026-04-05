@@ -6,39 +6,29 @@ import FadeIn from "@/components/fade-in";
 const Manifesto = () => {
   return (
     <section className="w-full px-4 max-w-3xl mx-auto">
-      <PageHeader title="Sentra: The Operational Nervous System" />
+      <PageHeader title="The Sentra Manifesto" />
 
       <FadeIn delay={100}>
-        <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed mb-10">
+        <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed mb-12">
           <p>
-            Scaling breaks organizations in predictable ways. At 20 people, you
-            lose the ability to sync over lunch. At 50, product-engineering
-            alignment fractures. At 150, cross-functional context evaporates. At
-            500, executives are governing a company they no longer understand.
-            Companies scaled by adding processes to compensate. More standups.
-            More status docs. More dashboards. Each layer added friction while
-            reducing actual understanding. Notion pages went stale within weeks.
-            Confluence became a graveyard. The result: organizations tracked
-            everything about what happened and understood nothing about why.
+            <span className="font-semibold text-[#1a1a1f]">
+              Enterprise General Intelligence
+            </span>
           </p>
           <p>
-            The future belongs to companies where AI deeply understands the
-            business, not as a search engine over stale documents, but as a
-            living participant in how work actually happens. Memory is not an
-            archive. Archives store dead artifacts waiting to be searched. A
-            company with 10TB of Google Drive isn&apos;t knowledgeable. It&apos;s
-            hoarding. Memory understands. It connects. It learns continuously. A
-            library holds books. A scholar reads them, connects ideas across
-            volumes, and develops judgment over time. What we call
-            &quot;institutional memory&quot; today is actually institutional
-            amnesia with good filing.
+            Every organization runs on intelligence, the decisions made in
+            meetings, the context buried in threads, the commitments forged in
+            conversation. Yet every enterprise tool stores only the shadows: the
+            document after the decision, the ticket after the discussion, the
+            CRM entry after the handshake. The originals, the interactions
+            themselves, are thrown away.
           </p>
           <p>
-            Today we rely on fragmented SaaS tools that require constant manual
-            feeding. We serve these tools. We update tickets. We log calls. The
-            tools don&apos;t serve us; they demand tribute. Sentra builds memory
-            that eliminates the need for tribute entirely. This was impossible
-            until very recently.
+            Sentra exists to change this. We are building Enterprise General
+            Intelligence: infrastructure that captures organizational
+            interactions at their source, extracts the intelligence within them,
+            and turns every company into a system that learns, remembers, and
+            acts on what it knows.
           </p>
         </div>
       </FadeIn>
@@ -47,36 +37,21 @@ const Manifesto = () => {
         <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
-              Why wasn&apos;t this built before? Because until now, AI was
-              retrieval, not reasoning. It could find a file. It couldn&apos;t
-              understand a company. Three thresholds changed that. First, the
-              digitization of dark matter: spoken decisions, hallway negotiations,
-              ad-hoc brainstorms used to evaporate the moment they happened, that
-              friction has collapsed. Second, context windows exploded from 4K to
-              over 1M tokens, so we can reason over organizational history, not
-              just search it. Third, continuous memory revision: Sentra maintains
-              a living state of your organization that updates as decisions occur,
-              without model retraining.
+              <span className="font-semibold text-[#1a1a1f]">
+                The Core Insight
+              </span>
             </p>
             <p>
-              Borrowing from Kahneman: organizational thinking happens in two
-              modes. System-2 is structured output, Jira tickets, PRDs, quarterly
-              reports. System-1 is raw cognition, the negotiation of reality in
-              meetings and conversations where decisions actually get made. Most
-              tools only capture System-2. But System-2 is derivative. By the time
-              something becomes a ticket, the actual thinking has already happened
-              elsewhere. Sentra captures System-1 directly, building genuine
-              understanding of how decisions are made, how projects evolve, and
-              how context flows through your company.
-            </p>
-            <p>
-              When AI weaves System-1 and System-2 together across an entire
-              company, something new emerges. Call it System 3: collective
-              intelligence at the organizational level. The organization
-              doesn&apos;t just store its thinking. It actually thinks, as a
-              coherent entity, not just individuals trying to stay aligned.
-              Single-player AI optimizes one person&apos;s workflow. System 3 is
-              multiplayer cognition.
+              Intelligence lives in interactions, not documents. Every system of
+              record, your CRM, your project tracker, your OKR tool, is
+              derivative. They are downstream artifacts of conversations between
+              people. The meeting where strategy shifted. The Slack thread where
+              architecture was debated. The email where the commitment was made.
+              These interactions carry intent, rationale, context, and
+              causality. The artifacts carry none of it. The cost is staggering
+              and invisible: decisions revisited because no one remembers why
+              they were made, commitments slipping because they were never
+              extracted, context evaporating when people leave.
             </p>
           </div>
         </div>
@@ -86,30 +61,19 @@ const Manifesto = () => {
         <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
-              What does this look like? An engineer asks why the architecture
-              looks this way and gets the full decision history immediately, no
-              coffee chats, no archaeology through old PRDs. A VP joins; within a
-              week, they ask Sentra why the Q3 pricing decision was made, who
-              disagreed, and what changed since, context that used to take six
-              months of hallway conversations. A founder wakes up Monday and gets
-              a single synthesis across engineering, sales, and ops, not status
-              docs to reconcile, but a coherent narrative with risks surfaced. A
-              COO notices drift; instead of four meetings to triangulate, they get
-              the full decision history, blockers, and who needs to be in the
-              room. The coordination tax flattens. Process becomes optional.
+              <span className="font-semibold text-[#1a1a1f]">
+                Why Organizational Memory Is Solvable
+              </span>
             </p>
             <p>
-              Today&apos;s AI agents are impressive but fundamentally
-              single-player. Claude Code, Copilot, Operator, they excel at tasks
-              one person can describe to one computer. They don&apos;t understand
-              organizations. The problem we&apos;re solving isn&apos;t &quot;how
-              do I automate my individual work.&quot; It&apos;s &quot;how do I
-              keep fifty people aligned when context fragments across hundreds of
-              conversations daily.&quot; Glean searches documents. Copilot
-              summarizes what&apos;s in front of you. Neither builds memory.
-              Neither connects a March conversation to a June decision to a
-              September consequence. Why can&apos;t they? Because this is a
-              research problem.
+              Personal memory is intractable, individuals have shifting,
+              unpredictable utility functions. Organizations are different. They
+              have a stable utility function: build products, generate revenue,
+              serve customers. This makes defining "what matters"
+              mathematically tractable. The core ontology reduces to six
+              classes: Actors, Interactions, Decisions, Rationale,
+              Commitments, and Value-Creating Objects, all indexed across time.
+              Actors and Interactions are primary. Everything else is derived.
             </p>
           </div>
         </div>
@@ -119,23 +83,27 @@ const Manifesto = () => {
         <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
-              Making coherent sense of millions of tokens of organizational
-              context requires new science. We built Reflexion at MIT (NeurIPS
-              2023). Now we&apos;re extending it into Operational Reinforcement:
-              by maintaining short-term memory of errors as they form, we enable
-              real-time correction that dramatically improves performance.
-              We&apos;ve shown that 4-billion parameter models fine-tuned with
-              this approach match GPT-3.5 and GPT-4o on coding benchmarks.
-              We&apos;re extending these capabilities to increase context length,
-              improve temporal reasoning, and model how decisions propagate
-              through organizations.
+              <span className="font-semibold text-[#1a1a1f]">
+                System of Intelligence, Not System of Record
+              </span>
             </p>
             <p>
-              Our moat deepens with time. Every month Sentra operates inside a
-              company, it becomes harder to replace. The learned context of how
-              this specific organization communicates isn&apos;t exportable.
-              OpenAI starting fresh in 2027 has zero historical context for your
-              company.
+              We are not adding a layer on top. We are replacing the underlying
+              substrate. Today's enterprise stack is a patchwork of disconnected
+              systems of record, each storing a partial, stale copy of
+              organizational knowledge. Sentra captures interactions at their
+              source, meetings, emails, messages, agent traces, and derives
+              everything that currently lives in separate silos. CRMs, OKR
+              platforms, performance reviews, knowledge management, all collapse
+              into a single intelligence layer that is always current, always
+              contextual, always complete.
+            </p>
+            <p>
+              The interface is proactive and prompt-free. Sentra understands
+              each person's role, the org structure, and what matters to them.
+              It surfaces what deserves attention rather than waiting to be
+              asked. A chief of staff for every person. A program manager for
+              every team. No prompting required.
             </p>
           </div>
         </div>
@@ -145,28 +113,49 @@ const Manifesto = () => {
         <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
-              If Sentra is ingesting every meeting and every chat, you&apos;re
-              right to ask: who else can see this? Your memory stays yours alone.
-              Your organizational memory is entirely isolated, your strategy
-              meeting can&apos;t leak into another customer&apos;s context. Your
-              data never trains a shared model. You control retention. Access
-              mirrors your org structure: an IC can&apos;t query executive
-              discussions. We earn trust through architecture, not promises.
+              <span className="font-semibold text-[#1a1a1f]">
+                The Research Foundation
+              </span>
             </p>
             <p>
-              There&apos;s a missing layer that actually runs enterprises: the
-              decision traces. The exceptions, overrides, precedents, and
-              reasoning that currently live in Slack threads and people&apos;s
-              heads. A VP approves a discount over Zoom. A support lead escalates
-              based on synthesis across three systems. The reasoning connecting
-              data to action was never treated as data. When Sentra captures this,
-              precedent becomes searchable. One-off exceptions turn into
-              institutional knowledge. OKRs reflect what&apos;s actually
-              happening. Project status updates itself. The engineer who quietly
-              unblocks three teams is finally seen. CRM entries populate from
-              conversations. When someone asks &quot;why did we do it this
-              way?&quot;, there&apos;s an answer, not a guess, but the actual
-              decision trace.
+              This is not a product claim. It is a mathematically proven thesis,
+              grounded in five research papers from the Sentra team.
+            </p>
+            <p>
+              The Geometry of Forgetting shows that high-dimensional embedding
+              spaces reproduce quantitative signatures of human memory,
+              power-law forgetting, false recall, with no phenomenon-specific
+              engineering. Forgetting arises from interference, not decay.
+            </p>
+            <p>
+              The Price of Meaning proves the No-Escape Theorem:
+              interference-driven forgetting cannot be eliminated without
+              abandoning semantic organization or adding external structure.
+              Scale alone does not solve this.
+            </p>
+            <p>
+              The Semantic Memory Filesystem is the engineering answer, treating
+              a POSIX filesystem as the deterministic substrate for
+              organizational memory, with 4-channel parallel retrieval and
+              provenance tracking. The key result: replacing frontier models
+              with a 50x smaller model drops F1 by only 0.07, while retrieval
+              architecture optimizations contribute +0.112 F1. Intelligence is
+              in the architecture, not the model.
+            </p>
+            <p>
+              Operational Reinforcement introduces Monitor MDPs for structured
+              failure feedback, exact credit assignment by design, 300-900x
+              memory advantage over reward machines.
+            </p>
+            <p>
+              Avoidance Learning shows that substantive LLM behavior emerges
+              from pure negative feedback, with 80% fewer evasive responses, and
+              counter-intuitively, adding positive rewards degrades
+              performance.
+            </p>
+            <p>
+              Five papers. One thesis: structure and negation matter more than
+              scale and reward.
             </p>
           </div>
         </div>
@@ -176,23 +165,117 @@ const Manifesto = () => {
         <div className="border-t border-[#e8e8ec] pt-10 mb-12">
           <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
             <p>
-              Over time, patterns will emerge across companies. Not shared data,
-              but shared learnings. A founder could understand how similar
-              decisions played out at companies like theirs, while every
-              company&apos;s memory stays isolated. No more tribute. The tools
-              finally serve you. Where founders stay in founder mode at two
-              hundred people, not because they sit in every meeting, but because
-              they have an agent that does, and actually understands what it
-              hears.
+              <span className="font-semibold text-[#1a1a1f]">
+                When Raw Intelligence Becomes a Commodity
+              </span>
+            </p>
+            <p>
+              The AI industry is converging on abundant, cheap intelligence.
+              Foundation models are commoditizing. Inference costs are
+              collapsing. When every company has access to frontier-level
+              reasoning, the differentiator is no longer the model, it is how
+              teams operate. Enterprise General Intelligence is the layer that
+              turns commodity AI into organizational advantage: the memory, the
+              context, the accumulated understanding of how your company works,
+              what it has decided, and what it should do next.
             </p>
           </div>
         </div>
       </FadeIn>
 
       <FadeIn>
-        <div className="border-l-2 border-[#2563eb] pl-6 mb-10">
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
+          <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
+            <p>
+              <span className="font-semibold text-[#1a1a1f]">
+                The Roadmap of Sentra within Organizations
+              </span>
+            </p>
+            <p>
+              Phase 1, Org Memory (Now -&gt; 6 months): Sentra knows the
+              organization. Every interaction captured, every decision extracted,
+              every commitment tracked. Day 1: meeting intelligence, enterprise
+              search with full context, custom workflows. By Day 90: the primary
+              hub for work initiation and monitoring.
+            </p>
+            <p>
+              Phase 2, World Model (6 -&gt; 12 months): Sentra understands the
+              organization. Causal models of how the company behaves, who
+              influences what, which decisions led to which outcomes, where
+              patterns repeat. Agents that causally interact with, learn from,
+              and predict within a structured reality.
+            </p>
+            <p>
+              Phase 3, Org-wide RL (12 -&gt; 18 months): Sentra becomes
+              irreplaceable infrastructure. Reinforcement learning on what worked
+              and what didn't. The system doesn't just remember, it improves,
+              turning accumulated intelligence into a compounding advantage that
+              deepens every day.
+            </p>
+          </div>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className="border-t border-[#e8e8ec] pt-10 mb-12">
+          <div className="text-[15px] text-[#52525b] space-y-6 leading-relaxed">
+            <p>
+              <span className="font-semibold text-[#1a1a1f]">
+                Workflow Collapse
+              </span>
+            </p>
+            <p>
+              We do not engineer workflow automation. We make it inevitable.
+              When an intelligence layer captures every commitment, tracks every
+              dependency, and understands every person's context, workflows
+              collapse on their own. The action layer is a natural consequence
+              of the intelligence layer, not a separate product that needs to be
+              bolted on.
+            </p>
+            <p>
+              <span className="font-semibold text-[#1a1a1f]">
+                Early Evidence
+              </span>
+            </p>
+            <p>
+              11 active design partners including teams at SoftBank, Runway, and
+              Softmax. Over 10,000 meetings and 200,000 Slack messages
+              processed. 20,000 decisions tracked. 35,000 commitments extracted.
+              35 enterprises in active pipeline.
+            </p>
+            <p>
+              "The one thing Sentra does well that others don't is that Sentra
+              can contextualize what's important for me to know.", Emmett Shear,
+              CEO Softmax, Former CEO Twitch
+            </p>
+            <p>
+              "I consistently find the weekly reports good, useful. I enjoy
+              reading them. Even when it doesn't tell me anything new, just
+              having a story of what happened is actually quite useful.", Siqi
+              Chen, CEO Runway, Former CEO Sandbox VR
+            </p>
+            <p>
+              The enterprise software industry spent two decades building systems
+              of record, static databases organized around artifacts that were
+              already out of date the moment they were created. The next era
+              belongs to systems of intelligence: living infrastructure that
+              captures how organizations actually think, decide, and operate.
+            </p>
+            <p>
+              We have the research. We have the architecture. We have the
+              traction. We are not waiting for AGI to arrive and hoping it
+              solves enterprise, we are building the intelligence layer that
+              makes AGI useful for organizations. Sentra is Enterprise General
+              Intelligence.
+            </p>
+          </div>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className="border-l-2 border-[#2595ee] pl-6 mb-10">
           <p className="text-lg font-semibold tracking-tighter text-[#1a1a1f]">
-            Sentra. Memory that learns.
+            Sentra is Enterprise General Intelligence.
           </p>
         </div>
       </FadeIn>

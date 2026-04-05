@@ -152,7 +152,7 @@ const About = () => {
                 <h3 className="text-[14px] font-semibold text-[#1a1a1f] mb-1">Sentra does not spy on you</h3>
                 <p className="text-[14px] text-[#52525b] leading-relaxed">
                   She takes{" "}
-                  <a href="/data-privacy" className="text-[#2563eb] hover:underline">
+                  <a href="/data-privacy" className="text-[#2595ee] hover:underline">
                     data privacy very seriously
                   </a>
                   , and ensures you remain in control of your data, keeping you protected.
@@ -177,7 +177,7 @@ const About = () => {
 
       <FadeIn>
         <p className="text-[15px] text-[#52525b] mb-8 text-right">
-          — Jae, Co-founder and CEO
+          — Ashwin, Co-founder and CEO
         </p>
       </FadeIn>
     </section>

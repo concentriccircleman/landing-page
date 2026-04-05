@@ -17,7 +17,7 @@ const NotFound = () => {
             </p>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 bg-white text-[#1a1a1f] px-6 py-3 text-[14px] font-medium rounded-lg duration-200 hover:cursor-pointer hover:-translate-y-px shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06),inset_0_0.75px_0_rgba(255,255,255,0.8)] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.1),0_2px_6px_rgba(0,0,0,0.08),inset_0_0.75px_0_rgba(255,255,255,0.8)] transition-all active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)]"
+              className="inline-flex items-center gap-2 bg-white text-[#1a1a1f] px-6 py-3 text-[14px] font-medium rounded-lg duration-200 hover:cursor-pointer hover:-translate-y-px shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.06),inset_0_0.75px_0_rgba(255,255,255,0.8)] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.1),0_2px_6px_rgba(0,0,0,0.08),inset_0_0.75px_0_rgba(255,255,255,0.8)] transition-all active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,149,238,0.2)]"
             >
               Return Home
             </Link>

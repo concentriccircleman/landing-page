@@ -97,7 +97,7 @@ const DataPrivacy = () => {
                 <div className="space-y-2">
                   {["Full meeting transcript", "AI-generated summary and insights", "Action items and key decisions", "Can share with specific non-participants"].map((item) => (
                     <div key={item} className="flex items-center gap-2">
-                      <span className="text-[#2563eb] text-[13px]">&#10003;</span>
+                      <span className="text-[#2595ee] text-[13px]">&#10003;</span>
                       <span className="text-[14px] text-[#52525b]">{item}</span>
                     </div>
                   ))}
@@ -110,16 +110,16 @@ const DataPrivacy = () => {
                   <div>
                     <h5 className="text-[13px] font-semibold text-[#1a1a1f] mb-2">Admins</h5>
                     <div className="space-y-1.5">
-                      <div className="flex items-center gap-2"><span className="text-[#2563eb] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Public meeting notes and summaries</span></div>
-                      <div className="flex items-center gap-2"><span className="text-[#2563eb] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Any meeting shared with them</span></div>
+                      <div className="flex items-center gap-2"><span className="text-[#2595ee] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Public meeting notes and summaries</span></div>
+                      <div className="flex items-center gap-2"><span className="text-[#2595ee] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Any meeting shared with them</span></div>
                       <div className="flex items-center gap-2"><span className="text-[#a1a1aa] text-[13px]">&#10005;</span><span className="text-[14px] text-[#a1a1aa]">No access to private meetings at all</span></div>
                     </div>
                   </div>
                   <div>
                     <h5 className="text-[13px] font-semibold text-[#1a1a1f] mb-2">Members</h5>
                     <div className="space-y-1.5">
-                      <div className="flex items-center gap-2"><span className="text-[#2563eb] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Access to meetings they attended</span></div>
-                      <div className="flex items-center gap-2"><span className="text-[#2563eb] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Any meeting shared with them</span></div>
+                      <div className="flex items-center gap-2"><span className="text-[#2595ee] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Access to meetings they attended</span></div>
+                      <div className="flex items-center gap-2"><span className="text-[#2595ee] text-[13px]">&#10003;</span><span className="text-[14px] text-[#52525b]">Any meeting shared with them</span></div>
                       <div className="flex items-center gap-2"><span className="text-[#a1a1aa] text-[13px]">&#10005;</span><span className="text-[14px] text-[#a1a1aa]">No access to other meeting notes or transcripts</span></div>
                       <div className="flex items-center gap-2"><span className="text-[#a1a1aa] text-[13px]">&#10005;</span><span className="text-[14px] text-[#a1a1aa]">No access to private meetings at all</span></div>
                     </div>
@@ -169,12 +169,12 @@ const DataPrivacy = () => {
           </h2>
           <div className="space-y-5">
             {[
-              { title: "Access Your Data", desc: <>Download all your data at any time by contacting us at <a href="mailto:contact@sentra.app" className="text-[#2563eb] hover:underline">contact@sentra.app</a></> },
+              { title: "Access Your Data", desc: <>Download all your data at any time by contacting us at <a href="mailto:contact@sentra.app" className="text-[#2595ee] hover:underline">contact@sentra.app</a></> },
               { title: "Delete Your Data", desc: "Request immediate deletion of specific recordings or all data" },
               { title: "Control Sharing", desc: "Choose what insights are shared with your team and workspace admins" },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-3">
-                <span className="text-[#2563eb] mt-0.5">&#10003;</span>
+                <span className="text-[#2595ee] mt-0.5">&#10003;</span>
                 <div>
                   <h4 className="text-[14px] font-semibold text-[#1a1a1f]">{item.title}</h4>
                   <p className="text-[14px] text-[#52525b] leading-relaxed">{item.desc}</p>

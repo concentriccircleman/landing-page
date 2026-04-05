@@ -7,6 +7,9 @@ html {
 }
 
 :root {
+  --folder-side-pad: max(2rem, min(8rem, 6vw));
+  --folder-body-offset: 0px;
+
   --foreground: #1a1a1f;
   --background: #f8f8f8;
   --stroke-subtle: #e8e8ec;
@@ -191,4 +194,11 @@ pre {
   border-width: 1px;
   padding: 1rem;
   border-radius: var(--radius-lg);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --folder-side-pad: max(2rem, min(14rem, 10vw));
+    --folder-body-offset: 80px;
+  }
 }

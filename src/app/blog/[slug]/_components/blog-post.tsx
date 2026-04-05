@@ -38,7 +38,7 @@ const BlogPost = ({ Post, metadata, toc }: BlogPostProps) => {
     <nav aria-label="Breadcrumb" className="text-[13px] font-medium">
       <ol className="flex items-center gap-1.5">
         <li>
-          <Link href="/blog" className="text-[#a1a1aa] hover:text-[#2563eb] duration-200">
+          <Link href="/blog" className="text-[#a1a1aa] hover:text-[#2595ee] duration-200">
             Blog
           </Link>
         </li>

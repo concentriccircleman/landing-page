@@ -95,11 +95,14 @@ const FEATURES: Feature[] = [
 
 const TAB_H = 30;
 const NAV_H = 80;
-const SIDE_PAD = "max(2rem, min(8rem, 6vw))";
+const TOP_GAP = 40;
+const STICKY_TOP = NAV_H + TOP_GAP;
+const SIDE_PAD = "var(--folder-side-pad)";
 const SCROLL_DWELL = 20;
 const SCROLL_DWELL_LAST = 20;
 
 const SHADOW_OFFSET = 10;
+const BODY_H_OFFSET = "var(--folder-body-offset)";
 
 const MARK = 10;
 const MARK_COLOR = "#c4c4c8";
@@ -129,12 +132,11 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
     <div
       className="sticky w-full"
       style={{
-        top: NAV_H,
-        height: `calc(100vh - ${NAV_H}px + ${dwell}vh)`,
+        top: STICKY_TOP,
+        height: `calc(100vh - ${STICKY_TOP}px + ${dwell}vh)`,
         zIndex: index + 1,
       }}
     >
-      {/* Tab strip — transparent so previous cards' tabs show through */}
       <div
         className="flex items-end"
         style={{ height: TAB_H, padding: `0 ${SIDE_PAD}` }}
@@ -172,7 +174,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
       <div
         className="relative"
         style={{
-          height: `calc(100vh - ${NAV_H + TAB_H + SHADOW_OFFSET}px)`,
+          height: `calc(100vh - ${STICKY_TOP + TAB_H + SHADOW_OFFSET}px - ${BODY_H_OFFSET})`,
           margin: `0 ${SIDE_PAD}`,
         }}
       >

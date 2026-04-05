@@ -218,7 +218,7 @@ function ChatBubble() {
       >
         <div
           className="w-5 h-5 rounded-full shrink-0 flex items-center justify-center mt-0.5"
-          style={{ background: "rgba(37,99,235,0.1)" }}
+          style={{ background: "rgba(37,149,238,0.1)" }}
         >
           <svg viewBox="0 0 80 80" width="12" height="12">
             <circle cx="40" cy="12" r="4" fill="var(--brand)" />
@@ -288,8 +288,8 @@ function SyncLabel() {
         top: "54%",
         padding: "3px 10px",
         borderRadius: 100,
-        background: "rgba(37,99,235,0.06)",
-        border: "1px solid rgba(37,99,235,0.12)",
+        background: "rgba(37,149,238,0.06)",
+        border: "1px solid rgba(37,149,238,0.12)",
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: [0, 0.8, 0.5, 0.8] }}
@@ -336,7 +336,7 @@ export default function UnifiedMemoryAnimation() {
       className="relative w-full h-full overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse at 72% 42%, rgba(37,99,235,0.04) 0%, transparent 50%), var(--background)",
+          "radial-gradient(ellipse at 72% 42%, rgba(37,149,238,0.04) 0%, transparent 50%), var(--background)",
       }}
     >
       <DotGrid />
@@ -365,7 +365,7 @@ export default function UnifiedMemoryAnimation() {
           width: 110,
           height: 110,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(37,149,238,0.07) 0%, transparent 65%)",
         }}
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: [1, 1.04, 1] }}
@@ -379,7 +379,7 @@ export default function UnifiedMemoryAnimation() {
             width: 90,
             height: 90,
             filter:
-              "drop-shadow(0 0 16px rgba(37,99,235,0.18)) drop-shadow(0 0 40px rgba(37,99,235,0.08))",
+              "drop-shadow(0 0 16px rgba(37,149,238,0.18)) drop-shadow(0 0 40px rgba(37,149,238,0.08))",
           }}
         >
           <SentraMark />

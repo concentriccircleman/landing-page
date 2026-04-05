@@ -8,7 +8,7 @@ import sentraLogo from "@/assets/brand/sentra.png";
 import PixelShimmer from "@/components/pixel-shimmer";
 
 const inputClassName =
-  "w-full h-11 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,99,235,0.15)] transition-colors duration-150 rounded-lg";
+  "w-full h-11 bg-white text-[#1a1a1f] border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] px-4 py-2 text-sm placeholder:text-[#a1a1aa] focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,149,238,0.15)] transition-colors duration-150 rounded-lg";
 
 const socialButtonClassName =
   "flex items-center justify-center gap-2.5 w-full h-11 bg-white text-[14px] font-medium text-[#1a1a1f] border border-[#e0e0e3] rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_-1px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06),0_2px_4px_rgba(0,0,0,0.04)] hover:border-[#d4d4d8] transition-all duration-150 cursor-pointer";
@@ -164,7 +164,7 @@ const SignInPage = () => {
               <div className="flex flex-col gap-3 mt-8">
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 h-11 bg-brand text-[#f0f0f0] text-[14px] font-medium rounded-lg cursor-pointer shadow-[0_0_0_1px_#1e40af,0_2px_4px_rgba(37,99,235,0.3),0_6px_16px_rgba(37,99,235,0.2),0_12px_32px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.25)] hover:shadow-[0_0_0_1px_#1e40af,0_4px_8px_rgba(37,99,235,0.35),0_10px_24px_rgba(37,99,235,0.25),0_16px_40px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)] hover:brightness-110 hover:-translate-y-px transition-all duration-200 active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)]"
+                  className="w-full inline-flex items-center justify-center gap-2 h-11 bg-brand text-[#f0f0f0] text-[14px] font-medium rounded-lg cursor-pointer shadow-[0_0_0_1px_#1a7dd4,0_2px_4px_rgba(37,149,238,0.3),0_6px_16px_rgba(37,149,238,0.2),0_12px_32px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.25)] hover:shadow-[0_0_0_1px_#1a7dd4,0_4px_8px_rgba(37,149,238,0.35),0_10px_24px_rgba(37,149,238,0.25),0_16px_40px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)] hover:brightness-110 hover:-translate-y-px transition-all duration-200 active:scale-[0.97] focus-visible:ring-[3px] focus-visible:ring-[rgba(37,149,238,0.2)]"
                 >
                   Login
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

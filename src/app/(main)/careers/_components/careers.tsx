@@ -61,7 +61,7 @@ const Careers = () => {
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex-1">
-                    <div className="text-[14px] font-semibold text-[#1a1a1f] group-hover:text-[#2563eb] transition-colors duration-150">
+                    <div className="text-[14px] font-semibold text-[#1a1a1f] group-hover:text-[#2595ee] transition-colors duration-150">
                       {role.title}
                     </div>
                     <div className="text-[13px] text-[#a1a1aa] mt-1">
@@ -72,7 +72,7 @@ const Careers = () => {
                     <span className="text-[12px] font-medium text-[#52525b] bg-[#f0f0f2] px-2.5 py-1">
                       {role.department}
                     </span>
-                    <svg className="w-4 h-4 text-[#a1a1aa] group-hover:text-[#2563eb] transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#a1a1aa] group-hover:text-[#2595ee] transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>

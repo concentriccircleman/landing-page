@@ -229,7 +229,7 @@ const PricingCard = ({
         href={ctaHref}
         className={`h-11 inline-flex items-center justify-center text-[14px] font-medium rounded-lg duration-200 hover:cursor-pointer transition-all active:scale-[0.97] hover:-translate-y-px ${
           highlighted
-            ? "bg-brand text-[#f0f0f0] shadow-[0_0_0_1px_#1e40af,0_2px_4px_rgba(37,99,235,0.3),0_6px_16px_rgba(37,99,235,0.2),0_10px_24px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.25)] hover:brightness-110 focus-visible:ring-[3px] focus-visible:ring-[rgba(37,99,235,0.2)]"
+            ? "bg-brand text-[#f0f0f0] shadow-[0_0_0_1px_#1a7dd4,0_2px_4px_rgba(37,149,238,0.3),0_6px_16px_rgba(37,149,238,0.2),0_10px_24px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.25)] hover:brightness-110 focus-visible:ring-[3px] focus-visible:ring-[rgba(37,149,238,0.2)]"
             : "bg-white text-[#1a1a1f] shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04),inset_0_0.75px_0_rgba(255,255,255,0.6)] hover:bg-[#f4f4f5] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_2px_6px_rgba(0,0,0,0.06),inset_0_0.75px_0_rgba(255,255,255,0.6)]"
         }`}
       >

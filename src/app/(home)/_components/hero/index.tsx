@@ -4,12 +4,19 @@ import Link from "next/link";
 import HeroDemo from "./HeroDemo";
 import { StaticInvestorRow } from "./by-variants";
 import FadeIn from "@/components/fade-in";
+import PixelShimmer from "@/components/pixel-shimmer";
 
 export default function Hero() {
   return (
+    <>
     <section className="relative w-full flex flex-col bg-[#f8f8f8] md:min-h-screen overflow-hidden">
-      {/* Demo UI — positioned relative to viewport, bleeds off right edge */}
-      <div className="hidden md:block absolute top-[18%] bottom-[18%] left-[56%] -right-[15%] z-0">
+      <div
+        className="hidden md:block absolute top-[8%] bottom-[8%] left-[46%] -right-[25%] z-0 pointer-events-none overflow-hidden"
+        style={{ maskImage: "linear-gradient(to top, transparent, black 15%, black 85%, transparent), linear-gradient(to left, transparent, black 10%, black 90%, transparent)", maskComposite: "intersect", WebkitMaskImage: "linear-gradient(to top, transparent, black 15%, black 85%, transparent), linear-gradient(to left, transparent, black 10%, black 90%, transparent)", WebkitMaskComposite: "source-in" }}
+      >
+        <PixelShimmer maxOpacity={0.2} spawnRate={10} fadeRate={0.0005} />
+      </div>
+      <div className="hidden md:block absolute top-[18%] bottom-[18%] left-[56%] -right-[15%] z-[1]">
         <HeroDemo />
       </div>
       <div className="relative z-10 flex-1 flex flex-col pt-32 2xs:pt-44 pb-16 sm:pt-32 sm:pb-16">
@@ -72,14 +79,17 @@ export default function Hero() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={400} className="mt-auto pt-20 w-full max-w-3xl mx-auto flex flex-col items-center gap-3">
-            <p className="text-[10px] uppercase tracking-[0.15em] font-medium text-[#a1a1aa]">
-              Backed by
-            </p>
-            <StaticInvestorRow />
-          </FadeIn>
         </div>
       </div>
     </section>
+    <div className="relative z-10 bg-[#f8f8f8] pt-1 pb-3">
+      <FadeIn delay={400} className="w-full max-w-3xl mx-auto flex flex-col items-center gap-2 px-4">
+        <p className="text-[11px] uppercase tracking-[0.15em] font-medium text-[#a1a1aa]">
+          Backed by
+        </p>
+        <StaticInvestorRow />
+      </FadeIn>
+    </div>
+    </>
   );
 }

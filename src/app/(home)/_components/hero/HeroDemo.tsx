@@ -93,7 +93,7 @@ export default function HeroDemo() {
 
           <div className="mt-auto flex flex-col gap-1 px-2.5 pb-3">
             <div className="flex items-center gap-2 h-6 px-1 cursor-pointer group/user">
-              <span className="shrink-0 flex items-center justify-center" style={{ width: 16, height: 16, borderRadius: "50%", background: "#2563eb", fontSize: 7, fontWeight: 700, color: "#fff" }}>SN</span>
+              <span className="shrink-0 flex items-center justify-center" style={{ width: 16, height: 16, borderRadius: "50%", background: "#2595ee", fontSize: 7, fontWeight: 700, color: "#fff" }}>SN</span>
               <span className="group-hover/user:text-[#18181b] transition-colors" style={{ fontSize: 11, fontWeight: 500, color: "#52525b" }}>Shaurya Narang</span>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function HeroDemo() {
 
             {/* Research panel hint */}
             <div className="shrink-0 flex items-center gap-2 px-4 cursor-pointer group/hint" style={{ height: 36, borderTop: "1px solid #e8e8ec", background: "#fafafa" }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/hint:scale-110 transition-transform">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2595ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/hint:scale-110 transition-transform">
                 <path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/>
               </svg>
               <span className="group-hover/hint:text-[#71717a] transition-colors" style={{ fontSize: 10, color: "#a1a1aa" }}>{cfg.hint}</span>
@@ -148,7 +148,7 @@ export default function HeroDemo() {
             animation: "toast-in 0.4s ease-out",
           }}
         >
-          <span className="shrink-0" style={{ width: 6, height: 6, borderRadius: "50%", background: "#2563eb", boxShadow: "0 0 6px rgba(37,99,235,0.8)", animation: "pulse-dot 2s ease-in-out infinite" }} />
+          <span className="shrink-0" style={{ width: 6, height: 6, borderRadius: "50%", background: "#2595ee", boxShadow: "0 0 6px rgba(37,149,238,0.8)", animation: "pulse-dot 2s ease-in-out infinite" }} />
           <span style={{ fontSize: 11, fontWeight: 500, color: "#e0e0e0" }}>New risk detected</span>
           <span style={{ fontSize: 10, color: "#71717a" }}>just now</span>
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#71717a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 opacity-0 group-hover:opacity-100 hover:stroke-white transition-all">
@@ -163,8 +163,8 @@ export default function HeroDemo() {
           to { opacity: 1; transform: translateY(0); }
         }
         @keyframes pulse-dot {
-          0%, 100% { box-shadow: 0 0 6px rgba(37,99,235,0.8); }
-          50% { box-shadow: 0 0 12px rgba(37,99,235,1), 0 0 4px rgba(37,99,235,0.6); }
+          0%, 100% { box-shadow: 0 0 6px rgba(37,149,238,0.8); }
+          50% { box-shadow: 0 0 12px rgba(37,149,238,1), 0 0 4px rgba(37,149,238,0.6); }
         }
       `}</style>
     </div>
@@ -298,7 +298,7 @@ function HomeContent() {
       </div>
       <div className="grid grid-cols-3 gap-2 mb-4">
         <StatCard label="Open Risks" value="4" color="#ef4444" />
-        <StatCard label="This Week" value="4 meetings" color="#2563eb" />
+        <StatCard label="This Week" value="4 meetings" color="#2595ee" />
         <StatCard label="Pending" value="5 tasks" color="#f59e0b" />
       </div>
       <div className="mb-2.5">
@@ -394,7 +394,7 @@ function IconBtn({ children, tooltip }: { children: React.ReactNode; tooltip?: s
 function FeatureBanner({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-2 px-3 mb-4" style={{ height: 28, background: "#eff6ff", borderRadius: 4, border: "1px solid #bfdbfe" }}>
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2595ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3v1m0 16v1m-7.07-2.93l.71-.71M18.36 5.64l.71-.71M3 12h1m16 0h1M5.64 5.64l-.71-.71m13.43 13.43l-.71-.71"/><circle cx="12" cy="12" r="4"/>
       </svg>
       <span style={{ fontSize: 9, color: "#1d4ed8", fontWeight: 500 }}>{text}</span>
@@ -410,7 +410,7 @@ const severityColors: Record<string, { dot: string; bg: string }> = {
   medium: { dot: "#3b82f6", bg: "rgba(59,130,246,0.04)" },
   low: { dot: "#6b7280", bg: "rgba(107,114,128,0.04)" },
 };
-const avatarColors: Record<string, string> = { S: "#2563eb", CD: "#be123c", AJ: "#7c3aed", BC: "#059669", SH: "#2563eb" };
+const avatarColors: Record<string, string> = { S: "#2595ee", CD: "#be123c", AJ: "#7c3aed", BC: "#059669", SH: "#2595ee" };
 
 function SeverityGroup({ label, count, children }: { label: string; count: number; children: React.ReactNode }) {
   return (
@@ -472,12 +472,12 @@ function MeetingRow({ title, summary, date, duration, participants, topics, acti
       style={{
         display: "flex", gap: 10, padding: "10px 12px", borderRadius: 8, background: "#fff",
         boxShadow: active
-          ? "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(37,99,235,0.2)"
+          ? "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(37,149,238,0.2)"
           : "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)",
         transition: "box-shadow 0.2s ease, transform 0.15s ease",
       }}
-      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = active ? "0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(37,99,235,0.25)" : "0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)"; }}
-      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = active ? "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(37,99,235,0.2)" : "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)"; }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = active ? "0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(37,149,238,0.25)" : "0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)"; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = active ? "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06), 0 0 0 1.5px rgba(37,149,238,0.2)" : "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.06)"; }}
     >
       <div className="flex-1 min-w-0 flex flex-col gap-1">
         <div className="flex items-center gap-2">
@@ -500,7 +500,7 @@ function MeetingRow({ title, summary, date, duration, participants, topics, acti
 
 /* ── Memory ── */
 
-const typeColors: Record<string, string> = { decision: "#2563eb", milestone: "#059669", insight: "#7c3aed", blocker: "#ef4444" };
+const typeColors: Record<string, string> = { decision: "#2595ee", milestone: "#059669", insight: "#7c3aed", blocker: "#ef4444" };
 
 function MemoryCard({ type, title, body, date }: { type: string; title: string; body: string; date: string }) {
   return (
@@ -541,7 +541,7 @@ function ReportCard({ title, meetings, decisions, risks, highlights }: { title: 
         <div className="flex flex-col gap-1">
           {highlights.map((h) => (
             <div key={h} className="flex items-start gap-1.5">
-              <span style={{ color: "#2563eb", fontSize: 10, lineHeight: 1.5 }}>•</span>
+              <span style={{ color: "#2595ee", fontSize: 10, lineHeight: 1.5 }}>•</span>
               <span style={{ fontSize: 10, color: "#52525b", lineHeight: 1.5 }}>{h}</span>
             </div>
           ))}
@@ -567,12 +567,12 @@ function TodoItem({ text, due, who, done, urgent, onToggle }: { text: string; du
         style={{
           width: 14, height: 14, borderRadius: 4,
           border: done ? "none" : "1px solid #d4d4d8",
-          background: done ? "#2563eb" : "#fff",
+          background: done ? "#2595ee" : "#fff",
           display: "flex", alignItems: "center", justifyContent: "center",
           transition: "background 0.2s ease, border-color 0.2s ease, transform 0.15s ease",
           transform: done ? "scale(1)" : "scale(1)",
         }}
-        onMouseEnter={e => { if (!done) (e.currentTarget as HTMLElement).style.borderColor = "#2563eb"; }}
+        onMouseEnter={e => { if (!done) (e.currentTarget as HTMLElement).style.borderColor = "#2595ee"; }}
         onMouseLeave={e => { if (!done) (e.currentTarget as HTMLElement).style.borderColor = "#d4d4d8"; }}
       >
         {done && <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>}

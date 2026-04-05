@@ -50,7 +50,7 @@ const BlogIndex = async ({ category }: BlogIndexProps) => {
                   aria-current={selectedCategory === c ? "page" : undefined}
                   className={
                     selectedCategory === c
-                      ? "block text-[13px] font-semibold text-[#2563eb]"
+                      ? "block text-[13px] font-semibold text-[#2595ee]"
                       : "block text-[13px] font-semibold text-[#a1a1aa] hover:text-[#1a1a1f] duration-200"
                   }
                 >
