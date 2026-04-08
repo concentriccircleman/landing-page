@@ -78,7 +78,7 @@ export function BentoContainer({ children, className }: BentoContainerProps) {
     );
   });
 
-  return <div className={cn("overflow-hidden border border-[#e8e8ec]", className)}>{renderedGroups}</div>;
+  return <div className={cn("overflow-hidden border border-[#e8e8ec] rounded-sm", className)}>{renderedGroups}</div>;
 }
 
 export function Bento({
@@ -117,7 +117,7 @@ export function Bento({
         <div className={cn("flex w-full items-center", gapCol, pad)}>
           <div className="flex-1 text-left relative z-10 flex flex-col justify-center">
             {icon && (
-              <div className="w-6 h-6 bg-brand flex items-center justify-center mb-2">
+              <div className="w-6 h-6 bg-brand flex items-center justify-center rounded-sm mb-2">
                 {icon}
               </div>
             )}
@@ -159,7 +159,7 @@ export function Bento({
         </div>
         <div className="text-left relative z-10">
           {icon && (
-            <div className="w-6 h-6 bg-brand flex items-center justify-center mb-2">
+            <div className="w-6 h-6 bg-brand flex items-center justify-center rounded-sm mb-2">
               {icon}
             </div>
           )}

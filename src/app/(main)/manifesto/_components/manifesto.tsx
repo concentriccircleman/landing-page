@@ -5,7 +5,7 @@ import FadeIn from "@/components/fade-in";
 
 const Manifesto = () => {
   return (
-    <section className="w-full px-4 max-w-3xl mx-auto">
+    <section className="w-full px-6 max-w-3xl mx-auto">
       <PageHeader title="The Sentra Manifesto" />
 
       <FadeIn delay={100}>

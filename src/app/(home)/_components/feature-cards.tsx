@@ -7,6 +7,7 @@ import meetingsImage from "@/assets/illustrations/meetings.svg";
 import remindersImage from "@/assets/illustrations/reminders.svg";
 import actionLogImage from "@/assets/illustrations/action-log.svg";
 import onboardingImage from "@/assets/illustrations/onboarding.svg";
+import TaskListAnimation from "./task-list-animation";
 interface Feature {
   id: string;
   label: string;
@@ -17,6 +18,7 @@ interface Feature {
   icon: React.ReactNode;
   animation?: React.ReactNode;
   isNew?: boolean;
+  frameless?: boolean;
 }
 
 const FEATURES: Feature[] = [
@@ -71,6 +73,8 @@ const FEATURES: Feature[] = [
       "Stop chasing status reports. Just ask Sentra and get a clear summary of what happened across your team this week — ready to share in minutes, not hours.",
     imageSrc: alwaysWorkingImage,
     imageAlt: "Always working status visualization",
+    animation: <TaskListAnimation />,
+    frameless: true,
     icon: (
       <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -138,8 +142,8 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
       }}
     >
       <div
-        className="flex items-end"
-        style={{ height: TAB_H, padding: `0 ${SIDE_PAD}` }}
+        className="flex items-end relative z-20"
+        style={{ height: TAB_H, padding: `0 ${SIDE_PAD}`, marginBottom: -1 }}
       >
         {features.slice(0, index + 1).map((f, i) => {
           const isCurrent = i === index;
@@ -151,9 +155,9 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
                 height: TAB_H - 2,
                 visibility: isCurrent ? "visible" : "hidden",
                 background: "#f8f8f8",
-                borderTop: "1px solid #e0e0e3",
-                borderLeft: "1px solid #e0e0e3",
-                borderRight: "1px solid #e0e0e3",
+                borderTop: "1px solid #d4d4d8",
+                borderLeft: "1px solid #d4d4d8",
+                borderRight: "1px solid #d4d4d8",
                 borderBottom: "1px solid #f8f8f8",
                 borderRadius: "4px 4px 0 0",
                 marginLeft: i > 0 ? -1 : 0,
@@ -187,6 +191,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
               width: "100%",
               height: "100%",
               zIndex: 0,
+              borderRadius: 4,
               background: `repeating-linear-gradient(
                 45deg,
                 #b4b4ba,
@@ -198,7 +203,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
             aria-hidden="true"
           />
         )}
-        <div className="overflow-hidden relative h-full z-10" style={{ background: "#f8f8f8", border: "1px solid #e0e0e3" }}>
+        <div className="overflow-hidden relative h-full z-10" style={{ background: "#f8f8f8", border: "1px solid #d4d4d8", borderRadius: 4 }}>
           {/* Dot grid texture */}
           <div
             className="absolute inset-0 pointer-events-none"
@@ -208,10 +213,9 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
               opacity: 0.4,
             }}
           />
-          <div className="relative z-10 max-w-screen-xl mx-auto w-full px-8 md:px-12 h-full flex items-center">
+          <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-6 h-full flex items-center">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 w-full py-8">
               <div className="relative flex flex-col justify-center md:w-[42%] shrink-0">
-                {/* Large faded feature number */}
                 <span
                   className="absolute -top-6 -left-2 select-none pointer-events-none font-semibold tabular-nums text-[72px] sm:text-[120px]"
                   style={{
@@ -242,7 +246,6 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
                     {feature.description}
                   </p>
                 </div>
-                {/* Progress indicator */}
                 <div
                   className="hidden md:flex items-center gap-2 mt-8"
                   aria-hidden="true"
@@ -267,12 +270,18 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
 
               <div className="flex-1 flex items-center justify-center">
                 {feature.animation ? (
-                  <div className="relative w-full aspect-square max-h-[520px] bg-white border border-[#e0e0e3] overflow-hidden rounded-sm">
-                    {feature.animation}
-                    <CornerMarks />
-                  </div>
+                  feature.frameless ? (
+                    <div className="relative w-full flex items-center justify-center overflow-visible py-4">
+                      {feature.animation}
+                    </div>
+                  ) : (
+                    <div className="relative w-full aspect-square max-h-[520px] bg-white border border-[#d4d4d8] overflow-hidden rounded-sm">
+                      {feature.animation}
+                      <CornerMarks />
+                    </div>
+                  )
                 ) : (
-                  <div className="relative w-full aspect-[4/3] max-h-[480px] bg-white border border-[#e0e0e3] flex items-center justify-center p-8 md:p-12 rounded-sm">
+                  <div className="relative w-full aspect-[4/3] max-h-[480px] bg-white border border-[#d4d4d8] flex items-center justify-center p-8 md:p-12 rounded-sm">
                     <Image
                       src={feature.imageSrc}
                       alt={feature.imageAlt}

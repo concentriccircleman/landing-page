@@ -52,7 +52,7 @@ export default function HowItWorks() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-4">
+      <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-6">
         <FadeIn>
           <p className="text-[10px] uppercase tracking-[0.15em] font-medium text-[#a1a1aa] mb-6">
             How it works
@@ -68,7 +68,7 @@ export default function HowItWorks() {
         <FadeIn delay={200}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {CAPABILITIES.map((capability) => (
-              <IsometricCard key={capability.id} className="border border-[#e0e0e3] bg-[#f8f8f8] p-10 relative">
+              <IsometricCard key={capability.id} className="border border-[#e0e0e3] bg-[#f8f8f8] p-10 rounded-sm relative">
                 <span
                   className="absolute top-8 right-8 font-semibold tabular-nums select-none pointer-events-none text-[#e8e8ec]"
                   style={{ fontSize: 48, lineHeight: 1, letterSpacing: "-0.04em" }}

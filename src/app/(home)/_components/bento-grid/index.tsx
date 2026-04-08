@@ -13,7 +13,7 @@ export default function BentoGrid() {
   return (
     <Section as="div">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-8 h-8 bg-brand flex items-center justify-center">
+        <div className="w-8 h-8 bg-brand flex items-center justify-center rounded-sm">
           <svg className="w-4 h-4 text-[#f0f0f0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
         </div>
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#1a1a1f]">

@@ -31,6 +31,8 @@ export default function Layout({
     "/pricing",
     "/blog",
     "/sign-in",
+    "/research",
+    "/use-cases",
   ];
 
   const isNotFound = !validRoutes.includes(pathname) && !isBlogRoute;

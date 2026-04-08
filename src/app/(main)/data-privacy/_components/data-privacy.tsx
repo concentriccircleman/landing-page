@@ -5,7 +5,7 @@ import FadeIn from "@/components/fade-in";
 
 const DataPrivacy = () => {
   return (
-    <section className="w-full px-4 max-w-4xl mx-auto">
+    <section className="w-full px-6 max-w-4xl mx-auto">
       <PageHeader
         title="Data Privacy & Visibility"
         subtitle="Understanding what data is visible to whom in your organization"
@@ -23,7 +23,7 @@ const DataPrivacy = () => {
 
       <FadeIn delay={150}>
         <div className="grid md:grid-cols-2 gap-4 mb-10">
-          <div className="bg-white border border-[#e8e8ec] p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+          <div className="bg-white border border-[#e8e8ec] p-6 rounded-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
             <h3 className="text-base font-semibold text-[#1a1a1f] mb-2">
               What is &quot;Company Memory&quot;?
             </h3>
@@ -34,7 +34,7 @@ const DataPrivacy = () => {
               shared source of truth.
             </p>
           </div>
-          <div className="bg-white border border-[#e8e8ec] p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+          <div className="bg-white border border-[#e8e8ec] p-6 rounded-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
             <h3 className="text-base font-semibold text-[#1a1a1f] mb-2">
               Key Privacy Principle
             </h3>
@@ -53,12 +53,12 @@ const DataPrivacy = () => {
             Data Sources & Privacy Levels
           </h2>
 
-          <div className="border border-[#e8e8ec] bg-white p-6 mb-8">
+          <div className="border border-[#e8e8ec] bg-white p-6 rounded-sm mb-8">
             <h3 className="text-lg font-semibold tracking-tighter text-[#1a1a1f] mb-4">
               Meeting Data
             </h3>
 
-            <div className="bg-[#f8f8f8] border border-[#e8e8ec] p-4 mb-6">
+            <div className="bg-[#f8f8f8] border border-[#e8e8ec] p-4 rounded-sm mb-6">
               <h4 className="text-[14px] font-semibold text-[#1a1a1f] mb-2">
                 Private Meetings
               </h4>
@@ -142,14 +142,14 @@ const DataPrivacy = () => {
             Additional Privacy Controls
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="border border-[#e8e8ec] bg-white p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+            <div className="border border-[#e8e8ec] bg-white p-6 rounded-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
               <h3 className="text-base font-semibold text-[#1a1a1f] mb-3">Data Retention</h3>
               <ul className="text-[14px] text-[#52525b] space-y-2">
                 <li>Private meetings are never added to company memory</li>
                 <li>You can request deletion anytime</li>
               </ul>
             </div>
-            <div className="border border-[#e8e8ec] bg-white p-6 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+            <div className="border border-[#e8e8ec] bg-white p-6 rounded-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
               <h3 className="text-base font-semibold text-[#1a1a1f] mb-3">Encryption & Security</h3>
               <ul className="text-[14px] text-[#52525b] space-y-2">
                 <li>End-to-end encryption in transit</li>
@@ -187,7 +187,7 @@ const DataPrivacy = () => {
 
       <FadeIn>
         <div className="border-t border-[#e8e8ec] pt-8 mb-8">
-          <div className="bg-white border border-[#e8e8ec] p-6">
+          <div className="bg-white border border-[#e8e8ec] p-6 rounded-sm">
             <h3 className="text-base font-semibold text-[#1a1a1f] mb-2">Questions or Concerns?</h3>
             <p className="text-[14px] text-[#52525b] leading-relaxed mb-2">
               We&apos;re committed to transparency. If you have questions about

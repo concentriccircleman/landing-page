@@ -171,8 +171,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full px-4">
-      <div className="border border-[#e8e8ec] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(0,0,0,0.03)]">
+    <div className="w-full px-6">
+      <div className="border border-[#e8e8ec] bg-white rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.02),0_4px_12px_rgba(0,0,0,0.03)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <FadeIn>
           <div className="flex flex-col p-8 md:p-14">

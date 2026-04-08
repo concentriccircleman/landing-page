@@ -66,7 +66,7 @@ const UseCaseCard = ({ useCase, index }: UseCaseCardProps) => {
                 {useCase.deliverables.map((deliverable) => (
                   <div
                     key={deliverable.title}
-                    className="border border-border bg-white p-5"
+                    className="border border-border bg-white p-5 rounded-sm"
                   >
                     <span className="text-lg mb-2 block">
                       {deliverable.icon}
@@ -82,7 +82,7 @@ const UseCaseCard = ({ useCase, index }: UseCaseCardProps) => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-5 bg-background">
+                <div className="p-5 bg-background rounded-sm">
                   <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-3">
                     Before Sentra
                   </p>
@@ -90,7 +90,7 @@ const UseCaseCard = ({ useCase, index }: UseCaseCardProps) => {
                     {useCase.before}
                   </p>
                 </div>
-                <div className="p-5 bg-background border-l-2 border-brand">
+                <div className="p-5 bg-background border-l-2 border-brand rounded-sm">
                   <p className="text-xs font-semibold tracking-widest uppercase text-brand mb-3">
                     With Sentra
                   </p>

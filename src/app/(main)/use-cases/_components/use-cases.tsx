@@ -19,7 +19,7 @@ const getCategoryUseCases = (categoryId: string) =>
 const UseCases = () => {
   return (
     <ScrollSpy asChild orientation="vertical" offset={96}>
-      <div className="w-full max-w-screen-2xl mx-auto px-4">
+      <div className="w-full max-w-screen-2xl mx-auto px-6">
         <div className="flex gap-10">
           <aside className="hidden lg:block shrink-0 w-56 sticky top-28 self-start max-h-[calc(100vh-8rem)] overflow-y-auto">
             <ScrollSpyNav>
@@ -80,7 +80,7 @@ const UseCases = () => {
                 <FadeIn>
                   <div
                     id={category.slug}
-                    className="section-gray -mx-4 px-4 py-12 mb-12"
+                    className="section-gray -mx-6 px-6 py-12 mb-12"
                   >
                     <div className="max-w-3xl mx-auto">
                       <p className="text-xs font-semibold tracking-widest uppercase text-brand mb-3">
@@ -126,7 +126,7 @@ const UseCases = () => {
                   href="/download"
                   className={cn(
                     "h-10 inline-flex items-center gap-2 text-sm font-medium",
-                    "bg-brand text-background px-6",
+                    "bg-brand text-background px-6 rounded-sm",
                     "duration-200 hover:brightness-110 transition-all active:scale-[0.97]",
                     "shadow-[0_0_0_1px_#1a7dd4,0_2px_4px_rgba(37,149,238,0.3),0_6px_16px_rgba(37,149,238,0.2),0_10px_24px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.25)]"
                   )}

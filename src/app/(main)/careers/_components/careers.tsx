@@ -46,7 +46,7 @@ const CAREERS_ROLES: CareersRole[] = [
 
 const Careers = () => {
   return (
-    <section className="w-full px-4">
+    <section className="w-full px-6">
       <PageHeader title="Careers" subtitle="Join us and help build the future of organizational intelligence" />
 
       <FadeIn delay={100}>
@@ -57,7 +57,7 @@ const Careers = () => {
                 href={role.ashbyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group block border border-[#e8e8ec] bg-white p-5 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
+                className="group block border border-[#e8e8ec] bg-white p-5 rounded-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex-1">
@@ -69,7 +69,7 @@ const Careers = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-[12px] font-medium text-[#52525b] bg-[#f0f0f2] px-2.5 py-1">
+                    <span className="text-[12px] font-medium text-[#52525b] bg-[#f0f0f2] px-2.5 py-1 rounded-sm">
                       {role.department}
                     </span>
                     <svg className="w-4 h-4 text-[#a1a1aa] group-hover:text-[#2595ee] transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">

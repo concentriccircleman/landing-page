@@ -126,14 +126,14 @@ const comparisonData: FeatureCategory[] = [
 
 const Pricing = () => {
   return (
-    <section className="w-full px-4">
+    <section className="w-full px-6">
       <PageHeader
         title="Plans that grow with you"
         subtitle="Simple, transparent pricing for teams of every size."
       />
 
       <FadeIn delay={100}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#e8e8ec] border border-[#e8e8ec] mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#e8e8ec] border border-[#e8e8ec] rounded-sm mb-16">
           <PricingCard
             name="Team"
             subtitle="For teams of 2–20"
@@ -262,7 +262,7 @@ const ComparisonTable = () => {
         Compare plans
       </h2>
 
-      <div className="border border-[#e8e8ec] bg-white overflow-hidden">
+      <div className="border border-[#e8e8ec] bg-white overflow-hidden rounded-sm">
         <div className="grid grid-cols-[1fr_140px_140px] sm:grid-cols-[1fr_180px_180px] bg-[#fafafa] border-b border-[#e8e8ec]">
           <div className="px-5 py-3.5">
             <span className="text-[12px] font-semibold uppercase tracking-wider text-[#71717a]">

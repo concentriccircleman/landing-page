@@ -19,7 +19,7 @@ const Publication = ({ title, authors, venue }: PublicationProps) => (
 
 const Research = () => {
   return (
-    <article className="w-full px-4 max-w-2xl mx-auto">
+    <article className="w-full px-6 max-w-2xl mx-auto">
       <PageHeader
         title="Research"
         subtitle="Building the mathematical and architectural foundations for enterprise memory, alignment, and intelligence."
