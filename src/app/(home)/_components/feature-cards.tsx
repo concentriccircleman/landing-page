@@ -203,7 +203,7 @@ function FeatureCard({ features, index }: { features: Feature[]; index: number }
             aria-hidden="true"
           />
         )}
-        <div className="overflow-hidden relative h-full z-10" style={{ background: "#f8f8f8", border: "1px solid #d4d4d8", borderRadius: 4 }}>
+        <div className="overflow-hidden relative h-full z-10" style={{ background: "#f8f8f8", border: "1px solid #d4d4d8", borderRadius: "0 4px 4px 4px" }}>
           {/* Dot grid texture */}
           <div
             className="absolute inset-0 pointer-events-none"
