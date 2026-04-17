@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@/utils/cn";
 
 interface FaqItem {
   question: string;
@@ -36,56 +35,6 @@ const faqItems: FaqItem[] = [
   },
 ];
 
-const AccordionItem = ({
-  item,
-  isOpen,
-  onToggle,
-}: {
-  item: FaqItem;
-  isOpen: boolean;
-  onToggle: () => void;
-}) => {
-  return (
-    <div className="border-b border-border">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between py-5 text-left"
-      >
-        <span className="text-sm font-medium text-foreground pr-4">
-          {item.question}
-        </span>
-        <svg
-          className={cn(
-            "w-4 h-4 shrink-0 text-muted transition-transform duration-200",
-            isOpen && "rotate-180"
-          )}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M6 9l6 6 6-6" />
-        </svg>
-      </button>
-      <div
-        className={cn(
-          "grid transition-[grid-template-rows] duration-200",
-          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        )}
-      >
-        <div className="overflow-hidden">
-          <div className="pb-5 text-sm text-muted leading-relaxed">
-            {item.answer}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const IntegrationsFaq = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -94,18 +43,49 @@ const IntegrationsFaq = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-semibold tracking-tighter text-foreground mb-2">
-        Frequently Asked Questions
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 md:gap-16">
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-foreground">
+        FAQs
       </h2>
-      <div>
-        {faqItems.map((item, index) => (
-          <AccordionItem
-            key={index}
-            item={item}
-            isOpen={openIndex === index}
-            onToggle={() => handleToggle(index)}
-          />
+      <div className="flex flex-col">
+        {faqItems.map((item, itemIndex) => (
+          <div key={itemIndex} className="border-b border-border">
+            <button
+              type="button"
+              onClick={() => handleToggle(itemIndex)}
+              className="w-full flex items-center justify-between py-5 text-left gap-4"
+            >
+              <span className="text-base font-medium text-foreground">
+                {item.question}
+              </span>
+              <svg
+                className="w-5 h-5 text-muted shrink-0 transition-transform duration-300"
+                style={{
+                  transform: openIndex === itemIndex ? "rotate(180deg)" : "rotate(0deg)",
+                }}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              className="grid transition-[grid-template-rows] duration-300"
+              style={{
+                gridTemplateRows: openIndex === itemIndex ? "1fr" : "0fr",
+              }}
+            >
+              <div className="overflow-hidden">
+                <p className="text-sm text-muted leading-relaxed pb-5">
+                  {item.answer}
+                </p>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>

@@ -68,7 +68,7 @@ const IntegrationsPage = () => {
               placeholder="Search for an integration..."
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
-              className="w-full pl-11 pr-4 py-3 text-sm text-foreground bg-white border border-border placeholder:text-muted focus:outline-none focus:border-foreground transition-colors duration-150"
+              className="w-full pl-11 pr-4 py-3 text-sm text-foreground bg-background border border-border placeholder:text-muted focus:outline-none focus:border-foreground transition-colors duration-150"
             />
           </div>
         </div>
@@ -81,11 +81,11 @@ const IntegrationsPage = () => {
               No integrations found matching &ldquo;{searchQuery}&rdquo;
             </p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#a1a1aa] border border-[#a1a1aa]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
               {paddedIntegrations.map((integration, index) => (
                 <div
                   key={integration ? integration.name : `empty-${index}`}
-                  className="bg-white"
+                  className="bg-background"
                 >
                   {integration ? <IntegrationCard integration={integration} /> : null}
                 </div>
@@ -96,7 +96,7 @@ const IntegrationsPage = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="mt-24 max-w-2xl">
+        <div className="py-20 md:py-28">
           <IntegrationsFaq />
         </div>
       </FadeIn>
