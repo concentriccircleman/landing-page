@@ -17,6 +17,7 @@ export default function Layout({
   const isLanding = pathname === "/";
 
   const isBlogRoute = pathname.startsWith("/blog");
+  const isUseCasesRoute = pathname.startsWith("/use-cases");
   const isAuthRoute = pathname === "/sign-in";
 
   const validRoutes = [
@@ -33,9 +34,10 @@ export default function Layout({
     "/sign-in",
     "/research",
     "/use-cases",
+    "/integrations",
   ];
 
-  const isNotFound = !validRoutes.includes(pathname) && !isBlogRoute;
+  const isNotFound = !validRoutes.includes(pathname) && !isBlogRoute && !isUseCasesRoute;
 
   if (isAuthRoute) {
     return (
@@ -61,6 +63,13 @@ export default function Layout({
           <>
             <Header />
             <main className="flex-1 flex flex-col py-40">
+              {children}
+            </main>
+          </>
+        ) : isUseCasesRoute ? (
+          <>
+            <Header />
+            <main className="flex-1 flex flex-col pt-40 pb-0">
               {children}
             </main>
           </>

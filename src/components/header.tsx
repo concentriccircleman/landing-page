@@ -9,19 +9,29 @@ import Button from "@/components/button";
 
 const useCaseCategories = [
   {
-    title: "Leadership & Strategy",
-    description: "Strategic awareness at every level",
-    href: "/use-cases#leadership-strategy",
+    title: "Organizational Memory",
+    description: "Sentra captures what happened before it disappears",
+    href: "/use-cases/organizational-memory",
+  },
+  {
+    title: "Organizational Awareness",
+    description: "Sentra sees across the org so you don\u2019t have to",
+    href: "/use-cases/organizational-awareness",
+  },
+  {
+    title: "Artifacts Generated",
+    description: "Every document derived from interactions Sentra already holds",
+    href: "/use-cases/artifacts-generated",
   },
   {
     title: "Workflow Collapse",
-    description: "When Sentra knows enough, entire workflows disappear",
-    href: "/use-cases#workflow-collapse",
+    description: "Entire processes that disappear when intelligence is complete",
+    href: "/use-cases/workflow-collapse",
   },
   {
-    title: "Operational Workflow Collapse",
-    description: "Compliance, approvals, and recurring processes\u2014collapsed",
-    href: "/use-cases#operational-workflow-collapse",
+    title: "Operational Autopilot",
+    description: "Recurring tasks that run themselves when intelligence is always on",
+    href: "/use-cases/operational-autopilot",
   },
 ];
 
@@ -141,6 +151,9 @@ const Header = () => {
             Research
           </Link>
           <UseCasesDropdown />
+          <Link href="/integrations" className="text-[13px] font-medium hover:opacity-80 duration-150 px-2.5">
+            Integrations
+          </Link>
           <Link href="/manifesto" className="text-[13px] font-medium hover:opacity-80 duration-150 px-2.5">
             Manifesto
           </Link>
