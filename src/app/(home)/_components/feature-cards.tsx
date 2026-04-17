@@ -1,12 +1,9 @@
 import Image, { type ImageProps } from "next/image";
 import unifiedKnowledgeImage from "@/assets/illustrations/unified-knowledge.svg";
-import alignmentImage from "@/assets/illustrations/alignment.svg";
 import misalignmentRadarImage from "@/assets/illustrations/misalignment-radar.svg";
 import alwaysWorkingImage from "@/assets/illustrations/always-working.svg";
 import meetingsImage from "@/assets/illustrations/meetings.svg";
-import remindersImage from "@/assets/illustrations/reminders.svg";
 import actionLogImage from "@/assets/illustrations/action-log.svg";
-import onboardingImage from "@/assets/illustrations/onboarding.svg";
 import TaskListAnimation from "./task-list-animation";
 interface Feature {
   id: string;

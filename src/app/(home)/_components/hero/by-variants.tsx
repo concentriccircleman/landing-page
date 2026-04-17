@@ -20,7 +20,7 @@ const ANGEL_LOGOS: LogoItem[] = [
   { id: "instacart", src: instacartLogo, alt: "Instacart" },
 ];
 
-const INVESTOR_LOGOS: LogoItem[] = [
+const _INVESTOR_LOGOS: LogoItem[] = [
   { id: "a16z-speedrun", src: a16zSpeedrunLogo, alt: "a16z Speedrun" },
   { id: "together-fund", src: togetherFundLogo, alt: "Together Fund" },
 ];

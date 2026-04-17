@@ -69,8 +69,8 @@ const Manifesto = () => {
               Personal memory is intractable, individuals have shifting,
               unpredictable utility functions. Organizations are different. They
               have a stable utility function: build products, generate revenue,
-              serve customers. This makes defining "what matters"
-              mathematically tractable. The core ontology reduces to six
+              serve customers. This makes defining &ldquo;what matters&rdquo;
+    mathematically tractable. The core ontology reduces to six
               classes: Actors, Interactions, Decisions, Rationale,
               Commitments, and Value-Creating Objects, all indexed across time.
               Actors and Interactions are primary. Everything else is derived.
@@ -89,7 +89,7 @@ const Manifesto = () => {
             </p>
             <p>
               We are not adding a layer on top. We are replacing the underlying
-              substrate. Today's enterprise stack is a patchwork of disconnected
+              substrate. Today&apos;s enterprise stack is a patchwork of disconnected
               systems of record, each storing a partial, stale copy of
               organizational knowledge. Sentra captures interactions at their
               source, meetings, emails, messages, agent traces, and derives
@@ -100,7 +100,7 @@ const Manifesto = () => {
             </p>
             <p>
               The interface is proactive and prompt-free. Sentra understands
-              each person's role, the org structure, and what matters to them.
+              each person&apos;s role, the org structure, and what matters to them.
               It surfaces what deserves attention rather than waiting to be
               asked. A chief of staff for every person. A program manager for
               every team. No prompting required.
@@ -208,7 +208,7 @@ const Manifesto = () => {
             <p>
               Phase 3, Org-wide RL (12 -&gt; 18 months): Sentra becomes
               irreplaceable infrastructure. Reinforcement learning on what worked
-              and what didn't. The system doesn't just remember, it improves,
+              and what didn&apos;t. The system doesn&apos;t just remember, it improves,
               turning accumulated intelligence into a compounding advantage that
               deepens every day.
             </p>
@@ -227,7 +227,7 @@ const Manifesto = () => {
             <p>
               We do not engineer workflow automation. We make it inevitable.
               When an intelligence layer captures every commitment, tracks every
-              dependency, and understands every person's context, workflows
+              dependency, and understands every person&apos;s context, workflows
               collapse on their own. The action layer is a natural consequence
               of the intelligence layer, not a separate product that needs to be
               bolted on.
@@ -244,14 +244,14 @@ const Manifesto = () => {
               35 enterprises in active pipeline.
             </p>
             <p>
-              "The one thing Sentra does well that others don't is that Sentra
-              can contextualize what's important for me to know.", Emmett Shear,
+              &ldquo;The one thing Sentra does well that others don&apos;t is that Sentra
+              can contextualize what&apos;s important for me to know.&rdquo;, Emmett Shear,
               CEO Softmax, Former CEO Twitch
             </p>
             <p>
-              "I consistently find the weekly reports good, useful. I enjoy
-              reading them. Even when it doesn't tell me anything new, just
-              having a story of what happened is actually quite useful.", Siqi
+              &ldquo;I consistently find the weekly reports good, useful. I enjoy
+              reading them. Even when it doesn&apos;t tell me anything new, just
+              having a story of what happened is actually quite useful.&rdquo;, Siqi
               Chen, CEO Runway, Former CEO Sandbox VR
             </p>
             <p>

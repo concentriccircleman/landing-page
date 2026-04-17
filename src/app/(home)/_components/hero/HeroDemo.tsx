@@ -237,7 +237,7 @@ function MeetingNotesContent() {
   );
 }
 
-function MemoryContent() {
+function _MemoryContent() {
   return (
     <>
       <div className="mb-3">
