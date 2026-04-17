@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import sentraLogo from "@/assets/brand/sentra.png";
+
 /* ------------------------------------------------------------------ */
 /*  Brand logos – inline SVGs for zero external dependencies          */
 /* ------------------------------------------------------------------ */
@@ -57,10 +60,10 @@ function SlackLogo() {
   );
 }
 
-function SentraPlaceholder() {
+function SentraIcon() {
   return (
-    <div className="w-20 h-20 rounded-2xl bg-[#e4e4e7] flex items-center justify-center">
-      <span className="text-[11px] font-medium text-[#a1a1aa] select-none">Logo</span>
+    <div className="w-16 h-16 flex items-center justify-center">
+      <Image src={sentraLogo} alt="Sentra" width={40} height={40} />
     </div>
   );
 }
@@ -202,10 +205,10 @@ export default function IntegrationsDiagram({ className = "" }: { className?: st
         <SlackLogo />
       </IconCard>
 
-      {/* ── Sentra logo placeholder ── */}
-      <div className="absolute left-[72%] top-[44%] -translate-y-1/2">
-        <SentraPlaceholder />
-      </div>
+      {/* ── Sentra logo ── */}
+      <IconCard className="left-[72%] top-[44%] -translate-y-1/2">
+        <SentraIcon />
+      </IconCard>
 
       {/* ── Chat bubble ── */}
       <ChatBubble className="left-[38%] top-[57%]" />

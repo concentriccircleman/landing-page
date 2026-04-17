@@ -68,7 +68,7 @@ const IntegrationsPage = () => {
               placeholder="Search for an integration..."
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
-              className="w-full pl-11 pr-10 h-10 bg-white text-foreground border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] text-sm placeholder:text-muted focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,149,238,0.15)] transition-colors duration-150 rounded-sm"
+              className="w-full pl-11 pr-10 h-10 bg-white text-foreground border border-[#e0e0e3] text-sm placeholder:text-muted focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,149,238,0.15)] transition-colors duration-150 rounded-sm"
             />
             {searchQuery && (
               <button

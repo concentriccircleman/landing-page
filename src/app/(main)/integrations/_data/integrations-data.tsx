@@ -22,65 +22,67 @@ export const integrations: Integration[] = [
   {
     name: "Google Calendar",
     description:
-      "Connect your Google account for Sentra to automatically join meetings in your calendar.",
+      "Sentra joins your meetings and gives you structured notes, action items, and decisions — ready to search anytime.",
     icon: googleCalendarIcon,
   },
   {
     name: "Microsoft Calendar",
     description:
-      "Connect your Microsoft account for Sentra to automatically join meetings in your calendar.",
+      "Get meeting notes, action items, and decision summaries from every Outlook calendar meeting, automatically.",
     icon: microsoftCalendarIcon,
   },
   {
     name: "Gmail",
     description:
-      "Connect your Gmail account to let Sentra search and analyze your emails.",
+      "Ask Sentra about anything in your inbox. Find commitments, follow-ups, and context across your email without digging through threads.",
     icon: gmailIcon,
   },
   {
     name: "Outlook",
     description:
-      "Connect your Outlook account to let Sentra search and analyze your emails.",
+      "Search across your Outlook emails naturally. Sentra helps you find what was promised, what needs follow-up, and what you missed.",
     icon: outlookIcon,
   },
   {
     name: "GitHub",
     description:
-      "Connect your personal GitHub account to access your repositories and activity.",
+      "Bring engineering context into the picture. Sentra connects repo activity to what your team discussed in meetings and messages.",
     icon: githubIcon,
   },
   {
     name: "Google Docs",
-    description: "Create, read, search, and edit Google Docs documents.",
+    description:
+      "Sentra agents create, search, and update Google Docs for you — turning meeting outcomes into living documentation.",
     icon: googleDocsIcon,
   },
   {
     name: "Google Sheets",
     description:
-      "Create, search, read, and update Google Sheets spreadsheets.",
+      "Sentra agents build and maintain spreadsheets for you — weekly reports, project trackers, and dashboards that stay up to date.",
     icon: googleSheetsIcon,
   },
   {
     name: "Notion",
-    description: "Search, read, create, and update pages in Notion.",
+    description:
+      "Sentra agents keep your Notion workspace current — creating pages, updating docs, and syncing what your team decided into one place.",
     icon: notionIcon,
   },
   {
     name: "Slack",
     description:
-      "Get real-time notifications about check-ins, team updates, and more directly in your Slack channels.",
+      "Get weekly updates, check-ins, and helpful reminders delivered straight to your Slack channels — no extra tools needed.",
     icon: slackIcon,
   },
   {
     name: "Linear",
     description:
-      "Sentra will act as an app in your Linear workspace. All actions will be attributed to the Sentra app.",
+      "Sentra connects what your team discussed to what they are building — giving project context alongside your Linear issues.",
     icon: linearIcon,
   },
   {
     name: "Discord",
     description:
-      "Sentra will read and analyze messages from your Discord server to provide insights.",
+      "Sentra brings your Discord conversations into your team's shared memory, so important discussions are never lost in the scroll.",
     icon: discordIcon,
   },
 ];
