@@ -39,11 +39,11 @@ const IntegrationsPage = () => {
             {integrations.length} integrations available
           </p>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-foreground">
-            Connect All Your Favorite Tools in One Place
+            All the Tools Sentra Supports and Learns From
           </h1>
           <p className="mt-4 text-base text-muted leading-relaxed">
-            Sentra integrates with the tools your team already uses. It&apos;s never
-            been easier to bring your workflows together.
+            Sentra connects to the tools your team already uses — learning from
+            every interaction to build your company&apos;s shared memory.
           </p>
         </div>
       </FadeIn>
