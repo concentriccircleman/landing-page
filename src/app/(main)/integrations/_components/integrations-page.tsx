@@ -38,7 +38,7 @@ const IntegrationsPage = () => {
           <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">
             {integrations.length} integrations available
           </p>
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tighter text-foreground">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-foreground">
             Connect All Your Favorite Tools in One Place
           </h1>
           <p className="mt-4 text-base text-muted leading-relaxed">
@@ -49,7 +49,7 @@ const IntegrationsPage = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="mt-10 max-w-xl">
+        <div className="mt-10 max-w-2xl">
           <div className="relative">
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted pointer-events-none"
@@ -68,8 +68,19 @@ const IntegrationsPage = () => {
               placeholder="Search for an integration..."
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
-              className="w-full pl-11 pr-4 py-3 text-sm text-foreground bg-background border border-border placeholder:text-muted focus:outline-none focus:border-foreground transition-colors duration-150"
+              className="w-full pl-11 pr-10 h-10 bg-white text-foreground border border-[#e0e0e3] shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] text-sm placeholder:text-muted focus:outline-none focus:border-brand focus:ring-1 focus:ring-[rgba(37,149,238,0.15)] transition-colors duration-150 rounded-sm"
             />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery("")}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-foreground transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       </FadeIn>
