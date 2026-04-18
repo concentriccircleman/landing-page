@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import FadeIn from "@/components/fade-in";
 import IntegrationCard from "./integration-card";
 import IntegrationsFaq from "./integrations-faq";
-import { integrations, type Integration } from "../_data/integrations-data";
+import { integrations } from "../_data/integrations-data";
 
 const IntegrationsPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,17 +19,6 @@ const IntegrationsPage = () => {
     );
   }, [searchQuery]);
 
-  const paddedIntegrations = useMemo(() => {
-    const padded: (Integration | null)[] = [...filteredIntegrations];
-    const remainder = padded.length % 3;
-    if (remainder > 0) {
-      const paddingCount = 3 - remainder;
-      for (let index = 0; index < paddingCount; index++) {
-        padded.push(null);
-      }
-    }
-    return padded;
-  }, [filteredIntegrations]);
 
   return (
     <div className="w-full max-w-screen-2xl mx-auto px-6">
@@ -93,14 +82,18 @@ const IntegrationsPage = () => {
             </p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-              {paddedIntegrations.map((integration, index) => (
+              {filteredIntegrations.map((integration) => (
                 <div
-                  key={integration ? integration.name : `empty-${index}`}
+                  key={integration.name}
                   className="bg-background"
                 >
-                  {integration ? <IntegrationCard integration={integration} /> : null}
+                  <IntegrationCard integration={integration} />
                 </div>
               ))}
+              {filteredIntegrations.length % 3 !== 0 &&
+                Array.from({ length: 3 - (filteredIntegrations.length % 3) }).map((_, emptyIndex) => (
+                  <div key={`empty-${emptyIndex}`} className="bg-background" />
+                ))}
             </div>
           )}
         </div>

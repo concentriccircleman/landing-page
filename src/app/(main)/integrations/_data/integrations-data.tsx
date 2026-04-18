@@ -12,10 +12,13 @@ import slackIcon from "@/assets/icons/slack.svg";
 import linearIcon from "@/assets/icons/linear.svg";
 import discordIcon from "@/assets/icons/discord.svg";
 
+export type IntegrationPermission = "Read" | "Write" | "Read & Write";
+
 export interface Integration {
   name: string;
   description: string;
   icon: StaticImageData;
+  permission: IntegrationPermission;
 }
 
 export const integrations: Integration[] = [
@@ -24,65 +27,76 @@ export const integrations: Integration[] = [
     description:
       "Sentra joins your meetings and gives you structured notes, action items, and decisions — ready to search anytime.",
     icon: googleCalendarIcon,
+    permission: "Read",
   },
   {
     name: "Microsoft Calendar",
     description:
       "Get meeting notes, action items, and decision summaries from every Outlook calendar meeting, automatically.",
     icon: microsoftCalendarIcon,
+    permission: "Read",
   },
   {
     name: "Gmail",
     description:
       "Ask Sentra about anything in your inbox. Find commitments, follow-ups, and context across your email without digging through threads.",
     icon: gmailIcon,
+    permission: "Read",
   },
   {
     name: "Outlook",
     description:
       "Search across your Outlook emails naturally. Sentra helps you find what was promised, what needs follow-up, and what you missed.",
     icon: outlookIcon,
+    permission: "Read",
   },
   {
     name: "GitHub",
     description:
       "Bring engineering context into the picture. Sentra connects repo activity to what your team discussed in meetings and messages.",
     icon: githubIcon,
+    permission: "Read",
   },
   {
     name: "Google Docs",
     description:
       "Sentra agents create, search, and update Google Docs for you — turning meeting outcomes into living documentation.",
     icon: googleDocsIcon,
+    permission: "Read & Write",
   },
   {
     name: "Google Sheets",
     description:
       "Sentra agents build and maintain spreadsheets for you — weekly reports, project trackers, and dashboards that stay up to date.",
     icon: googleSheetsIcon,
+    permission: "Read & Write",
   },
   {
     name: "Notion",
     description:
       "Sentra agents keep your Notion workspace current — creating pages, updating docs, and syncing what your team decided into one place.",
     icon: notionIcon,
+    permission: "Read & Write",
   },
   {
     name: "Slack",
     description:
       "Get weekly updates, check-ins, and helpful reminders delivered straight to your Slack channels — no extra tools needed.",
     icon: slackIcon,
+    permission: "Write",
   },
   {
     name: "Linear",
     description:
       "Sentra connects what your team discussed to what they are building — giving project context alongside your Linear issues.",
     icon: linearIcon,
+    permission: "Read & Write",
   },
   {
     name: "Discord",
     description:
       "Sentra brings your Discord conversations into your team's shared memory, so important discussions are never lost in the scroll.",
     icon: discordIcon,
+    permission: "Read",
   },
 ];
