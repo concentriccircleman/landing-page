@@ -48,11 +48,14 @@ export type IntegrationPermission =
   | "Read & Write"
   | "Enterprise plan";
 
+export type IntegrationIconSize = "sm" | "md";
+
 export interface Integration {
   name: string;
   description: string;
   icon: StaticImageData;
   permission: IntegrationPermission;
+  iconSize?: IntegrationIconSize;
 }
 
 export const integrations: Integration[] = [
@@ -258,6 +261,7 @@ export const integrations: Integration[] = [
       "Sentra connects design discussions to the Figma files they reference — keeping product context tied to the work.",
     icon: figmaIcon,
     permission: "Enterprise plan",
+    iconSize: "sm",
   },
   {
     name: "Sentry",
@@ -279,6 +283,7 @@ export const integrations: Integration[] = [
       "Sentra ties PagerDuty incidents to the on-call conversations and postmortems that follow.",
     icon: pagerdutyIcon,
     permission: "Enterprise plan",
+    iconSize: "sm",
   },
   {
     name: "GitLab",
