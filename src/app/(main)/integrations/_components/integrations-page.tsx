@@ -2,8 +2,10 @@
 
 import { useState, useMemo } from "react";
 import FadeIn from "@/components/fade-in";
+import Button from "@/components/button";
 import IntegrationCard from "./integration-card";
 import IntegrationsFaq from "./integrations-faq";
+import RequestIntegrationDialog from "./request-integration-dialog";
 import { integrations } from "../_data/integrations-data";
 
 const IntegrationsPage = () => {
@@ -38,8 +40,8 @@ const IntegrationsPage = () => {
       </FadeIn>
 
       <FadeIn>
-        <div className="mt-10 max-w-2xl">
-          <div className="relative">
+        <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="relative w-full sm:max-w-2xl">
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted pointer-events-none"
               fill="none"
@@ -71,6 +73,16 @@ const IntegrationsPage = () => {
               </button>
             )}
           </div>
+          <RequestIntegrationDialog>
+            <Button
+              variant="tertiary"
+              size="sm"
+              className="h-10 px-4 whitespace-nowrap"
+            >
+              <span className="text-base leading-none" aria-hidden="true">+</span>
+              Request an integration
+            </Button>
+          </RequestIntegrationDialog>
         </div>
       </FadeIn>
 

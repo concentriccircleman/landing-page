@@ -5,12 +5,13 @@ import { cn } from "@/utils/cn";
 interface ButtonProps {
   children: ReactNode;
   href?: string;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "tertiary" | "outline";
   size?: "sm" | "md";
   className?: string;
   target?: string;
   rel?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
 const baseClasses =
@@ -29,6 +30,13 @@ const variantClasses: Record<string, string> = {
     "shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_0_0_3px_rgba(255,255,255,0.1),0_2px_4px_rgba(0,0,0,0.12),0_6px_16px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.8)]",
     "hover:bg-[#f4f4f5] hover:-translate-y-px",
     "hover:shadow-[0_0_0_1px_rgba(0,0,0,0.1),0_0_0_3.5px_rgba(255,255,255,0.12),0_4px_8px_rgba(0,0,0,0.15),0_8px_24px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)]",
+  ].join(" "),
+  tertiary: [
+    "bg-transparent text-[#52525b]",
+    "shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1)]",
+    "hover:bg-[#f4f4f5] hover:text-[#1a1a1f] hover:-translate-y-px",
+    "hover:shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)]",
+    "focus-visible:ring-[3px] focus-visible:ring-[rgba(0,0,0,0.08)]",
   ].join(" "),
   outline: [
     "bg-transparent text-[#f0f0f0]",
@@ -52,6 +60,7 @@ const Button = ({
   target,
   rel,
   onClick,
+  type = "button",
 }: ButtonProps) => {
   const classes = cn(
     baseClasses,
@@ -69,7 +78,7 @@ const Button = ({
   }
 
   return (
-    <button className={classes} onClick={onClick} type="button">
+    <button className={classes} onClick={onClick} type={type}>
       {children}
     </button>
   );
