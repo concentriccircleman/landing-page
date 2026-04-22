@@ -56,6 +56,7 @@ export interface Integration {
   icon: StaticImageData;
   permission: IntegrationPermission;
   iconSize?: IntegrationIconSize;
+  isMemorySource?: boolean;
 }
 
 export const integrations: Integration[] = [
@@ -65,6 +66,7 @@ export const integrations: Integration[] = [
       "Sentra joins your meetings and gives you structured notes, action items, and decisions — ready to search anytime.",
     icon: googleCalendarIcon,
     permission: "Read",
+    isMemorySource: true,
   },
   {
     name: "Microsoft Calendar",
@@ -72,6 +74,7 @@ export const integrations: Integration[] = [
       "Get meeting notes, action items, and decision summaries from every Outlook calendar meeting, automatically.",
     icon: microsoftCalendarIcon,
     permission: "Read",
+    isMemorySource: true,
   },
   {
     name: "Gmail",
@@ -79,6 +82,7 @@ export const integrations: Integration[] = [
       "Ask Sentra about anything in your inbox. Find commitments, follow-ups, and context across your email without digging through threads.",
     icon: gmailIcon,
     permission: "Read",
+    isMemorySource: true,
   },
   {
     name: "Outlook",
@@ -86,6 +90,7 @@ export const integrations: Integration[] = [
       "Search across your Outlook emails naturally. Sentra helps you find what was promised, what needs follow-up, and what you missed.",
     icon: outlookIcon,
     permission: "Read",
+    isMemorySource: true,
   },
   {
     name: "GitHub",
@@ -93,6 +98,7 @@ export const integrations: Integration[] = [
       "Bring engineering context into the picture. Sentra connects repo activity to what your team discussed in meetings and messages.",
     icon: githubIcon,
     permission: "Read",
+    isMemorySource: true,
   },
   {
     name: "Google Docs",
@@ -121,6 +127,7 @@ export const integrations: Integration[] = [
       "Get weekly updates, check-ins, and helpful reminders delivered straight to your Slack channels — no extra tools needed.",
     icon: slackIcon,
     permission: "Write",
+    isMemorySource: true,
   },
   {
     name: "Linear",
@@ -128,6 +135,7 @@ export const integrations: Integration[] = [
       "Sentra connects what your team discussed to what they are building — giving project context alongside your Linear issues.",
     icon: linearIcon,
     permission: "Read & Write",
+    isMemorySource: true,
   },
   {
     name: "Discord",
@@ -135,6 +143,7 @@ export const integrations: Integration[] = [
       "Sentra brings your Discord conversations into your team's shared memory, so important discussions are never lost in the scroll.",
     icon: discordIcon,
     permission: "Read",
+    isMemorySource: true,
   },
   {
     name: "Asana",
@@ -142,6 +151,7 @@ export const integrations: Integration[] = [
       "Sentra links task progress in Asana to what your team discussed, keeping priorities and context aligned across projects.",
     icon: asanaIcon,
     permission: "Enterprise plan",
+    isMemorySource: true,
   },
   {
     name: "Zoom",
