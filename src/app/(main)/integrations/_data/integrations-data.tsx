@@ -3,6 +3,7 @@ import type { StaticImageData } from "next/image";
 import googleCalendarIcon from "@/assets/icons/google-calendar.svg";
 import gmailIcon from "@/assets/icons/gmail.svg";
 import outlookIcon from "@/assets/icons/microsoft-outlook.svg";
+import outlookCalendarIcon from "@/assets/icons/outlook-calendar.png";
 import githubIcon from "@/assets/icons/github.svg";
 import googleDocsIcon from "@/assets/icons/google-docs.svg";
 import googleSheetsIcon from "@/assets/icons/google-sheets.svg";
@@ -71,7 +72,7 @@ export const integrations: Integration[] = [
     name: "Outlook Calendar",
     description:
       "Get meeting notes, action items, and decision summaries from every Outlook calendar meeting, automatically.",
-    icon: outlookIcon,
+    icon: outlookCalendarIcon,
     permission: "Read",
     isMemorySource: true,
   },
