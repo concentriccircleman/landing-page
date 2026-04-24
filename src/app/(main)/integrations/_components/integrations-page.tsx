@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { Tooltip } from "@base-ui/react/tooltip";
 import FadeIn from "@/components/fade-in";
 import Button from "@/components/button";
 import IntegrationCard from "./integration-card";
@@ -93,20 +94,22 @@ const IntegrationsPage = () => {
               No integrations found matching &ldquo;{searchQuery}&rdquo;
             </p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-              {filteredIntegrations.map((integration) => (
-                <div
-                  key={integration.name}
-                  className="bg-background"
-                >
-                  <IntegrationCard integration={integration} />
-                </div>
-              ))}
-              {filteredIntegrations.length % 3 !== 0 &&
-                Array.from({ length: 3 - (filteredIntegrations.length % 3) }).map((_, emptyIndex) => (
-                  <div key={`empty-${emptyIndex}`} className="bg-background" />
+            <Tooltip.Provider delay={350} closeDelay={80}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+                {filteredIntegrations.map((integration) => (
+                  <div
+                    key={integration.name}
+                    className="bg-background"
+                  >
+                    <IntegrationCard integration={integration} />
+                  </div>
                 ))}
-            </div>
+                {filteredIntegrations.length % 3 !== 0 &&
+                  Array.from({ length: 3 - (filteredIntegrations.length % 3) }).map((_, emptyIndex) => (
+                    <div key={`empty-${emptyIndex}`} className="bg-background" />
+                  ))}
+              </div>
+            </Tooltip.Provider>
           )}
         </div>
       </FadeIn>
